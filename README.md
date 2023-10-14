@@ -1,4 +1,4 @@
-EcoEnchanter/
+new-world-profit-calculator/
 │
 ├── config/
 │   ├── __init__.py

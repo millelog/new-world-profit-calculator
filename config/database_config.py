@@ -5,7 +5,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Path to the SQLite database
-DATABASE_PATH = os.path.join(BASE_DIR, "newworld_marketmystic_db.sqlite")
+DATABASE_PATH = os.path.join(BASE_DIR, "new_world_profit_calculator_db.sqlite")
 
 # Connection URI for SQLite
 DATABASE_URI = f"sqlite:///{DATABASE_PATH}"
