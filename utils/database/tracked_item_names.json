@@ -1,0 +1,70 @@
+[
+    "Stone",
+    "Stone Block",
+
+    "Hyssop",
+    "Hemp",
+    "Sateen Thread",
+    "Wirefiber",
+
+
+    "Linen",
+    "Sateen",
+    "Silk",
+    "Infused Silk",
+    "Wirefiber",
+
+    ".*Ingot",
+    "^(?!How).*Ore",
+    ".*Alloy",
+
+    "Green Wood",
+    "Aged Wood",
+    "(Ironwood|Wyrdwood)",
+    "Charcoal",    
+    "Timber",
+    "Lumber",
+    "Weirdwood Plank",
+    "Ironwood Plank",
+
+    "Rawhide",
+    "Coarse Leather",
+    "Rugged Leather",
+    "Thick Hide",
+    "Infused Leather",
+
+    ".*Tincture.*",
+    "^(?!Schematic).*Oil.*",
+    
+
+    ".*Ration",
+    ".*Health Potion",
+    ".*Tannin",
+    ".*Solvent",
+    ".*Flux",
+    "Weave Thread",
+    "Crossweave",
+    "Phoenixweave",
+    "RuneWeave",
+    "Asmodeum",
+    "Cinnabar",
+    "Tolvium",
+
+    "(Life|Death|Fire|Water|Air|Earth|Soul)( Mote| Essence| Quintessence| Wisp)",
+    "Voidmetal",
+    "Phoenix Feather",
+    "Vial of Suspended Azoth",
+    "^(?!Schematic).*Storage Chest",
+    "^(?!Schematic).*Bed",
+    "^(?!Schematic).*Table",
+    "^(?!Schematic).*Chair",
+    "(Cut )?((Brilliant|Pristine|Flawed) )?\b(Carnelian Gem|Amber|Amethyst|Aquamarine|Diamond|Emerald|Jasper|Malachite|Moonstone|Onyx|Opal|Ruby|Sapphire|Topaz)\b",
+    "Tuning Orb",
+    "Whetstone",
+    "Quills",
+    "Ink",
+    "Feathers",
+    ".*Arrow",
+    ".*Cartridge"
+    
+]
