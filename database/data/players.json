@@ -1,0 +1,20 @@
+[
+    {
+        "player_name": "Keenorlin",
+        "server_name": "Isabella",
+        "skills": [
+            {"skill_name": "Arcana", "skill_level": 50},
+            {"skill_name": "Armoring", "skill_level": 120},
+            {"skill_name": "Cooking", "skill_level": 85},
+            {"skill_name": "Engineering", "skill_level": 95},
+            {"skill_name": "Furnishing", "skill_level": 60},
+            {"skill_name": "Jewelcrafting", "skill_level": 75},
+            {"skill_name": "Leatherworking", "skill_level": 110},
+            {"skill_name": "Smelting", "skill_level": 100},
+            {"skill_name": "Stonecutting", "skill_level": 80},
+            {"skill_name": "Weaponsmithing", "skill_level": 115},
+            {"skill_name": "Weaving", "skill_level": 90},
+            {"skill_name": "Woodworking", "skill_level": 105}
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {"skill_name": "Arcana"},
+    {"skill_name": "Armoring"},
+    {"skill_name": "Cooking"},
+    {"skill_name": "Engineering"},
+    {"skill_name": "Furnishing"},
+    {"skill_name": "Jewelcrafting"},
+    {"skill_name": "Leatherworking"},
+    {"skill_name": "Smelting"},
+    {"skill_name": "Stonecutting"},
+    {"skill_name": "Weaponsmithing"},
+    {"skill_name": "Weaving"},
+    {"skill_name": "Woodworking"}
+]

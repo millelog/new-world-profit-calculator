@@ -1,0 +1,14 @@
+[
+    {
+        "result_item_id": "potion1_id",
+        "quantity_produced": 1,
+        "reagents": [
+            {"item_id": "reagent1_id", "quantity_required": 5},
+            {"item_id": "reagent2_id", "quantity_required": 2}
+        ],
+        "skills_required": [
+            {"skill_name": "Arcana", "level_required": 50},
+            {"skill_name": "Armoring", "level_required": 20}
+        ]
+    }
+]
