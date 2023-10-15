@@ -1,7 +1,10 @@
-# data_input/data_downloader.py
-
+import os
 import requests
 import json
+
+def delete_old_data_file(filename='download.json'):
+    if os.path.exists(filename):
+        os.remove(filename)
 
 def download_data(server_id):
     url = f'https://nwmarketprices.com/api/latest-prices/{server_id}/'
@@ -11,6 +14,7 @@ def download_data(server_id):
     return data
 
 def save_data_to_file(data, filename='download.json'):
+    delete_old_data_file(filename)  
     with open(filename, 'w') as f:
         json.dump(data, f)
 

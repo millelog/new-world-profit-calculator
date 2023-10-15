@@ -1,6 +1,6 @@
 #database/operations/item_operations.py
 
-from models import Item 
+from database.models import Item 
 
 
 def add_item(session, item_data):

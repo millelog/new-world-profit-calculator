@@ -11,14 +11,28 @@ def add_price_log_entry(session, item_id, log_data):
         - item_id: ID of the item for which the log entry is being added
         - log_data: Dictionary containing price log details (e.g., price, availability, date, etc.)
     """
-    # Create a new PriceLog instance using the provided data
-    price_log_entry = PriceLog(item_id=item_id, **log_data)
-    
-    # Add to the session
-    session.add(price_log_entry)
-    
-    # Commit the session
-    session.commit()
+    # Check if an entry with the same data already exists
+    existing_entry = session.query(PriceLog).filter(
+        and_(
+            PriceLog.item_id == item_id,
+            PriceLog.price == log_data.get('price'),
+            PriceLog.availability == log_data.get('availability'),
+            PriceLog.last_updated == log_data.get('last_updated'),
+            PriceLog.server_id == log_data.get('server_id')
+        )
+    ).first()
+
+    # If no such entry exists, add a new one
+    if existing_entry is None:
+        # Create a new PriceLog instance using the provided data
+        price_log_entry = PriceLog(item_id=item_id, **log_data)
+        
+        # Add to the session
+        session.add(price_log_entry)
+        
+        # Commit the session
+        session.commit()
+
 
 def get_price_log_entries(session, item_id, start_date=None, end_date=None):
     """

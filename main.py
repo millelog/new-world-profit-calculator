@@ -18,8 +18,10 @@ def main():
         # Launch the UI
         app = MainWindow(session)
         app.mainloop()
+        
     except Exception as e:
         print(f"An error occurred: {e}")
+
     finally:
         # Close the session
         session.close()

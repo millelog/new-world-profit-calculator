@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from analysis.crafting_profit import calculate_profitability, evaluate_all_recipes
+from database.operations.item_operations import get_item_by_id
 
 class AnalysisFrame(tk.Frame):
     def __init__(self, parent, session):
@@ -26,39 +27,99 @@ class AnalysisFrame(tk.Frame):
         self.result_text = tk.Text(self, width=40, height=10)
         self.result_text.grid(row=3, columnspan=2)
 
-         # Treeview to display crafting tree
-        self.tree = ttk.Treeview(self)
-        self.tree.grid(row=4, columnspan=2)
+         # Create Panedwindow to hold the listbox and treeview
+        self.panedwindow = ttk.Panedwindow(self, orient=tk.HORIZONTAL)
+        self.panedwindow.grid(row=4, column=0, columnspan=2, sticky='nsew')
+        
+        # Frame for Listbox
+        self.listbox_frame = tk.Frame(self.panedwindow)
+        self.panedwindow.add(self.listbox_frame, weight=1)
+        
+        # Listbox to display item IDs of the top 50 profitable items
+        self.listbox = tk.Listbox(self.listbox_frame)
+        self.listbox.pack(fill=tk.BOTH, expand=True)
+        
+        # Frame for Treeview
+        self.tree_frame = tk.Frame(self.panedwindow)
+        self.panedwindow.add(self.tree_frame, weight=3)
+        
+        # Update Treeview to include new columns
+        self.tree = ttk.Treeview(self.tree_frame, columns=("Item ID", "Item Name", "Quantity", "Cost", "Source"), show="headings")
+        self.tree.heading("Item ID", text="Item ID")
+        self.tree.heading("Item Name", text="Item Name")
+        self.tree.heading("Quantity", text="Quantity")
+        self.tree.heading("Cost", text="Cost")
+        self.tree.heading("Source", text="Source")
+        self.tree.pack(fill=tk.BOTH, expand=True)
+        
+        # Bind listbox selection event to update the treeview
+        self.listbox.bind('<<ListboxSelect>>', self.on_listbox_select)
     
     def calculate_profitability(self):
         item_id = self.item_id_entry.get()
         if not item_id:
             messagebox.showerror("Error", "Please enter an Item ID")
             return
-        profit_margin, recommended_recipe, crafting_tree = calculate_profitability(self.session, item_id)
-        result_text = f"Profit Margin: {profit_margin}\nRecommended Recipe ID: {recommended_recipe.recipe_id if recommended_recipe else 'N/A'}\nCrafting Tree: {crafting_tree}"
+        info = self.profitability_info.get(item_id, {})
+        result_text = f"Name: {get_item_by_id(self.session, item_id).item_name}\nProfit Margin: {info.get('Profit Margin', 'N/A')}\nCrafting Tree: {info.get('Crafting Tree', {})}"
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)
-        self.populate_tree(crafting_tree)
+        self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes(self):
-        profitability_info = evaluate_all_recipes(self.session)
-        top_5_profitable_items = sorted(profitability_info.items(), key=lambda x: x[1]["Profit Margin"], reverse=True)[:5]
-        result_text = "Top 5 Profitable Items:\n"
-        for item_id, info in top_5_profitable_items:
-            result_text += f"Item ID: {item_id}, Profit Margin: {info['Profit Margin']}, Recommended Recipe ID: {info['Recommended Recipe ID']}\n"
+        profitability_info_list = evaluate_all_recipes(self.session)
+        # Convert list of tuples to a dictionary
+        self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
+        self.listbox.delete(0, tk.END)  # Clear existing listbox items
+        for item_id in self.profitability_info:
+            self.listbox.insert(tk.END, item_id)
+
+    
+    def on_listbox_select(self, event):
+        selected_item_index = self.listbox.curselection()
+        if not selected_item_index:
+            return  # No item selected
+        item_id = self.listbox.get(selected_item_index[0])
+        self.display_item_info(item_id)
+
+    def display_item_info(self, item_id):
+        # Lookup the item info from the stored profitability_info
+        info = self.profitability_info.get(item_id, {})
+        item_name = get_item_by_id(self.session, item_id).item_name
+        profit_margin = info.get("Profit Margin", "N/A")
+        profit_margin_percentage = info.get("Profit Margin Percentage", "N/A")
+        score = info.get("Score", "N/A")
+        availability = info.get("Availability", "N/A")
+        recommended_recipe_id = info.get("Recommended Recipe ID", "N/A")
+        crafting_cost = info.get("Crafting Cost", "N/A")
+        crafting_tree = info.get("Crafting Tree", {})
+
+        result_text = (f"Item Name: {item_name}\n"
+                       f"Profit Margin: {profit_margin}\n"
+                       f"Profit Margin Percentage: {profit_margin_percentage}\n"
+                       f"Score: {score}\n"
+                       f"Availability: {availability}\n"
+                       f"Recommended Recipe ID: {recommended_recipe_id}\n"
+                       f"Crafting Cost: {crafting_cost}")
+
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)
-    
-    def populate_tree(self, crafting_tree):
-        for item_id, node in crafting_tree.items():
-            parent_id = self.tree.insert("", "end", text=item_id)
-            self._add_tree_children(parent_id, node)
-    
+        self.populate_tree(crafting_tree, item_id)
+
+
+    def populate_tree(self, crafting_tree, root_item_id):
+        self.tree.delete(*self.tree.get_children())  # Clear existing tree items
+        self._add_tree_children("", crafting_tree)  # Start with the root node of the crafting_tree
+
     def _add_tree_children(self, parent_id, node):
-        for child_id, child_node in node.get("children", {}).items():
-            child_parent_id = self.tree.insert(parent_id, "end", text=child_id)
-            self._add_tree_children(child_parent_id, child_node)
+        for item_id, info in node.items():
+            # Now values only include item_id, cost, and source
+            values = (item_id, get_item_by_id(self.session, item_id).item_name, info.get('quantity', 'N/A'), info.get('cost', 'N/A'), info.get('source', 'N/A'))
+            child_id = self.tree.insert(parent_id, "end", text=item_id, values=values)
+            self._add_tree_children(child_id, info.get('children', {}))
+
+
+
 
 # Usage:
 if __name__ == '__main__':
