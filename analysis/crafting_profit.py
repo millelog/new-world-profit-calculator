@@ -10,7 +10,7 @@ engine = create_engine(DATABASE_URI)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-def get_crafting_cost(session, recipe, crafting_tree=None):
+def get_crafting_cost(session, recipe, server_id, crafting_tree=None):
     if crafting_tree is None:
         crafting_tree = {}  # Initialize crafting tree
 
@@ -25,7 +25,7 @@ def get_crafting_cost(session, recipe, crafting_tree=None):
             continue
 
         # Get reagent market price
-        market_price_data = cpo.get_current_price(session, reagent_item_id)
+        market_price_data = cpo.get_current_price(session, reagent_item_id, server_id)
         market_price = market_price_data['price'] if market_price_data else float('inf')  # Assume infinite cost if no market price data
 
         # If the reagent has crafting recipes, calculate the crafting cost
@@ -34,7 +34,7 @@ def get_crafting_cost(session, recipe, crafting_tree=None):
             crafting_options = []  # List to store crafting options and their costs
             for reagent_recipe in reagent_recipes:
                 # Recursive call to evaluate the cost of crafting this reagent
-                reagent_crafting_cost, reagent_crafting_tree = get_crafting_cost(session, reagent_recipe, {})
+                reagent_crafting_cost, reagent_crafting_tree = get_crafting_cost(session, reagent_recipe, server_id, {})
                 crafting_options.append((reagent_crafting_cost, reagent_crafting_tree))
 
             # Choose the cheapest crafting option
@@ -66,12 +66,12 @@ def get_crafting_cost(session, recipe, crafting_tree=None):
 
 
 
-def calculate_profitability(session, item_id):
+def calculate_profitability(session, item_id, server_id):
     recipes = ro.get_recipes_by_item(session, item_id)
     if not recipes:
         raise ValueError(f"No recipes found for item {item_id}")
 
-    market_price_data = cpo.get_current_price(session, item_id)
+    market_price_data = cpo.get_current_price(session, item_id, server_id)
     market_price = market_price_data['price'] if market_price_data else float('inf')  # Assume infinite price if no market data
 
     max_score = float('-inf')
@@ -81,7 +81,7 @@ def calculate_profitability(session, item_id):
     max_profit_margin_percentage = float('-inf')  # Initialize with negative infinity
 
     for recipe in recipes:
-        crafting_cost, crafting_tree = get_crafting_cost(session, recipe)
+        crafting_cost, crafting_tree = get_crafting_cost(session, recipe, server_id)
         if crafting_cost == 0:
             continue  # Avoid division by zero
 
@@ -97,7 +97,15 @@ def calculate_profitability(session, item_id):
             max_profit_margin = profit_margin  # Update max profit margin
             max_profit_margin_percentage = profit_margin_percentage  # Update max profit margin percentage
 
-    return max_score, recommended_recipe, recommended_crafting_tree, max_profit_margin, max_profit_margin_percentage, crafting_cost, market_price_data['qty'] if market_price_data['qty'] else market_price_data['availability']
+    return (
+        max_score,
+        recommended_recipe,
+        recommended_crafting_tree,
+        max_profit_margin,
+        max_profit_margin_percentage,
+        crafting_cost,
+        market_price_data['qty'] if market_price_data and market_price_data['qty'] else (market_price_data['availability'] if market_price_data else None)
+    )
 
 
 def calculate_score(profit_margin_percentage, profit_margin, availability):
@@ -109,13 +117,13 @@ def calculate_score(profit_margin_percentage, profit_margin, availability):
     availability_weight = 0  # for example, adjust as needed
     return profit_margin_weight * profit_margin_percentage + availability_weight * availability + profit_margin*profit_weight
 
-def evaluate_all_recipes(session):
+def evaluate_all_recipes(session, server_id):
     all_recipes = session.query(CraftingRecipe).all()
     profitability_info = {}
 
     for recipe in all_recipes:
         item_id = recipe.result_item_id
-        score, recommended_recipe, crafting_tree, profit_margin, profit_margin_percentage, crafting_cost, availability = calculate_profitability(session, item_id)
+        score, recommended_recipe, crafting_tree, profit_margin, profit_margin_percentage, crafting_cost, availability = calculate_profitability(session, item_id, server_id)
         profitability_info[item_id] = {
             "Score": score,
             "Recommended Recipe ID": recommended_recipe.recipe_id if recommended_recipe else None,

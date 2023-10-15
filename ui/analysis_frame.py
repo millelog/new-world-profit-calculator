@@ -5,9 +5,10 @@ from analysis.crafting_profit import calculate_profitability, evaluate_all_recip
 from database.operations.item_operations import get_item_by_id
 
 class AnalysisFrame(tk.Frame):
-    def __init__(self, parent, session):
+    def __init__(self, parent, session, data_store):
         super().__init__(parent)
         self.session = session
+        self.data_store = data_store
         
         # Entry for item_id input
         self.item_id_entry = tk.Entry(self)
@@ -67,7 +68,7 @@ class AnalysisFrame(tk.Frame):
         self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes(self):
-        profitability_info_list = evaluate_all_recipes(self.session)
+        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id)
         # Convert list of tuples to a dictionary
         self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
         self.listbox.delete(0, tk.END)  # Clear existing listbox items

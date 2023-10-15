@@ -32,7 +32,7 @@ def process_json_data(session, json_data, server_id):
         price_log_operations.add_price_log_entry(session, item_id, log_data)
         
         # Check if item exists in CurrentPrice
-        current_price_entry = current_price_operations.get_current_price(session, item_id)
+        current_price_entry = current_price_operations.get_current_price(session, item_id, server_id)
         if current_price_entry:
             # Update the existing entry
             current_price_operations.update_current_price(session, item_id, log_data)

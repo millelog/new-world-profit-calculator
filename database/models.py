@@ -66,7 +66,7 @@ class CurrentPrice(Base):
     highest_buy_order = Column(Float)
     qty = Column(Integer)
 
-    server_id = Column(Integer, ForeignKey('servers.server_id'))
+    server_id = Column(Integer, ForeignKey('servers.server_id'), primary_key=True)
     server = relationship("Server", back_populates="current_prices")
     item = relationship("Item", back_populates="current_price")
 
