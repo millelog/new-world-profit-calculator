@@ -1,0 +1,23 @@
+[
+    {
+        "recipe_name": "Cooking Oil",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 5
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "2",
+                "ingredient_name": "Fish Oil"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            }
+        ],
+        "category": "basic_cooking",
+        "craft_amount": 1
+    }
+]

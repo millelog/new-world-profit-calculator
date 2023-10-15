@@ -1,10 +1,36 @@
-from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, DateTime
+from sqlalchemy import Table, create_engine, Column, Integer, String, Float, ForeignKey, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
 from config.database_config import DATABASE_URI
 
 Base = declarative_base()
+# Define the association table for the many-to-many relationship between Item and ItemType
+item_itemtype_association = Table('item_itemtype_association', Base.metadata,
+    Column('item_id', String, ForeignKey('items.item_id')),
+    Column('item_type_id', Integer, ForeignKey('item_types.item_type_id'))
+)
+
+class ItemType(Base):
+    __tablename__ = 'item_types'
+
+    item_type_id = Column(Integer, primary_key=True, autoincrement=True)
+    item_type_name = Column(String, nullable=False)
+    
+    # Define the relationship to items
+    items = relationship("Item", secondary=item_itemtype_association, back_populates="item_types")
+
+
+class RecipeReagent(Base):
+    __tablename__ = 'recipe_reagents'
+    
+    recipe_id = Column(Integer, ForeignKey('crafting_recipes.recipe_id'), primary_key=True, autoincrement=True)
+    reagent_item_id = Column(String, ForeignKey('items.item_id'), nullable=True)
+    reagent_item_type_id = Column(Integer, ForeignKey('item_types.item_type_id'), nullable=True)
+    quantity_required = Column(Integer, nullable=False)
+
+    reagent = relationship("Item", backref="recipe_reagents_as_specific_item")
+    recipe = relationship("CraftingRecipe", backref="recipe_reagents")
 
 class Item(Base):
     __tablename__ = 'items'
@@ -16,6 +42,7 @@ class Item(Base):
     price_logs = relationship("PriceLog", back_populates="item")
     crafting_recipes = relationship("CraftingRecipe", back_populates="result_item")
     recipe_reagents = relationship("RecipeReagent", back_populates="reagent")
+    item_types = relationship("ItemType", secondary=item_itemtype_association, back_populates="items")
 
 
 class PriceLog(Base):
@@ -79,17 +106,6 @@ class CraftingRecipe(Base):
     result_item = relationship("Item", back_populates="crafting_recipes")
     recipe_reagents = relationship("RecipeReagent", back_populates="recipe")
     skill_requirements = relationship("RecipeSkillRequirement", back_populates="recipe")
-
-
-class RecipeReagent(Base):
-    __tablename__ = 'recipe_reagents'
-    
-    recipe_id = Column(Integer, ForeignKey('crafting_recipes.recipe_id'), primary_key=True)
-    reagent_item_id = Column(String, ForeignKey('items.item_id'), primary_key=True)
-    quantity_required = Column(Integer, nullable=False)
-
-    reagent = relationship("Item", back_populates="recipe_reagents")
-    recipe = relationship("CraftingRecipe", back_populates="recipe_reagents")
 
 
 class Player(Base):

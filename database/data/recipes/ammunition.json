@@ -1,0 +1,202 @@
+[
+    {
+        "recipe_name": "Iron Arrow",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 0
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Iron Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Timber"
+            },
+            {
+                "quantity": "3",
+                "ingredient_name": "Feathers"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Orichalcum Arrow",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 150
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Orichalcum Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Ironwood Planks"
+            },
+            {
+                "quantity": "3",
+                "ingredient_name": "Feathers"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Starmetal Arrow",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 100
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "2",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "3",
+                "ingredient_name": "Feathers"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Steel Arrow",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 50
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Steel Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Lumber"
+            },
+            {
+                "quantity": "3",
+                "ingredient_name": "Feathers"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Iron Cartridge",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 0
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Iron Ingot"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Linen"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Gunpowder"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Orichalcum Cartridge",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 150
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Orichalcum Ingot"
+            },
+            {
+                "quantity": "3",
+                "ingredient_name": "Infused Silk"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Gunpowder"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Starmetal Cartridge",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 100
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "2",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Silk"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Gunpowder"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    },
+    {
+        "recipe_name": "Steel Cartridge",
+        "skills_required": [
+            {
+                "skill_name": "Engineering Skill",
+                "level_required": 50
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Steel Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Sateen"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Gunpowder"
+            }
+        ],
+        "category": "ammunition",
+        "craft_amount": 100
+    }
+]

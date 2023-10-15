@@ -5,6 +5,16 @@ Item:
 - price_logs -> PriceLog (1:N)
 - crafting_recipes -> CraftingRecipe (1:N)
 - recipe_reagents -> RecipeReagent (1:N)
+- item_types -> ItemType (N:N)
+
+ItemType:
+- item_type_id (PK)
+- item_type_name
+- items -> Item (N:N)
+
+item_itemtype_association:
+- item_id (FK -> Item)
+- item_type_id (FK -> ItemType)
 
 PriceLog:
 - log_id (PK)

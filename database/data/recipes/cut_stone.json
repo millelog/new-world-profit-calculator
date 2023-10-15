@@ -1,0 +1,65 @@
+[
+    {
+        "recipe_name": "Stone Block",
+        "skills_required": [
+            {
+                "skill_name": "Stonecutting Skill",
+                "level_required": 0
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Stone"
+            }
+        ],
+        "category": "cut_stone",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Stone Brick",
+        "skills_required": [
+            {
+                "skill_name": "Stonecutting Skill",
+                "level_required": 50
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Stone Block"
+            },
+            {
+                "quantity": "1",
+                "item_type": "Sandpaper"
+            }
+        ],
+        "category": "cut_stone",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Lodestone Brick",
+        "skills_required": [
+            {
+                "skill_name": "Stonecutting Skill",
+                "level_required": 100
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "6",
+                "ingredient_name": "Lodestone"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Stone Brick"
+            },
+            {
+                "quantity": "1",
+                "item_type": "Sandpaper"
+            }
+        ],
+        "category": "cut_stone",
+        "craft_amount": 1
+    }
+]

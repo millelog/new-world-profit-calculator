@@ -1,0 +1,359 @@
+[
+    {
+        "recipe_name": "Air Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Air Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Air Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Air Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Air Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Air Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Death Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Death Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Death Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Death Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Death Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Death Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Earth Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Earth Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Earth Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Earth Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Earth Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Earth Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Fire Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Fire Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Fire Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Fire Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Fire Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Fire Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Life Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Life Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Life Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Life Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Life Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Life Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Soul Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Soul Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Soul Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Soul Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Soul Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Soul Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Water Essence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 75
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Water Wisp"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Water Quintessence",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 125
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "3",
+                "ingredient_name": "Water Essence"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Water Wisp",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 25
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Water Mote"
+            }
+        ],
+        "category": "elemental_infusion",
+        "craft_amount": 1
+    }
+]

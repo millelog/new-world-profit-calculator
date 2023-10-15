@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from config.database_config import DATABASE_URI
 from database.models import (Base, Item, CraftingRecipe, RecipeReagent, TradeSkill,
-                             Player, PlayerSkill, Transaction, Server, RecipeSkillRequirement)
+                             Player, PlayerSkill, Transaction, Server, RecipeSkillRequirement, item_itemtype_association, ItemType)
 from sqlalchemy.orm import sessionmaker
 import os
 import json
@@ -44,9 +44,34 @@ def load_players(session):
 
 def load_tracked_items(session):
     tracked_items = load_json(os.path.join(DATABASE_DATA_DIR, 'tracked_items.json'))
+
     for item in tracked_items:
-        if not session.query(Item).filter_by(item_id=item["item_id"]).first():
-            session.add(Item(**item))
+        # Check if the item exists
+        existing_item = session.query(Item).filter_by(item_id=item["item_id"]).first()
+        
+        if not existing_item:
+            new_item = Item(item_id=item["item_id"], item_name=item["item_name"])
+            session.add(new_item)
+        else:
+            new_item = existing_item
+
+        # Handle item types
+        if "item_type" in item:
+            for type_name in item["item_type"]:
+                # Check if the ItemType exists
+                item_type = session.query(ItemType).filter_by(item_type_name=type_name).first()
+                
+                if not item_type:
+                    item_type = ItemType(item_type_name=type_name)
+                    session.add(item_type)
+                
+                # Create or update association
+                if not session.query(item_itemtype_association).filter_by(item_id=new_item.item_id, item_type_id=item_type.item_type_id).first():
+                    new_association = item_itemtype_association(item_id=new_item.item_id, item_type_id=item_type.item_type_id)
+                    session.add(new_association)
+
+    session.commit()
+
 
 
 def load_recipes(session):
@@ -55,19 +80,20 @@ def load_recipes(session):
         if category_file.endswith(".json"):
             recipes = load_json(os.path.join(recipe_category_dir, category_file))
             for recipe_data in recipes:
-                if not session.query(CraftingRecipe).filter_by(result_item_id=recipe_data["result_item_id"]).first():
-                    recipe = CraftingRecipe(result_item_id=recipe_data["result_item_id"], quantity_produced=recipe_data["quantity_produced"])
+                if not session.query(CraftingRecipe).filter_by(result_item_id=recipe_data["res"]).first():
+                    recipe = CraftingRecipe(result_item_id=recipe_data["res"], quantity_produced=recipe_data["qty"])
                     session.add(recipe)
                     session.flush()
                     
-                    for reagent in recipe_data["reagents"]:
-                        if not session.query(RecipeReagent).filter_by(recipe_id=recipe.recipe_id, reagent_item_id=reagent["item_id"]).first():
-                            session.add(RecipeReagent(recipe_id=recipe.recipe_id, reagent_item_id=reagent["item_id"], quantity_required=reagent["quantity_required"]))
+                    for reagent in recipe_data["reag"]:
+                        reagent_item = session.query(Item).filter_by(item_name=reagent["name"]).first()
+                        if reagent_item and not session.query(RecipeReagent).filter_by(recipe_id=recipe.recipe_id, reagent_item_id=reagent_item.item_id).first():
+                            session.add(RecipeReagent(recipe_id=recipe.recipe_id, reagent_item_id=reagent_item.item_id, quantity_required=reagent["qty"]))
                     
-                    for skill_req in recipe_data["skills_required"]:
-                        skill = session.query(TradeSkill).filter_by(skill_name=skill_req["skill_name"]).first()
+                    for skill_req in recipe_data["skills"]:
+                        skill = session.query(TradeSkill).filter_by(skill_name=skill_req["name"]).first()
                         if skill and not session.query(RecipeSkillRequirement).filter_by(recipe_id=recipe.recipe_id, skill_id=skill.skill_id).first():
-                            session.add(RecipeSkillRequirement(recipe_id=recipe.recipe_id, skill_id=skill.skill_id, level_required=skill_req["level_required"]))
+                            session.add(RecipeSkillRequirement(recipe_id=recipe.recipe_id, skill_id=skill.skill_id, level_required=skill_req["lvl"]))
 
 
 def init_data(session):

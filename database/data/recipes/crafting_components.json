@@ -1,0 +1,70 @@
+[
+    {
+        "recipe_name": "Asmodeum Band",
+        "skills_required": [
+            {
+                "skill_name": "Jewelcrafting Skill",
+                "level_required": 200
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "8",
+                "ingredient_name": "Asmodeum"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Asmodeum Chain",
+        "skills_required": [
+            {
+                "skill_name": "Jewelcrafting Skill",
+                "level_required": 200
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "8",
+                "ingredient_name": "Asmodeum"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Asmodeum Hook",
+        "skills_required": [
+            {
+                "skill_name": "Jewelcrafting Skill",
+                "level_required": 200
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "8",
+                "ingredient_name": "Asmodeum"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Asmodeum Setting",
+        "skills_required": [
+            {
+                "skill_name": "Jewelcrafting Skill",
+                "level_required": 200
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "4",
+                "ingredient_name": "Asmodeum"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 1
+    }
+]

@@ -148,6 +148,14 @@
         "item_name": "Ironwood"
     },
     {
+        "item_id": "brown_guitar_part1_page1",
+        "item_name": "Ironwood Leaves: Guitar Sheet Music 1/2"
+    },
+    {
+        "item_id": "brown_guitar_part1_page2",
+        "item_name": "Ironwood Leaves: Guitar Sheet Music 2/2"
+    },
+    {
         "item_id": "timbert5",
         "item_name": "Ironwood Planks"
     },
@@ -158,6 +166,14 @@
     {
         "item_id": "2hfishingpolet4",
         "item_name": "Wyrdwood Fishing Pole"
+    },
+    {
+        "item_id": "blue_guitar_part1_page1",
+        "item_name": "Wyrdwood Leaves: Guitar Sheet Music 1/2"
+    },
+    {
+        "item_id": "blue_guitar_part1_page2",
+        "item_name": "Wyrdwood Leaves: Guitar Sheet Music 2/2"
     },
     {
         "item_id": "timbert4",
@@ -180,6 +196,18 @@
         "item_name": "Lumberjack's Token"
     },
     {
+        "item_id": "wildwoodt1",
+        "item_name": "Wildwood"
+    },
+    {
+        "item_id": "barbvinet1",
+        "item_name": "Barbvine"
+    },
+    {
+        "item_id": "timbert51",
+        "item_name": "Glittering Ebony"
+    },
+    {
         "item_id": "rawhidet1",
         "item_name": "Rawhide"
     },
@@ -198,6 +226,18 @@
     {
         "item_id": "leathert5",
         "item_name": "Infused Leather"
+    },
+    {
+        "item_id": "scarhidet1",
+        "item_name": "Scarhide"
+    },
+    {
+        "item_id": "smolderhidet1",
+        "item_name": "Smolderhide"
+    },
+    {
+        "item_id": "leathert51",
+        "item_name": "Runic Leather"
     },
     {
         "item_id": "tinctureacidt5",
@@ -316,6 +356,106 @@
         "item_name": "Travel Ration"
     },
     {
+        "item_id": "foodmanat5",
+        "item_name": "Energizing Hearty Meal"
+    },
+    {
+        "item_id": "foodmanat3",
+        "item_name": "Energizing Light Meal"
+    },
+    {
+        "item_id": "foodmanat4",
+        "item_name": "Energizing Satisfying Meal"
+    },
+    {
+        "item_id": "foodhealthrecoveryt5",
+        "item_name": "Hearty Meal"
+    },
+    {
+        "item_id": "foodhealthrecoveryt3",
+        "item_name": "Light Meal"
+    },
+    {
+        "item_id": "wcconsumable_mealiewrap",
+        "item_name": "Mealiewrap"
+    },
+    {
+        "item_id": "house_housingitem_legion_decor_kitchendishes02",
+        "item_name": "Meal Prep Dishes"
+    },
+    {
+        "item_id": "house_housingitem_settler_decor_table_kitchenarrangement01",
+        "item_name": "Meal Prep Set"
+    },
+    {
+        "item_id": "foodhealthrecoveryt4",
+        "item_name": "Satisfying Meal"
+    },
+    {
+        "item_id": "foodharvestert5",
+        "item_name": "Spicy Steak Pie"
+    },
+    {
+        "item_id": "foodharvestert4",
+        "item_name": "Breakfast Bread"
+    },
+    {
+        "item_id": "foodhuntert4",
+        "item_name": "Vegetable Boil"
+    },
+    {
+        "item_id": "foodhuntert3",
+        "item_name": "Carrot Soup"
+    },
+    {
+        "item_id": "foodhuntert5",
+        "item_name": "Savory Fish Cake"
+    },
+    {
+        "item_id": "foodharvestert3",
+        "item_name": "Herb-Crusted Corn on the Cob"
+    },
+    {
+        "item_id": "foodharvestert2",
+        "item_name": "Cornbread"
+    },
+    {
+        "item_id": "foodminert1",
+        "item_name": "Roasted Potatoes"
+    },
+    {
+        "item_id": "foodminert3",
+        "item_name": "Boiled Potatoes"
+    },
+    {
+        "item_id": "foodminert4",
+        "item_name": "Poultry with Roasted Potatoes"
+    },
+    {
+        "item_id": "foodminert5",
+        "item_name": "Salted Roasted Vegetables"
+    },
+    {
+        "item_id": "foodlumberjackt1",
+        "item_name": "Roasted Cabbage"
+    },
+    {
+        "item_id": "foodlumberjackt2",
+        "item_name": "Boiled Cabbage"
+    },
+    {
+        "item_id": "foodlumberjackt3",
+        "item_name": "Herb-Roasted Cabbage"
+    },
+    {
+        "item_id": "foodlumberjackt4",
+        "item_name": "Cabbage-Wrapped Roasted Fish"
+    },
+    {
+        "item_id": "foodlumberjackt5",
+        "item_name": "Salted Poultry with Cabbage"
+    },
+    {
         "item_id": "potionhealtht2",
         "item_name": "Common Health Potion"
     },
@@ -336,10 +476,6 @@
         "item_name": "Weak Health Potion"
     },
     {
-        "item_id": "tannint5",
-        "item_name": "Aged Tannin"
-    },
-    {
         "item_id": "solventt5",
         "item_name": "Pure Solvent"
     },
@@ -348,8 +484,20 @@
         "item_name": "Obsidian Flux"
     },
     {
+        "item_id": "sandpapert5",
+        "item_name": "Obsidian Sandpaper"
+    },
+    {
         "item_id": "clotht51",
         "item_name": "Phoenixweave"
+    },
+    {
+        "item_id": "blisterweavet1",
+        "item_name": "Blisterweave"
+    },
+    {
+        "item_id": "scaleclotht1",
+        "item_name": "Scalecloth"
     },
     {
         "item_id": "ingott51",
@@ -1002,5 +1150,45 @@
     {
         "item_id": "shott3",
         "item_name": "Steel Cartridge"
+    },
+    {
+        "item_id": "breachdrop5",
+        "item_name": "Corrupted Lodestone"
+    },
+    {
+        "item_id": "lodestonesoult1",
+        "item_name": "Crystalline Lodestone"
+    },
+    {
+        "item_id": "lodestonewatert1",
+        "item_name": "Freezing Lodestone"
+    },
+    {
+        "item_id": "lodestonelifet1",
+        "item_name": "Gleaming Lodestone"
+    },
+    {
+        "item_id": "lodestoneeartht1",
+        "item_name": "Loamy Lodestone"
+    },
+    {
+        "item_id": "stonet4",
+        "item_name": "Lodestone"
+    },
+    {
+        "item_id": "blockt4",
+        "item_name": "Lodestone Brick"
+    },
+    {
+        "item_id": "lodestonefiret1",
+        "item_name": "Molten Lodestone"
+    },
+    {
+        "item_id": "lodestonedeatht1",
+        "item_name": "Putrid Lodestone"
+    },
+    {
+        "item_id": "lodestoneairt1",
+        "item_name": "Shocking Lodestone"
     }
 ]

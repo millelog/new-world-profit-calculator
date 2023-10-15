@@ -1,0 +1,27 @@
+[
+    {
+        "recipe_name": "Acid Tincture",
+        "skills_required": [
+            {
+                "skill_name": "Arcana Skill",
+                "level_required": 100
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "25",
+                "ingredient_name": "Aloe Gel"
+            },
+            {
+                "quantity": "25",
+                "ingredient_name": "Cactus Flesh"
+            },
+            {
+                "quantity": "3",
+                "ingredient_name": "Sulfur Chunk"
+            }
+        ],
+        "category": "concoctions",
+        "craft_amount": 1
+    }
+]

@@ -1,0 +1,583 @@
+[
+    {
+        "recipe_name": "Fish with Tarragon and Oregano",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 42
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Fish Filet"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Tarragon"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Oregano"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Spicy Steak Pie",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 157
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Corn"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Red Meat"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Peppercorn"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Carrot"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "String Bean"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Breakfast Bread",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 107
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Corn"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Egg"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Honey"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Tomato"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Vegetable Boil",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 108
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Carrot"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cabbage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Water"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cauliflower"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Carrot Soup",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 58
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Carrot"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Water"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Paprika"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Savory Fish Cake",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 158
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Carrot"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Fish Filet"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Garlic"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "String Bean"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Rosemary"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Herb-Crusted Corn on the Cob",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 57
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Corn"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Milk"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cheese"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Cornbread",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 18
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Corn"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cauliflower"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Salt"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Roasted Potatoes",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 7
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Potato"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Peppercorn"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Boiled Potatoes",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 56
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Potato"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Water"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cauliflower"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Poultry with Roasted Potatoes",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 106
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Potato"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Poultry"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Sausage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salted Roasted Vegetables",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 156
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Potato"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Squash"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Salt"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Parsley"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Oregano"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Roasted Cabbage",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 10
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Cabbage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Dill"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Boiled Cabbage",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 20
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Cabbage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Saffron"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Herb-Roasted Cabbage",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 59
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Cabbage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cauliflower"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Cabbage-Wrapped Roasted Fish",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 109
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Cabbage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Fish Filet"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Water"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cauliflower"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salted Poultry with Cabbage",
+        "skills_required": [
+            {
+                "skill_name": "Cooking Skill",
+                "level_required": 159
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Cabbage"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Poultry"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nut"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Peppercorn"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "String Bean"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Seasoning Blend"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    }
+]
