@@ -96,6 +96,25 @@
     ".*Arrow",
     ".*Cartridge",
 
-    ".*Lodestone.*"
-    
+    ".*Lodestone.*",
+    "Seasoning Blend",
+    "Basil",
+    "Saffron",
+    "Thyme",
+    "Oregano",
+    "Dill",
+    "Parsley",
+    "Rosemary",
+    "Tarragon",
+    "Sage",
+    "Mint",
+    "Peppercorn",
+    "Cinnamon",
+    "Nutmeg",
+    "Paprika",
+    "Ginger",
+    "Garlic",
+    "Salt",
+    "Sugar",
+    "Honey"
 ]

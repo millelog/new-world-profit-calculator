@@ -1192,237 +1192,12 @@
         "item_name": "Shocking Lodestone"
     },
     {
-        "item_id": "gunpowdert2",
-        "item_name": "Gunpowder"
-    },
-    {
-        "item_id": "nutt1",
-        "item_name": "Nut",
-        "item_type": [
-            "Raw Foods",
-            "Tier 1 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "aloegelt1",
-        "item_name": "Aloe Gel"
-    },
-    {
-        "item_id": "cactusflesht1",
-        "item_name": "Cactus Flesh",
-        "item_type": [
-            "Tier 3 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 3 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "sulfurchunk",
-        "item_name": "Sulfur Chunk"
-    },
-    {
-        "item_id": "fisht1",
-        "item_name": "Fish Filet",
-        "item_type": [
-            "Fish",
-            "Raw Foods",
-            "Tier 1 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "tarragont1",
-        "item_name": "Tarragon",
-        "item_type": [
-            "Seasonings",
-            "herbs"
-        ]
-    },
-    {
-        "item_id": "cornt1",
-        "item_name": "Corn",
-        "item_type": [
-            "Tier 2 Grains",
-            "Cooked Grain",
-            "Raw Foods",
-            "Tier 2 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "redmeatt1",
-        "item_name": "Red Meat",
-        "item_type": [
-            "Tier 2 Meats",
-            "Raw Meats",
-            "Raw Foods",
-            "Tier 2 Raw Foods"
-        ]
-    },
-    {
         "item_id": "seasoningblendt1",
         "item_name": "Seasoning Blend"
     },
     {
-        "item_id": "peppercornt1",
-        "item_name": "Peppercorn"
-    },
-    {
-        "item_id": "buttert1",
-        "item_name": "Butter"
-    },
-    {
-        "item_id": "carrott1",
-        "item_name": "Carrot",
-        "item_type": [
-            "Tier 2 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 2 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "stringbeant1",
-        "item_name": "String Bean",
-        "item_type": [
-            "Tier 5 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 5 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "eggt1",
-        "item_name": "Egg",
-        "item_type": [
-            "Raw Foods",
-            "Tier 1 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "honeyt1",
-        "item_name": "Honey",
-        "item_type": [
-            "Seasonings",
-            "Raw Foods"
-        ]
-    },
-    {
-        "item_id": "tomatot1",
-        "item_name": "Tomato",
-        "item_type": [
-            "Tier 5 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 5 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "cabbaget1",
-        "item_name": "Cabbage",
-        "item_type": [
-            "Tier 3 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 3 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "watert1",
-        "item_name": "Water"
-    },
-    {
-        "item_id": "cauliflowert1",
-        "item_name": "Cauliflower",
-        "item_type": [
-            "Tier 4 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 4 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "paprikat1",
-        "item_name": "Paprika"
-    },
-    {
-        "item_id": "garlict1",
-        "item_name": "Garlic"
-    },
-    {
-        "item_id": "rosemaryt1",
-        "item_name": "Rosemary",
-        "item_type": [
-            "Seasonings",
-            "herbs"
-        ]
-    },
-    {
-        "item_id": "milkt1",
-        "item_name": "Milk",
-        "item_type": [
-            "Raw Foods",
-            "Tier 1 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "cheeset1",
-        "item_name": "Cheese"
-    },
-    {
-        "item_id": "saltt1",
-        "item_name": "Salt"
-    },
-    {
-        "item_id": "potatot1",
-        "item_name": "Potato",
-        "item_type": [
-            "Tier 3 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 3 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "poultryt1",
-        "item_name": "Poultry",
-        "item_type": [
-            "Tier 1 Meats",
-            "Raw Meats",
-            "Raw Foods",
-            "Tier 1 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "sausaget1",
-        "item_name": "Sausage",
-        "item_type": [
-            "Tier 2 Meats",
-            "Raw Meats",
-            "Raw Foods",
-            "Tier 2 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "squasht1",
-        "item_name": "Squash",
-        "item_type": [
-            "Tier 2 Vegetables",
-            "Cooked Vegetables",
-            "Raw Foods",
-            "Tier 2 Raw Foods"
-        ]
-    },
-    {
-        "item_id": "parsleyt1",
-        "item_name": "Parsley",
-        "item_type": [
-            "Seasonings",
-            "herbs"
-        ]
-    },
-    {
-        "item_id": "dillt1",
-        "item_name": "Dill",
+        "item_id": "basilt1",
+        "item_name": "Basil",
         "item_type": [
             "Seasonings",
             "herbs"
@@ -1437,83 +1212,191 @@
         ]
     },
     {
-        "item_id": "woodstaint4",
-        "item_name": "Oak Stain"
-    },
-    {
-        "item_id": "holdingrunet4",
-        "item_name": "Greater Rune of Holding"
-    },
-    {
-        "item_id": "woodstaint5",
-        "item_name": "Mahogany Stain"
-    },
-    {
-        "item_id": "holdingrunet5",
-        "item_name": "Grand Rune of Holding"
-    },
-    {
-        "item_id": "woodstaint2",
-        "item_name": "Ash Stain"
-    },
-    {
-        "item_id": "holdingrunet2",
-        "item_name": "Minor Rune of Holding"
-    },
-    {
-        "item_id": "woodstaint3",
-        "item_name": "Maple Stain"
-    },
-    {
-        "item_id": "holdingrunet3",
-        "item_name": "Major Rune of Holding"
-    },
-    {
-        "item_id": "leathert4",
-        "item_name": "Layered Leather",
+        "item_id": "thymet1",
+        "item_name": "Thyme",
         "item_type": [
-            "Tier 4 Leather",
-            "Leathers"
+            "Seasonings",
+            "herbs"
         ]
     },
     {
-        "item_id": "fibert1",
-        "item_name": "Fibers"
-    },
-    {
-        "item_id": "voidessence",
-        "item_name": "Void Essence"
-    },
-    {
-        "item_id": "rawhidet5",
-        "item_name": "Iron Hide"
-    },
-    {
-        "item_id": "tannint5",
-        "item_name": "Aged Tannin",
+        "item_id": "dillt1",
+        "item_name": "Dill",
         "item_type": [
-            "Tannin",
-            "Refining Materials Tier 5"
+            "Seasonings",
+            "herbs"
         ]
     },
     {
-        "item_id": "clothweavet5",
-        "item_name": "Wireweave",
+        "item_id": "parsleyt1",
+        "item_name": "Parsley",
         "item_type": [
-            "Cloth Weave",
-            "Refining Materials Tier 5"
+            "Seasonings",
+            "herbs"
         ]
     },
     {
-        "item_id": "yeastt1",
-        "item_name": "Yeast"
+        "item_id": "rosemaryt1",
+        "item_name": "Rosemary",
+        "item_type": [
+            "Seasonings",
+            "herbs"
+        ]
     },
     {
-        "item_id": "flintt1",
-        "item_name": "Flint"
+        "item_id": "tarragont1",
+        "item_name": "Tarragon",
+        "item_type": [
+            "Seasonings",
+            "herbs"
+        ]
+    },
+    {
+        "item_id": "foodcont2",
+        "item_name": "Tarragon Poultry Sliders"
+    },
+    {
+        "item_id": "saget1",
+        "item_name": "Sage",
+        "item_type": [
+            "Seasonings",
+            "herbs"
+        ]
+    },
+    {
+        "item_id": "mintt1",
+        "item_name": "Mint",
+        "item_type": [
+            "Seasonings",
+            "herbs"
+        ]
+    },
+    {
+        "item_id": "peppercornt1",
+        "item_name": "Peppercorn"
+    },
+    {
+        "item_id": "cinnamont1",
+        "item_name": "Cinnamon"
+    },
+    {
+        "item_id": "dyeb132",
+        "item_name": "Cinnamon Dye"
+    },
+    {
+        "item_id": "nutmegt1",
+        "item_name": "Nutmeg"
+    },
+    {
+        "item_id": "paprikat1",
+        "item_name": "Paprika"
+    },
+    {
+        "item_id": "gingert1",
+        "item_name": "Ginger"
+    },
+    {
+        "item_id": "wcconsumable_gingersnapcookie",
+        "item_name": "Gingersnap Cookie"
+    },
+    {
+        "item_id": "garlict1",
+        "item_name": "Garlic"
+    },
+    {
+        "item_id": "house_housingitem_decor_wreath_garlic",
+        "item_name": "Garlic Bulb Wreath"
+    },
+    {
+        "item_id": "foodintdext2",
+        "item_name": "Garlic Rosemary Poultry"
+    },
+    {
+        "item_id": "foodstrdext2",
+        "item_name": "Garlic Steak"
+    },
+    {
+        "item_id": "saltt1",
+        "item_name": "Salt"
+    },
+    {
+        "item_id": "foodintfoct4",
+        "item_name": "Salted Ham with Apple Butter"
     },
     {
         "item_id": "saltpetert1",
         "item_name": "Saltpeter"
+    },
+    {
+        "item_id": "house_housingitem_pirate_shelf01_b",
+        "item_name": "Salt-stripped Galley Shelf"
+    },
+    {
+        "item_id": "house_housingitem_lighting_pirate_lightceiling01_b",
+        "item_name": "Salt-stripped Helm Chandelier"
+    },
+    {
+        "item_id": "house_housingitem_pirate_bookcase01_b",
+        "item_name": "Salt-stripped Low Bookcase"
+    },
+    {
+        "item_id": "house_housingitem_pirate_armoire01_b",
+        "item_name": "Salt-stripped Scrolled Armoire"
+    },
+    {
+        "item_id": "house_housingitem_table_pirate_desk01_b",
+        "item_name": "Salt-stripped Scrolled Desk"
+    },
+    {
+        "item_id": "house_housingitem_pirate_cabinet01_b",
+        "item_name": "Salt-stripped Short Dresser"
+    },
+    {
+        "item_id": "house_housingitem_pirate_bookcase02_b",
+        "item_name": "Salt-stripped Tall Bookcase"
+    },
+    {
+        "item_id": "house_housingitem_pirate_cabinet02_b",
+        "item_name": "Salt-stripped Tall Dresser"
+    },
+    {
+        "item_id": "sugart1",
+        "item_name": "Sugar"
+    },
+    {
+        "item_id": "honeyt1",
+        "item_name": "Honey",
+        "item_type": [
+            "Seasonings",
+            "Raw Foods"
+        ]
+    },
+    {
+        "item_id": "foodarmorert3",
+        "item_name": "Honey Brew"
+    },
+    {
+        "item_id": "fooddext3",
+        "item_name": "Honeyed Melon"
+    },
+    {
+        "item_id": "honey_drums_part1_page1",
+        "item_name": "Honey N Biscuits: Drums Sheet Music 1/1"
+    },
+    {
+        "item_id": "honey_guitar_part1_page1",
+        "item_name": "Honey N Biscuits: Guitar Sheet Music 1/1"
+    },
+    {
+        "item_id": "honey_mandolin_part1_page1",
+        "item_name": "Honey N Biscuits: Mandolin Sheet Music 1/1"
+    },
+    {
+        "item_id": "honey_urbass_part1_page1",
+        "item_name": "Honey N Biscuits: Upright Bass Sheet Music 1/1"
+    },
+    {
+        "item_id": "foodstrfoct5",
+        "item_name": "Honey-Roasted Ham"
     }
 ]

@@ -2684,5 +2684,180 @@
         ],
         "category": "furniture",
         "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Galley Shelf",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 148
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "15",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "10",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Low Bookcase",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 137
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "30",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "15",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Scrolled Armoire",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 133
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "30",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "15",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Scrolled Desk",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 145
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "30",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "15",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Short Dresser",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 141
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "30",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "15",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Tall Bookcase",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 139
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "30",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "15",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salt-stripped Tall Dresser",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 143
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "30",
+                "ingredient_name": "Wyrdwood Planks"
+            },
+            {
+                "quantity": "15",
+                "ingredient_name": "Starmetal Ingot"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Oak Stain"
+            }
+        ],
+        "category": "furniture",
+        "craft_amount": 1
     }
 ]

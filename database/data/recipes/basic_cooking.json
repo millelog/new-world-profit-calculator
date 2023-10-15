@@ -28,7 +28,24 @@
                 "level_required": 5
             }
         ],
-        "ingredients": [],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_type": "Seasonings"
+
+            },
+            {
+                "quantity": "1",
+                "ingredient_type": "Seasonings"
+
+            },
+            {
+                "quantity": "1",
+                "ingredient_type": "Seasonings"
+
+            }
+
+        ],
         "category": "basic_cooking",
         "craft_amount": 1
     },
@@ -72,6 +89,18 @@
     },
     {
         "recipe_name": "Sausage",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 5
+            }
+        ],
+        "ingredients": [],
+        "category": "basic_cooking",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Seasoning Blend",
         "skills_required": [
             {
                 "skill_name": "Cooking",

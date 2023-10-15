@@ -579,5 +579,236 @@
         ],
         "category": "foods",
         "craft_amount": 1
+    },
+    {
+        "recipe_name": "Tarragon Poultry Sliders",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 39
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Poultry"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Bread"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Tarragon"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Tomato"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Garlic Rosemary Poultry",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 32
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Poultry"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Rosemary"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Garlic"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cooking Oil"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Garlic Steak",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 22
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Red Meat"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Garlic"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Broccoli"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Salted Ham with Apple Butter",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 135
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Juicy Ham Hock"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Salt"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Apple"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cinnamon"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Honey"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Honey Brew",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 55
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Barley"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Water"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Honey"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Ginger"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Nutmeg"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Honeyed Melon",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 77
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Melon"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Honey"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Sugar"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Mint"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Ginger"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Honey-Roasted Ham",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 175
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "1",
+                "ingredient_name": "Juicy Ham Hock"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Butter"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Honey"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Cinnamon"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Sugar"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Salt"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Orange"
+            }
+        ],
+        "category": "foods",
+        "craft_amount": 1
     }
 ]
