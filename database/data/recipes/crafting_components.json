@@ -3,7 +3,7 @@
         "recipe_name": "Asmodeum Band",
         "skills_required": [
             {
-                "skill_name": "Jewelcrafting Skill",
+                "skill_name": "Jewelcrafting",
                 "level_required": 200
             }
         ],
@@ -20,7 +20,7 @@
         "recipe_name": "Asmodeum Chain",
         "skills_required": [
             {
-                "skill_name": "Jewelcrafting Skill",
+                "skill_name": "Jewelcrafting",
                 "level_required": 200
             }
         ],
@@ -37,7 +37,7 @@
         "recipe_name": "Asmodeum Hook",
         "skills_required": [
             {
-                "skill_name": "Jewelcrafting Skill",
+                "skill_name": "Jewelcrafting",
                 "level_required": 200
             }
         ],
@@ -54,7 +54,7 @@
         "recipe_name": "Asmodeum Setting",
         "skills_required": [
             {
-                "skill_name": "Jewelcrafting Skill",
+                "skill_name": "Jewelcrafting",
                 "level_required": 200
             }
         ],
@@ -66,5 +66,114 @@
         ],
         "category": "crafting_components",
         "craft_amount": 1
+    },
+    {
+        "recipe_name": "Gunpowder",
+        "skills_required": [
+            {
+                "skill_name": "Engineering",
+                "level_required": 0
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "5",
+                "ingredient_name": "Charcoal"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Flint"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Saltpeter"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 5
+    },
+    {
+        "recipe_name": "Oak Stain",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 100
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "10",
+                "ingredient_name": "Pure Solvent"
+            },
+            {
+                "quantity": "4",
+                "ingredient_name": "Oil"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 10
+    },
+    {
+        "recipe_name": "Mahogany Stain",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 150
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "10",
+                "ingredient_name": "Pure Solvent"
+            },
+            {
+                "quantity": "4",
+                "ingredient_name": "Oil"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 10
+    },
+    {
+        "recipe_name": "Ash Stain",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 0
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "10",
+                "ingredient_name": "Charcoal"
+            },
+            {
+                "quantity": "4",
+                "ingredient_name": "Pure Solvent"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 10
+    },
+    {
+        "recipe_name": "Maple Stain",
+        "skills_required": [
+            {
+                "skill_name": "Furnishing",
+                "level_required": 50
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "10",
+                "ingredient_name": "Pure Solvent"
+            },
+            {
+                "quantity": "4",
+                "ingredient_name": "Oil"
+            }
+        ],
+        "category": "crafting_components",
+        "craft_amount": 10
     }
 ]

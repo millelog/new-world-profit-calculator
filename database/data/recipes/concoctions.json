@@ -3,7 +3,7 @@
         "recipe_name": "Acid Tincture",
         "skills_required": [
             {
-                "skill_name": "Arcana Skill",
+                "skill_name": "Arcana",
                 "level_required": 100
             }
         ],

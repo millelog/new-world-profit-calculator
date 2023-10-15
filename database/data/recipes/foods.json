@@ -3,7 +3,7 @@
         "recipe_name": "Fish with Tarragon and Oregano",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 42
             }
         ],
@@ -32,7 +32,7 @@
         "recipe_name": "Spicy Steak Pie",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 157
             }
         ],
@@ -73,7 +73,7 @@
         "recipe_name": "Breakfast Bread",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 107
             }
         ],
@@ -110,7 +110,7 @@
         "recipe_name": "Vegetable Boil",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 108
             }
         ],
@@ -147,7 +147,7 @@
         "recipe_name": "Carrot Soup",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 58
             }
         ],
@@ -180,7 +180,7 @@
         "recipe_name": "Savory Fish Cake",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 158
             }
         ],
@@ -221,7 +221,7 @@
         "recipe_name": "Herb-Crusted Corn on the Cob",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 57
             }
         ],
@@ -254,7 +254,7 @@
         "recipe_name": "Cornbread",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 18
             }
         ],
@@ -283,7 +283,7 @@
         "recipe_name": "Roasted Potatoes",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 7
             }
         ],
@@ -308,7 +308,7 @@
         "recipe_name": "Boiled Potatoes",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 56
             }
         ],
@@ -341,7 +341,7 @@
         "recipe_name": "Poultry with Roasted Potatoes",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 106
             }
         ],
@@ -378,7 +378,7 @@
         "recipe_name": "Salted Roasted Vegetables",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 156
             }
         ],
@@ -419,7 +419,7 @@
         "recipe_name": "Roasted Cabbage",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 10
             }
         ],
@@ -444,7 +444,7 @@
         "recipe_name": "Boiled Cabbage",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 20
             }
         ],
@@ -473,7 +473,7 @@
         "recipe_name": "Herb-Roasted Cabbage",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 59
             }
         ],
@@ -506,7 +506,7 @@
         "recipe_name": "Cabbage-Wrapped Roasted Fish",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 109
             }
         ],
@@ -543,7 +543,7 @@
         "recipe_name": "Salted Poultry with Cabbage",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 159
             }
         ],

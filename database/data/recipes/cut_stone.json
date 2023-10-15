@@ -3,7 +3,7 @@
         "recipe_name": "Stone Block",
         "skills_required": [
             {
-                "skill_name": "Stonecutting Skill",
+                "skill_name": "Stonecutting",
                 "level_required": 0
             }
         ],
@@ -20,7 +20,7 @@
         "recipe_name": "Stone Brick",
         "skills_required": [
             {
-                "skill_name": "Stonecutting Skill",
+                "skill_name": "Stonecutting",
                 "level_required": 50
             }
         ],
@@ -41,7 +41,7 @@
         "recipe_name": "Lodestone Brick",
         "skills_required": [
             {
-                "skill_name": "Stonecutting Skill",
+                "skill_name": "Stonecutting",
                 "level_required": 100
             }
         ],

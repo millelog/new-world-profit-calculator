@@ -3,7 +3,7 @@
         "recipe_name": "Cooking Oil",
         "skills_required": [
             {
-                "skill_name": "Cooking Skill",
+                "skill_name": "Cooking",
                 "level_required": 5
             }
         ],
@@ -17,6 +17,68 @@
                 "ingredient_name": "Nut"
             }
         ],
+        "category": "basic_cooking",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Seasoning Blend",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 5
+            }
+        ],
+        "ingredients": [],
+        "category": "basic_cooking",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Butter",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 5
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "2",
+                "ingredient_name": "Milk"
+            }
+        ],
+        "category": "basic_cooking",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Cheese",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 5
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "2",
+                "ingredient_name": "Milk"
+            },
+            {
+                "quantity": "1",
+                "ingredient_name": "Yeast"
+            }
+        ],
+        "category": "basic_cooking",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Sausage",
+        "skills_required": [
+            {
+                "skill_name": "Cooking",
+                "level_required": 5
+            }
+        ],
+        "ingredients": [],
         "category": "basic_cooking",
         "craft_amount": 1
     }

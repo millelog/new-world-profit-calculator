@@ -1,3 +1,4 @@
+import argparse
 import os
 import time
 import requests
@@ -50,7 +51,7 @@ def extract_data_from_html(html_content):
             skill_parts = skill_text.split('Lv. ')
             if len(skill_parts) == 2:
                 skills_required.append({
-                    'skill_name': skill_parts[0].strip(),
+                    'skill_name': skill_parts[0].strip().replace(" Skill", ""),
                     'level_required': int(skill_parts[1])
                 })
 
@@ -95,10 +96,20 @@ def extract_data_from_html(html_content):
         'craft_amount': craft_amount
     }
 
-def fetch_and_save_data(tracked_items):
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('--start-from', dest='start_from', help='Item ID to start processing from')
+    return parser.parse_args()
+
+def fetch_and_save_data(tracked_items, start_from=None):
+    start_processing = start_from is None  # Start processing immediately if start_from is None
     recipes = []
     for item in tracked_items:
         item_id = item['item_id']
+        if not start_processing:
+            if item_id == start_from:
+                start_processing = True  # Start processing when the specified item_id is found
+            continue  # Skip processing until the specified item_id is found
         html_content = fetch_html(item_id)
         recipe_data = extract_data_from_html(html_content)
         print(recipe_data)
@@ -122,10 +133,12 @@ def fetch_and_save_data(tracked_items):
 
 
 
-if __name__ == "__main__":
+def main():
+    args = parse_arguments()  # Parse command-line arguments
     tracked_items_path = os.path.join(BASE_DIR, 'database', 'data', 'tracked_items.json')
     with open(tracked_items_path, 'r') as f:
         tracked_items = json.load(f)
+    fetch_and_save_data(tracked_items, start_from=args.start_from)  # Pass the start_from argument
 
-    # Assuming tracked_items.json is a list of item_ids
-    fetch_and_save_data(tracked_items)
+if __name__ == "__main__":
+    main()

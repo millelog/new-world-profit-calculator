@@ -3,7 +3,7 @@
         "recipe_name": "Stone Cairn",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 53
             }
         ],
@@ -28,7 +28,7 @@
         "recipe_name": "Light Pewter Hanging Oil Lamp",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 64
             }
         ],
@@ -53,7 +53,7 @@
         "recipe_name": "Light Pewter Short Oil Lamp",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 66
             }
         ],
@@ -78,7 +78,7 @@
         "recipe_name": "Light Pewter Tall Oil Lamp",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 65
             }
         ],
@@ -103,7 +103,7 @@
         "recipe_name": "Dynasty Storage Chest",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 136
             }
         ],
@@ -132,7 +132,7 @@
         "recipe_name": "Golden Steel Storage Chest",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 200
             }
         ],
@@ -161,7 +161,7 @@
         "recipe_name": "Hewn Log Storage Chest",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 35
             }
         ],
@@ -190,7 +190,7 @@
         "recipe_name": "Hope Storage Chest",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 145
             }
         ],
@@ -219,7 +219,7 @@
         "recipe_name": "Iron Storage Chest",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 85
             }
         ],
@@ -248,7 +248,7 @@
         "recipe_name": "Legion Storage Chest",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 114
             }
         ],
@@ -277,7 +277,7 @@
         "recipe_name": "Ash Full Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 0
             }
         ],
@@ -302,7 +302,7 @@
         "recipe_name": "Bloody Velvet Captain's Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 179
             }
         ],
@@ -327,7 +327,7 @@
         "recipe_name": "Centurion High Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 102
             }
         ],
@@ -352,7 +352,7 @@
         "recipe_name": "Cerulean Sheets Bunk Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 0
             }
         ],
@@ -377,7 +377,7 @@
         "recipe_name": "Cherry Sheets Bunk Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 56
             }
         ],
@@ -402,7 +402,7 @@
         "recipe_name": "Ebony Carved Canopy Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 150
             }
         ],
@@ -431,7 +431,7 @@
         "recipe_name": "Gothic Velvet Captain's Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 180
             }
         ],
@@ -456,7 +456,7 @@
         "recipe_name": "Grassy Sheets Bunk Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 106
             }
         ],
@@ -481,7 +481,7 @@
         "recipe_name": "Influential High Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 150
             }
         ],
@@ -510,7 +510,7 @@
         "recipe_name": "Jade Carved Canopy Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 165
             }
         ],
@@ -535,7 +535,7 @@
         "recipe_name": "Lazulite Marble Bedside Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 164
             }
         ],
@@ -560,7 +560,7 @@
         "recipe_name": "Light Pewter Lounge Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 50
             }
         ],
@@ -585,7 +585,7 @@
         "recipe_name": "Mahogany Full Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 157
             }
         ],
@@ -610,7 +610,7 @@
         "recipe_name": "Maple Full Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 57
             }
         ],
@@ -635,7 +635,7 @@
         "recipe_name": "Maritime Velvet Captain's Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 124
             }
         ],
@@ -660,7 +660,7 @@
         "recipe_name": "Mediterranean High Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 152
             }
         ],
@@ -685,7 +685,7 @@
         "recipe_name": "Oak Full Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 107
             }
         ],
@@ -710,7 +710,7 @@
         "recipe_name": "Old Wooden Bunk Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 51
             }
         ],
@@ -735,7 +735,7 @@
         "recipe_name": "Old Wooden Full Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 52
             }
         ],
@@ -760,7 +760,7 @@
         "recipe_name": "Rojo-Levantina Marble Bedside Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 115
             }
         ],
@@ -785,7 +785,7 @@
         "recipe_name": "Rosewood Carved Canopy Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 115
             }
         ],
@@ -810,7 +810,7 @@
         "recipe_name": "Sea Foam Velvet Captain's Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 125
             }
         ],
@@ -835,7 +835,7 @@
         "recipe_name": "Serpentine Marble Bedside Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 67
             }
         ],
@@ -860,7 +860,7 @@
         "recipe_name": "Straw Pet Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 100
             }
         ],
@@ -885,7 +885,7 @@
         "recipe_name": "Sunny Sheets Bunk Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 156
             }
         ],
@@ -910,7 +910,7 @@
         "recipe_name": "Teak Carved Canopy Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 65
             }
         ],
@@ -935,7 +935,7 @@
         "recipe_name": "Verdant High Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 51
             }
         ],
@@ -960,7 +960,7 @@
         "recipe_name": "Yellow Brass Lounge Bed",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 101
             }
         ],
@@ -985,7 +985,7 @@
         "recipe_name": "Amethyst Marble Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 150
             }
         ],
@@ -1014,7 +1014,7 @@
         "recipe_name": "Ash End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 0
             }
         ],
@@ -1039,7 +1039,7 @@
         "recipe_name": "Ash Large Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 0
             }
         ],
@@ -1064,7 +1064,7 @@
         "recipe_name": "Ash Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 0
             }
         ],
@@ -1089,7 +1089,7 @@
         "recipe_name": "Black-lacquered Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 182
             }
         ],
@@ -1114,7 +1114,7 @@
         "recipe_name": "Black-lacquered Half-Barrel Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 194
             }
         ],
@@ -1139,7 +1139,7 @@
         "recipe_name": "Black-lacquered Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 180
             }
         ],
@@ -1164,7 +1164,7 @@
         "recipe_name": "Black-lacquered Vanity Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 185
             }
         ],
@@ -1189,7 +1189,7 @@
         "recipe_name": "Cypress Wood Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 119
             }
         ],
@@ -1214,7 +1214,7 @@
         "recipe_name": "Graceful Jade Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 185
             }
         ],
@@ -1239,7 +1239,7 @@
         "recipe_name": "Graceful Rosewood Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 140
             }
         ],
@@ -1264,7 +1264,7 @@
         "recipe_name": "Graceful Teak Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 87
             }
         ],
@@ -1289,7 +1289,7 @@
         "recipe_name": "Hard-Working Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 142
             }
         ],
@@ -1314,7 +1314,7 @@
         "recipe_name": "Hard-Working Half-Barrel Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 134
             }
         ],
@@ -1339,7 +1339,7 @@
         "recipe_name": "Hard-Working Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 140
             }
         ],
@@ -1364,7 +1364,7 @@
         "recipe_name": "Hard-Working Vanity Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 144
             }
         ],
@@ -1389,7 +1389,7 @@
         "recipe_name": "Jade Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 184
             }
         ],
@@ -1414,7 +1414,7 @@
         "recipe_name": "Jade End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 183
             }
         ],
@@ -1439,7 +1439,7 @@
         "recipe_name": "Lazulite Marble Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 167
             }
         ],
@@ -1464,7 +1464,7 @@
         "recipe_name": "Mahogany End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 174
             }
         ],
@@ -1489,7 +1489,7 @@
         "recipe_name": "Mahogany Large Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 178
             }
         ],
@@ -1514,7 +1514,7 @@
         "recipe_name": "Mahogany Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 177
             }
         ],
@@ -1539,7 +1539,7 @@
         "recipe_name": "Maple End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 69
             }
         ],
@@ -1564,7 +1564,7 @@
         "recipe_name": "Maple Large Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 72
             }
         ],
@@ -1589,7 +1589,7 @@
         "recipe_name": "Maple Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 71
             }
         ],
@@ -1614,7 +1614,7 @@
         "recipe_name": "Oak End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 120
             }
         ],
@@ -1639,7 +1639,7 @@
         "recipe_name": "Oak Large Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 123
             }
         ],
@@ -1664,7 +1664,7 @@
         "recipe_name": "Oak Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 122
             }
         ],
@@ -1689,7 +1689,7 @@
         "recipe_name": "Old Wood Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 104
             }
         ],
@@ -1714,7 +1714,7 @@
         "recipe_name": "Olive Wood Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 71
             }
         ],
@@ -1739,7 +1739,7 @@
         "recipe_name": "Picnic Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 175
             }
         ],
@@ -1764,7 +1764,7 @@
         "recipe_name": "Rojo-Levantina Marble Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 118
             }
         ],
@@ -1789,7 +1789,7 @@
         "recipe_name": "Rosewood Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 139
             }
         ],
@@ -1814,7 +1814,7 @@
         "recipe_name": "Rosewood End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 137
             }
         ],
@@ -1839,7 +1839,7 @@
         "recipe_name": "Salt-stripped Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 141
             }
         ],
@@ -1864,7 +1864,7 @@
         "recipe_name": "Salt-stripped Half-Barrel Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 135
             }
         ],
@@ -1889,7 +1889,7 @@
         "recipe_name": "Salt-stripped Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 139
             }
         ],
@@ -1914,7 +1914,7 @@
         "recipe_name": "Salt-stripped Vanity Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 143
             }
         ],
@@ -1939,7 +1939,7 @@
         "recipe_name": "Serpentine Marble Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 70
             }
         ],
@@ -1964,7 +1964,7 @@
         "recipe_name": "Teak Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 86
             }
         ],
@@ -1989,7 +1989,7 @@
         "recipe_name": "Teak End Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 84
             }
         ],
@@ -2014,7 +2014,7 @@
         "recipe_name": "Tree Stump Side Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 55
             }
         ],
@@ -2039,7 +2039,7 @@
         "recipe_name": "Tree Stump Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 54
             }
         ],
@@ -2064,7 +2064,7 @@
         "recipe_name": "Well-polished Dining Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 183
             }
         ],
@@ -2089,7 +2089,7 @@
         "recipe_name": "Well-polished Half-Barrel Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 193
             }
         ],
@@ -2114,7 +2114,7 @@
         "recipe_name": "Well-polished Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 181
             }
         ],
@@ -2139,7 +2139,7 @@
         "recipe_name": "Well-polished Vanity Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 186
             }
         ],
@@ -2164,7 +2164,7 @@
         "recipe_name": "White Oak Wood Small Table",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 168
             }
         ],
@@ -2189,7 +2189,7 @@
         "recipe_name": "Ash Casual Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 50
             }
         ],
@@ -2214,7 +2214,7 @@
         "recipe_name": "Ash Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 0
             }
         ],
@@ -2239,7 +2239,7 @@
         "recipe_name": "Bloody Velvet Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 184
             }
         ],
@@ -2264,7 +2264,7 @@
         "recipe_name": "Centurion Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 104
             }
         ],
@@ -2289,7 +2289,7 @@
         "recipe_name": "Gothic Velvet Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 185
             }
         ],
@@ -2314,7 +2314,7 @@
         "recipe_name": "Graceful Jade Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 171
             }
         ],
@@ -2339,7 +2339,7 @@
         "recipe_name": "Graceful Rosewood Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 121
             }
         ],
@@ -2364,7 +2364,7 @@
         "recipe_name": "Graceful Teak Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 71
             }
         ],
@@ -2389,7 +2389,7 @@
         "recipe_name": "Mahogany Casual Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 159
             }
         ],
@@ -2414,7 +2414,7 @@
         "recipe_name": "Mahogany Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 158
             }
         ],
@@ -2439,7 +2439,7 @@
         "recipe_name": "Maple Casual Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 59
             }
         ],
@@ -2464,7 +2464,7 @@
         "recipe_name": "Maple Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 58
             }
         ],
@@ -2489,7 +2489,7 @@
         "recipe_name": "Maritime Velvet Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 128
             }
         ],
@@ -2514,7 +2514,7 @@
         "recipe_name": "Mediterranean Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 154
             }
         ],
@@ -2539,7 +2539,7 @@
         "recipe_name": "Oak Casual Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 109
             }
         ],
@@ -2564,7 +2564,7 @@
         "recipe_name": "Oak Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 108
             }
         ],
@@ -2589,7 +2589,7 @@
         "recipe_name": "Old Desk Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 151
             }
         ],
@@ -2614,7 +2614,7 @@
         "recipe_name": "Rickety Wooden Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 101
             }
         ],
@@ -2639,7 +2639,7 @@
         "recipe_name": "Sea Foam Velvet Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 129
             }
         ],
@@ -2664,7 +2664,7 @@
         "recipe_name": "Verdant Dining Chair",
         "skills_required": [
             {
-                "skill_name": "Furnishing Skill",
+                "skill_name": "Furnishing",
                 "level_required": 53
             }
         ],

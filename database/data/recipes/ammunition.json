@@ -3,7 +3,7 @@
         "recipe_name": "Iron Arrow",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 0
             }
         ],
@@ -28,7 +28,7 @@
         "recipe_name": "Orichalcum Arrow",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 150
             }
         ],
@@ -53,7 +53,7 @@
         "recipe_name": "Starmetal Arrow",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 100
             }
         ],
@@ -78,7 +78,7 @@
         "recipe_name": "Steel Arrow",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 50
             }
         ],
@@ -103,7 +103,7 @@
         "recipe_name": "Iron Cartridge",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 0
             }
         ],
@@ -128,7 +128,7 @@
         "recipe_name": "Orichalcum Cartridge",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 150
             }
         ],
@@ -153,7 +153,7 @@
         "recipe_name": "Starmetal Cartridge",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 100
             }
         ],
@@ -178,7 +178,7 @@
         "recipe_name": "Steel Cartridge",
         "skills_required": [
             {
-                "skill_name": "Engineering Skill",
+                "skill_name": "Engineering",
                 "level_required": 50
             }
         ],

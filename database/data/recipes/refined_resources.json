@@ -3,7 +3,7 @@
         "recipe_name": "Linen",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 0
             }
         ],
@@ -20,7 +20,7 @@
         "recipe_name": "Sateen",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 50
             }
         ],
@@ -41,7 +41,7 @@
         "recipe_name": "Silk",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 100
             }
         ],
@@ -66,7 +66,7 @@
         "recipe_name": "Infused Silk",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 150
             }
         ],
@@ -91,7 +91,7 @@
         "recipe_name": "Gold Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 50
             }
         ],
@@ -116,7 +116,7 @@
         "recipe_name": "Iron Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 0
             }
         ],
@@ -133,7 +133,7 @@
         "recipe_name": "Mythril Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 205
             }
         ],
@@ -162,7 +162,7 @@
         "recipe_name": "Orichalcum Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 150
             }
         ],
@@ -191,7 +191,7 @@
         "recipe_name": "Platinum Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 100
             }
         ],
@@ -216,7 +216,7 @@
         "recipe_name": "Prismatic Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 250
             }
         ],
@@ -245,7 +245,7 @@
         "recipe_name": "Silver Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 0
             }
         ],
@@ -262,7 +262,7 @@
         "recipe_name": "Starmetal Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 100
             }
         ],
@@ -291,7 +291,7 @@
         "recipe_name": "Steel Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 50
             }
         ],
@@ -316,7 +316,7 @@
         "recipe_name": "Voidbent Ingot",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 200
             }
         ],
@@ -341,7 +341,7 @@
         "recipe_name": "Ironwood Planks",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 150
             }
         ],
@@ -366,7 +366,7 @@
         "recipe_name": "Wyrdwood Planks",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 100
             }
         ],
@@ -391,7 +391,7 @@
         "recipe_name": "Charcoal",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 0
             }
         ],
@@ -403,7 +403,7 @@
         "recipe_name": "Timber",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 0
             }
         ],
@@ -420,7 +420,7 @@
         "recipe_name": "Lumber",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 50
             }
         ],
@@ -445,7 +445,7 @@
         "recipe_name": "Wildwood",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 200
             }
         ],
@@ -462,7 +462,7 @@
         "recipe_name": "Barbvine",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 200
             }
         ],
@@ -479,7 +479,7 @@
         "recipe_name": "Glittering Ebony",
         "skills_required": [
             {
-                "skill_name": "Woodworking Skill",
+                "skill_name": "Woodworking",
                 "level_required": 200
             }
         ],
@@ -508,7 +508,7 @@
         "recipe_name": "Coarse Leather",
         "skills_required": [
             {
-                "skill_name": "Leatherworking Skill",
+                "skill_name": "Leatherworking",
                 "level_required": 0
             }
         ],
@@ -525,7 +525,7 @@
         "recipe_name": "Rugged Leather",
         "skills_required": [
             {
-                "skill_name": "Leatherworking Skill",
+                "skill_name": "Leatherworking",
                 "level_required": 50
             }
         ],
@@ -546,7 +546,7 @@
         "recipe_name": "Infused Leather",
         "skills_required": [
             {
-                "skill_name": "Leatherworking Skill",
+                "skill_name": "Leatherworking",
                 "level_required": 150
             }
         ],
@@ -567,7 +567,7 @@
         "recipe_name": "Scarhide",
         "skills_required": [
             {
-                "skill_name": "Leatherworking Skill",
+                "skill_name": "Leatherworking",
                 "level_required": 200
             }
         ],
@@ -584,7 +584,7 @@
         "recipe_name": "Smolderhide",
         "skills_required": [
             {
-                "skill_name": "Leatherworking Skill",
+                "skill_name": "Leatherworking",
                 "level_required": 200
             }
         ],
@@ -601,7 +601,7 @@
         "recipe_name": "Runic Leather",
         "skills_required": [
             {
-                "skill_name": "Leatherworking Skill",
+                "skill_name": "Leatherworking",
                 "level_required": 200
             }
         ],
@@ -630,7 +630,7 @@
         "recipe_name": "Phoenixweave",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 200
             }
         ],
@@ -659,7 +659,7 @@
         "recipe_name": "Blisterweave",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 200
             }
         ],
@@ -676,7 +676,7 @@
         "recipe_name": "Scalecloth",
         "skills_required": [
             {
-                "skill_name": "Weaving Skill",
+                "skill_name": "Weaving",
                 "level_required": 200
             }
         ],
@@ -693,7 +693,7 @@
         "recipe_name": "Asmodeum",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 200
             }
         ],
@@ -726,7 +726,7 @@
         "recipe_name": "Cinnabar",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 200
             }
         ],
@@ -743,7 +743,7 @@
         "recipe_name": "Tolvium",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 200
             }
         ],
@@ -760,7 +760,7 @@
         "recipe_name": "Voidmetal",
         "skills_required": [
             {
-                "skill_name": "Smelting Skill",
+                "skill_name": "Smelting",
                 "level_required": 50
             }
         ],
@@ -768,6 +768,31 @@
             {
                 "quantity": "100",
                 "ingredient_name": "Iron Ore"
+            }
+        ],
+        "category": "refined_resources",
+        "craft_amount": 1
+    },
+    {
+        "recipe_name": "Layered Leather",
+        "skills_required": [
+            {
+                "skill_name": "Leatherworking",
+                "level_required": 100
+            }
+        ],
+        "ingredients": [
+            {
+                "quantity": "6",
+                "ingredient_name": "Thick Hide"
+            },
+            {
+                "quantity": "2",
+                "ingredient_name": "Rugged Leather"
+            },
+            {
+                "quantity": "1",
+                "item_type": "Tannin"
             }
         ],
         "category": "refined_resources",
