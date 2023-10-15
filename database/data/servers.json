@@ -1,4 +1,10 @@
 [
-    {"server_name": "Isabella"},
-    {"server_name": "Leo"}
+    {
+        "server_name": "Isabella",
+        "server_id": "49"
+    },
+    {
+        "server_name": "Leo",
+        "server_id": "88"     
+    }
 ]

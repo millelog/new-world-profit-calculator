@@ -1,5 +1,6 @@
 #data_input/json_parse.py
 
+from datetime import datetime
 from database.operations import current_price_operations, price_log_operations
 
 def process_json_data(session, json_data, server_id):
@@ -15,10 +16,13 @@ def process_json_data(session, json_data, server_id):
     for item_data in json_data:
         # Extract necessary details
         item_id = item_data["ItemId"]
+        # Convert the string representation of the datetime to a datetime object
+        last_updated = datetime.strptime(item_data["LastUpdated"], "%Y-%m-%dT%H:%M:%S.%f")
+        
         log_data = {
             "price": float(item_data["Price"]),
             "availability": item_data["Availability"],
-            "last_updated": item_data["LastUpdated"],
+            "last_updated": last_updated,
             "highest_buy_order": item_data["HighestBuyOrder"] if item_data["HighestBuyOrder"] else None,
             "qty": item_data["Qty"] if item_data["Qty"] else None,
             "server_id": server_id  

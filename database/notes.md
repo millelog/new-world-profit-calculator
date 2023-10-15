@@ -45,9 +45,12 @@ CraftingRecipe:
 - skill_requirements -> RecipeSkillRequirement (1:N)
 
 RecipeReagent:
-- recipe_id (PK, FK -> CraftingRecipe)
-- reagent_item_id (PK, FK -> Item)
+- id (PK)
+- recipe_id (FK -> CraftingRecipe)
+- reagent_item_id (FK -> Item, nullable=True)
+- reagent_item_type_id (FK -> ItemType, nullable=True) 
 - quantity_required
+
 
 Player:
 - player_id (PK)

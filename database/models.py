@@ -32,8 +32,12 @@ class Item(Base):
     current_price = relationship("CurrentPrice", back_populates="item", uselist=False)
     price_logs = relationship("PriceLog", back_populates="item")
     crafting_recipes = relationship("CraftingRecipe", back_populates="result_item")
-    recipe_reagents = relationship("RecipeReagent", back_populates="reagent")
     item_types = relationship("ItemType", secondary=item_itemtype_association, back_populates="items")
+    recipe_reagents_as_specific_item = relationship(
+        "RecipeReagent",
+        back_populates="reagent",
+        overlaps="recipe_reagents"
+    )
 
 
 class PriceLog(Base):
@@ -88,7 +92,7 @@ class RecipeReagent(Base):
     reagent_item_type_id = Column(Integer, ForeignKey('item_types.item_type_id'), nullable=True)
     quantity_required = Column(Integer, nullable=False)
 
-    reagent = relationship("Item", backref="recipe_reagents_as_specific_item")
+    reagent = relationship("Item", back_populates="recipe_reagents_as_specific_item")
     recipe = relationship("CraftingRecipe", back_populates="recipe_reagents") 
 
 class CraftingRecipe(Base):
@@ -155,13 +159,15 @@ class Transaction(Base):
 class Server(Base):
     __tablename__ = 'servers'
     
-    server_id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    server_id = Column(String, unique=True, nullable=False) 
     server_name = Column(String, unique=True, nullable=False)
 
     price_logs = relationship("PriceLog", back_populates="server")
     current_prices = relationship("CurrentPrice", back_populates="server")
     players = relationship("Player", back_populates="server")
     transactions = relationship("Transaction", back_populates="server")
+
 
 
 # Create an engine and bind it to the Base
