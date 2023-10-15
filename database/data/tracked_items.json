@@ -1493,9 +1493,6 @@
         "item_name": "Aged Tannin",
         "item_type": [
             "Tannin",
-            "Refining Materials Tier 5",
-            "Refining Materials Tier 5",
-            "Refining Materials Tier 5",
             "Refining Materials Tier 5"
         ]
     },
@@ -1504,10 +1501,19 @@
         "item_name": "Wireweave",
         "item_type": [
             "Cloth Weave",
-            "Refining Materials Tier 5",
-            "Refining Materials Tier 5",
-            "Refining Materials Tier 5",
             "Refining Materials Tier 5"
         ]
+    },
+    {
+        "item_id": "yeastt1",
+        "item_name": "Yeast"
+    },
+    {
+        "item_id": "flintt1",
+        "item_name": "Flint"
+    },
+    {
+        "item_id": "saltpetert1",
+        "item_name": "Saltpeter"
     }
 ]
