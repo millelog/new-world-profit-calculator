@@ -1,6 +1,8 @@
+#database/models.py
+
 from sqlalchemy import Table, create_engine, Column, Integer, String, Float, ForeignKey, DateTime
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 
 from config.database_config import DATABASE_URI
 
@@ -20,17 +22,6 @@ class ItemType(Base):
     # Define the relationship to items
     items = relationship("Item", secondary=item_itemtype_association, back_populates="item_types")
 
-
-class RecipeReagent(Base):
-    __tablename__ = 'recipe_reagents'
-    
-    recipe_id = Column(Integer, ForeignKey('crafting_recipes.recipe_id'), primary_key=True, autoincrement=True)
-    reagent_item_id = Column(String, ForeignKey('items.item_id'), nullable=True)
-    reagent_item_type_id = Column(Integer, ForeignKey('item_types.item_type_id'), nullable=True)
-    quantity_required = Column(Integer, nullable=False)
-
-    reagent = relationship("Item", backref="recipe_reagents_as_specific_item")
-    recipe = relationship("CraftingRecipe", backref="recipe_reagents")
 
 class Item(Base):
     __tablename__ = 'items'
@@ -76,14 +67,6 @@ class CurrentPrice(Base):
     item = relationship("Item", back_populates="current_price")
 
 
-class TradeSkill(Base):
-    __tablename__ = 'trade_skills'
-    
-    skill_id = Column(Integer, primary_key=True, autoincrement=True)
-    skill_name = Column(String, nullable=False)
-
-    players = relationship("Player", back_populates="trade_skill")
-
 
 class RecipeSkillRequirement(Base):
     __tablename__ = 'recipe_skill_requirements'
@@ -96,6 +79,18 @@ class RecipeSkillRequirement(Base):
     recipe = relationship("CraftingRecipe", back_populates="skill_requirements")
 
 
+class RecipeReagent(Base):
+    __tablename__ = 'recipe_reagents'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)  # New primary key column    
+    recipe_id = Column(Integer, ForeignKey('crafting_recipes.recipe_id'))
+    reagent_item_id = Column(String, ForeignKey('items.item_id'), nullable=True)
+    reagent_item_type_id = Column(Integer, ForeignKey('item_types.item_type_id'), nullable=True)
+    quantity_required = Column(Integer, nullable=False)
+
+    reagent = relationship("Item", backref="recipe_reagents_as_specific_item")
+    recipe = relationship("CraftingRecipe", back_populates="recipe_reagents") 
+
 class CraftingRecipe(Base):
     __tablename__ = 'crafting_recipes'
     
@@ -105,8 +100,17 @@ class CraftingRecipe(Base):
 
     result_item = relationship("Item", back_populates="crafting_recipes")
     recipe_reagents = relationship("RecipeReagent", back_populates="recipe")
-    skill_requirements = relationship("RecipeSkillRequirement", back_populates="recipe")
+    skill_requirements = relationship("RecipeSkillRequirement", back_populates="recipe") 
 
+
+
+class TradeSkill(Base):
+    __tablename__ = 'trade_skills'
+    
+    skill_id = Column(Integer, primary_key=True, autoincrement=True)
+    skill_name = Column(String, nullable=False)
+
+    players = relationship("PlayerSkill", back_populates="trade_skill")  # Updated this line
 
 class Player(Base):
     __tablename__ = 'players'
@@ -116,10 +120,8 @@ class Player(Base):
     server_id = Column(Integer, ForeignKey('servers.server_id'))
     
     server = relationship("Server", back_populates="players")
-    skills = relationship("PlayerSkill", back_populates="player")
+    skills = relationship("PlayerSkill", back_populates="player")  # Updated this line
     transactions = relationship("Transaction", back_populates="player")
-
-
 class PlayerSkill(Base):
     __tablename__ = 'player_skills'
     
@@ -128,7 +130,8 @@ class PlayerSkill(Base):
     skill_level = Column(Integer, nullable=False)
     
     player = relationship("Player", back_populates="skills")
-    trade_skill = relationship("TradeSkill")
+    trade_skill = relationship("TradeSkill", back_populates="players")  # Updated this line
+
 
 
 class Transaction(Base):

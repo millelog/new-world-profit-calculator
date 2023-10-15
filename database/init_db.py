@@ -1,3 +1,5 @@
+#database/init_db.py
+
 from sqlalchemy import create_engine
 from config.database_config import DATABASE_URI
 from database.models import (Base, Item, CraftingRecipe, RecipeReagent, TradeSkill,
@@ -67,10 +69,15 @@ def load_tracked_items(session):
                 
                 # Create or update association
                 if not session.query(item_itemtype_association).filter_by(item_id=new_item.item_id, item_type_id=item_type.item_type_id).first():
-                    new_association = item_itemtype_association(item_id=new_item.item_id, item_type_id=item_type.item_type_id)
-                    session.add(new_association)
+                    new_association = {
+                        'item_id': new_item.item_id,
+                        'item_type_id': item_type.item_type_id
+                    }
+                    # Insert the new association into the association table
+                    session.execute(item_itemtype_association.insert().values(**new_association))
 
     session.commit()
+
 
 
 
@@ -80,20 +87,58 @@ def load_recipes(session):
         if category_file.endswith(".json"):
             recipes = load_json(os.path.join(recipe_category_dir, category_file))
             for recipe_data in recipes:
-                if not session.query(CraftingRecipe).filter_by(result_item_id=recipe_data["res"]).first():
-                    recipe = CraftingRecipe(result_item_id=recipe_data["res"], quantity_produced=recipe_data["qty"])
-                    session.add(recipe)
-                    session.flush()
-                    
-                    for reagent in recipe_data["reag"]:
-                        reagent_item = session.query(Item).filter_by(item_name=reagent["name"]).first()
-                        if reagent_item and not session.query(RecipeReagent).filter_by(recipe_id=recipe.recipe_id, reagent_item_id=reagent_item.item_id).first():
-                            session.add(RecipeReagent(recipe_id=recipe.recipe_id, reagent_item_id=reagent_item.item_id, quantity_required=reagent["qty"]))
-                    
-                    for skill_req in recipe_data["skills"]:
-                        skill = session.query(TradeSkill).filter_by(skill_name=skill_req["name"]).first()
-                        if skill and not session.query(RecipeSkillRequirement).filter_by(recipe_id=recipe.recipe_id, skill_id=skill.skill_id).first():
-                            session.add(RecipeSkillRequirement(recipe_id=recipe.recipe_id, skill_id=skill.skill_id, level_required=skill_req["lvl"]))
+                with session.no_autoflush:
+                    # Find the item based on the recipe_name from the recipe_data
+                    result_item = session.query(Item).filter_by(item_name=recipe_data["recipe_name"]).first()
+                    if result_item:
+                        # Use result_item_id instead of result_item_name
+                        if not session.query(CraftingRecipe).filter_by(result_item_id=result_item.item_id).first():
+                            recipe = CraftingRecipe(result_item_id=result_item.item_id, quantity_produced=recipe_data["craft_amount"])
+                            session.add(recipe)
+                            session.flush()
+                            
+                            for ingredient in recipe_data["ingredients"]:
+                                # Get the ingredient_name and item_type values
+                                ingredient_name = ingredient.get("ingredient_name")
+                                item_type = ingredient.get("item_type")
+
+                                # Initialize reagent_item_id and reagent_item_type_id to None
+                                reagent_item_id = None
+                                reagent_item_type_id = None
+
+                                if ingredient_name:
+                                    # If ingredient_name is provided, get the corresponding item
+                                    ingredient_item = session.query(Item).filter_by(item_name=ingredient_name).first()
+                                    if ingredient_item:
+                                        reagent_item_id = ingredient_item.item_id
+                                elif item_type:
+                                    # If item_type is provided, get the corresponding item type
+                                    ingredient_item_type = session.query(ItemType).filter_by(item_type_name=item_type).first()
+                                    if ingredient_item_type:
+                                        reagent_item_type_id = ingredient_item_type.item_type_id
+
+                                # Now create the RecipeReagent entry if it doesn't already exist
+                                existing_reagent = session.query(RecipeReagent).filter_by(
+                                    recipe_id=recipe.recipe_id, 
+                                    reagent_item_id=reagent_item_id, 
+                                    reagent_item_type_id=reagent_item_type_id
+                                ).first()
+
+                                if not existing_reagent:
+                                    session.add(RecipeReagent(
+                                        recipe_id=recipe.recipe_id, 
+                                        reagent_item_id=reagent_item_id, 
+                                        reagent_item_type_id=reagent_item_type_id, 
+                                        quantity_required=ingredient["quantity"]
+                                    ))
+
+                            for skill_req in recipe_data["skills_required"]:
+                                # Update to use 'skills_required' and the new field names 'skill_name' and 'level_required'
+                                skill = session.query(TradeSkill).filter_by(skill_name=skill_req["skill_name"]).first()
+                                if skill and not session.query(RecipeSkillRequirement).filter_by(recipe_id=recipe.recipe_id, skill_id=skill.skill_id).first():
+                                    session.add(RecipeSkillRequirement(recipe_id=recipe.recipe_id, skill_id=skill.skill_id, level_required=skill_req["level_required"]))
+                    else:
+                        print(f"Item {recipe_data['recipe_name']} not found in database.")
 
 
 def init_data(session):
