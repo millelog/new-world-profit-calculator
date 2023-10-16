@@ -161,3 +161,4 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 new_world_profit_calculator_db.sqlite
+utils/database/secrets.json
