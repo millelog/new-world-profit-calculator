@@ -66,6 +66,27 @@ def update_player(session, player_id, new_data):
     # Commit the session
     session.commit()
 
+def get_player_skills(session, player_id):
+    """
+    Retrieve the skills and skill levels of a player.
+    
+    Args:
+        session: The SQLAlchemy session object.
+        player_id: The ID of the player for whom to fetch the skills.
+    
+    Returns:
+        A list of dictionaries containing skill names and their corresponding levels for the player.
+    """
+    # Join the tables to get the required data
+    results = session.query(PlayerSkill.skill_level, TradeSkill.skill_name).join(
+        TradeSkill, PlayerSkill.skill_id == TradeSkill.skill_id
+    ).filter(PlayerSkill.player_id == player_id).all()
+
+    skills_data = [{"skill_name": skill_name, "skill_level": skill_level} for skill_level, skill_name in results]
+    
+    return skills_data
+
+
 def can_craft_recipe(session, player_id, recipe_id):
     # Fetch the player's skills and skill levels
     player_skills = {ps.skill_id: ps.skill_level for ps in session.query(PlayerSkill).filter(PlayerSkill.player_id == player_id)}
@@ -81,6 +102,26 @@ def can_craft_recipe(session, player_id, recipe_id):
 
     # If all requirements are met
     return True
+
+
+def delete_player(session, player_id):
+    """
+    Delete a player and their associated skills from the database.
+    
+    Args:
+        session: The SQLAlchemy session object.
+        player_id: The ID of the player to delete.
+    """
+    # First, delete the player's associated skills
+    session.query(PlayerSkill).filter(PlayerSkill.player_id == player_id).delete()
+
+    # Then, delete the player
+    player = session.query(Player).filter(Player.player_id == player_id).first()
+    if player:
+        session.delete(player)
+
+    # Commit the session to finalize the deletion
+    session.commit()
 
 
 def get_player_by_id(session, player_id):

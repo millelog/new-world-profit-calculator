@@ -4,6 +4,7 @@ from data_input.json_parse import process_json_data
 from data_input.data_downloader import download_data, save_data_to_file, load_data_from_file
 from database.models import Player, Server
 from database.init_db import init_database
+from ui.character_frame import CharacterFrame
 
 
 class DataInputFrame(tk.Frame):
@@ -41,19 +42,32 @@ class DataInputFrame(tk.Frame):
         # Create a button for updating prices
         self.update_button = tk.Button(self, text="Update Prices", command=self.update_prices)
         self.update_button.grid(row=0, column=5, padx=5, pady=5)
+        # Add button to open the CharacterFrame
+        self.character_mgmt_button = ttk.Button(self, text="Manage Characters", command=self.open_character_frame)
+        self.character_mgmt_button.grid(row=0, column=6, padx=5, pady=5)
 
 
     def populate_character_dropdown(self):
         # Query the database for characters of the selected server
         characters = self.session.query(Player).filter(Player.server_id == self.data_store.server_id).all()
+        # Extract player names and ids
+        character_names = [character.player_name for character in characters]
+        character_ids = [character.player_id for character in characters]
+        
         # Set the names for the dropdown menu
-        self.character_dropdown['values'] = [character.player_name for character in characters]
-        # Set the default selection to the first character in the list
-        if self.character_dropdown['values']:
+        self.character_dropdown['values'] = character_names
+        
+        # Set the default selection to the character matching the self.data_store.player_id
+        if self.data_store.player_id in character_ids:
+            idx = character_ids.index(self.data_store.player_id)
+            self.character_dropdown.current(idx)
+            self.on_character_select(None)
+        elif character_names:
             self.character_dropdown.current(0)
             self.on_character_select(None)
         else:
-            self.character_dropdown.set('')  # clear the previous value if no characters available
+            self.character_dropdown.set('')
+
 
     def on_character_select(self, event):
         # Update DataStore with the selected character's ID
@@ -110,3 +124,7 @@ class DataInputFrame(tk.Frame):
         else:
             print(f"No server found with name {selected_server_name}")
         self.populate_character_dropdown()
+
+    def open_character_frame(self):
+        CharacterFrame(self, self.session, self.data_store, main_frame=self)
+
