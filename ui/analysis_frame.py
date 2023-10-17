@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from analysis.crafting_profit import calculate_profitability, evaluate_all_recipes
 from database.operations.item_operations import get_item_by_id
+from ui.graph_frame import ItemGraphFrame
 
 class AnalysisFrame(tk.Frame):
     def __init__(self, parent, session, data_store):
@@ -23,6 +24,10 @@ class AnalysisFrame(tk.Frame):
         self.panedwindow = ttk.Panedwindow(self, orient=tk.HORIZONTAL)
         self.panedwindow.grid(row=2, column=0, columnspan=2, sticky='nsew')
         
+         # Create the ItemPriceGraphFrame and place it in the AnalysisFrame
+        self.price_graph_frame = ItemGraphFrame(self, self.session, self.data_store)
+        self.price_graph_frame.grid(row=3, column=0, columnspan=2, sticky='nsew')
+
         # Frame for Listbox
         self.listbox_frame = tk.Frame(self.panedwindow)
         self.panedwindow.add(self.listbox_frame, weight=1)
@@ -53,7 +58,7 @@ class AnalysisFrame(tk.Frame):
             messagebox.showerror("Error", "Please enter an Item ID")
             return
         info = self.profitability_info.get(item_id, {})
-        result_text = f"Name: {get_item_by_id(self.session, item_id).item_name}\nProfit Margin: {info.get('Profit Margin', 'N/A')}\nCrafting Tree: {info.get('Crafting Tree', {})}"
+        result_text = f"Name: {get_item_by_id(self.session, item_id).item_name}\nProfit: {info.get('Profit', 'N/A')}\nCrafting Tree: {info.get('Crafting Tree', {})}"
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)
         self.populate_tree(info.get("Crafting Tree", {}))
@@ -69,26 +74,29 @@ class AnalysisFrame(tk.Frame):
     
     def on_listbox_select(self, event):
         selected_item_index = self.listbox.curselection()
+        
         if not selected_item_index:
             return  # No item selected
         item_id = self.listbox.get(selected_item_index[0])
+        # Update the graph based on the selected item
+        self.price_graph_frame.plot_prices_for_item(item_id)
         self.display_item_info(item_id)
 
     def display_item_info(self, item_id):
         # Lookup the item info from the stored profitability_info
         info = self.profitability_info.get(item_id, {})
         item_name = get_item_by_id(self.session, item_id).item_name
-        profit_margin = info.get("Profit Margin", "N/A")
-        profit_margin_percentage = info.get("Profit Margin Percentage", "N/A")
-        score = info.get("Score", "N/A")
+        profit = info.get("Profit", "N/A")
+        profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
+        score = "{:.2f}".format(info.get("Score", 0.00))
         availability = info.get("Availability", "N/A")
         recommended_recipe_id = info.get("Recommended Recipe ID", "N/A")
         crafting_cost = info.get("Crafting Cost", "N/A")
         crafting_tree = info.get("Crafting Tree", {})
 
         result_text = (f"Item Name: {item_name}\n"
+                       f"Profit: {profit}\n"
                        f"Profit Margin: {profit_margin}\n"
-                       f"Profit Margin Percentage: {profit_margin_percentage}\n"
                        f"Score: {score}\n"
                        f"Availability: {availability}\n"
                        f"Recommended Recipe ID: {recommended_recipe_id}\n"

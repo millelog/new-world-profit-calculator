@@ -89,45 +89,42 @@ def calculate_profitability(session, item_id, server_id, player_id):
     max_score = float('-inf')
     recommended_recipe = None
     recommended_crafting_tree = None
-    max_profit_margin = float('-inf')  # Initialize with negative infinity
-    max_profit_margin_percentage = float('-inf')  # Initialize with negative infinity
+    max_profit = float('-inf')  # Initialize with negative infinity
+    max_profit = float('-inf')  # Initialize with negative infinity
 
     for recipe in recipes:
         crafting_cost, crafting_tree = get_crafting_cost(session, recipe, server_id, player_id)
         if crafting_cost == 0:
             continue  # Avoid division by zero
 
-        profit_margin = market_price - crafting_cost
-        profit_margin_percentage = (profit_margin / crafting_cost) * 100 if crafting_cost != 0 else 0
+        profit = market_price - crafting_cost
+        profit_margin = (profit / crafting_cost) * 100 if crafting_cost != 0 else 0
         availability = market_price_data['availability'] if market_price_data else 0
-        score = calculate_score(profit_margin_percentage, profit_margin, availability)
+        score = calculate_score(profit_margin, profit, availability)
 
         if score > max_score:
             max_score = score
             recommended_recipe = recipe
             recommended_crafting_tree = crafting_tree
-            max_profit_margin = profit_margin  # Update max profit margin
-            max_profit_margin_percentage = profit_margin_percentage  # Update max profit margin percentage
+            max_profit = profit  # Update max profit margin
+            max_profit = profit_margin  # Update max profit margin percentage
 
     return (
         max_score,
         recommended_recipe,
         recommended_crafting_tree,
-        max_profit_margin,
-        max_profit_margin_percentage,
+        max_profit,
+        max_profit,
         crafting_cost,
         market_price_data['qty'] if market_price_data and market_price_data['qty'] else (market_price_data['availability'] if market_price_data else None)
     )
 
 
-def calculate_score(profit_margin_percentage, profit_margin, availability):
-    if profit_margin_percentage < 0:
+def calculate_score(profit_margin, profit, availability):
+    if profit_margin < 0:
         return 0
     
-    profit_margin_weight = 0  # for example, adjust as needed
-    profit_weight = 1  # for example, adjust as needed
-    availability_weight = 0  # for example, adjust as needed
-    return profit_margin_weight * profit_margin_percentage + availability_weight * availability + profit_margin*profit_weight
+    return profit * availability
 
 def evaluate_all_recipes(session, server_id, player_id):
     all_recipes = session.query(CraftingRecipe).all()
@@ -136,13 +133,13 @@ def evaluate_all_recipes(session, server_id, player_id):
     for recipe in all_recipes:
 
         item_id = recipe.result_item_id
-        score, recommended_recipe, crafting_tree, profit_margin, profit_margin_percentage, crafting_cost, availability = calculate_profitability(session, item_id, server_id, player_id)
+        score, recommended_recipe, crafting_tree, profit, profit_margin, crafting_cost, availability = calculate_profitability(session, item_id, server_id, player_id)
         profitability_info[item_id] = {
             "Score": score,
             "Recommended Recipe ID": recommended_recipe.recipe_id if recommended_recipe else None,
             "Crafting Tree": crafting_tree,
+            "Profit": profit,
             "Profit Margin": profit_margin,
-            "Profit Margin Percentage": profit_margin_percentage,
             "Crafting Cost": crafting_cost,
             "Availability": availability
         }
@@ -156,7 +153,7 @@ def evaluate_all_recipes(session, server_id, player_id):
 
 if __name__ == "__main__":
     item_id = 'essenceairt1'
-    profit_margin, recommended_recipe = calculate_profitability(session, item_id)
-    print(f"Profit Margin: {profit_margin}")
+    profit, recommended_recipe = calculate_profitability(session, item_id)
+    print(f"Profit: {profit}")
     print(f"Recommended Recipe ID: {recommended_recipe.recipe_id}")
 
