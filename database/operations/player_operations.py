@@ -1,4 +1,4 @@
-from database.models import Player, PlayerSkill, TradeSkill, Server
+from database.models import Player, PlayerSkill, RecipeSkillRequirement, TradeSkill, Server
 
 def add_player(session, player_data):
     # Retrieve the server
@@ -65,6 +65,22 @@ def update_player(session, player_id, new_data):
 
     # Commit the session
     session.commit()
+
+def can_craft_recipe(session, player_id, recipe_id):
+    # Fetch the player's skills and skill levels
+    player_skills = {ps.skill_id: ps.skill_level for ps in session.query(PlayerSkill).filter(PlayerSkill.player_id == player_id)}
+
+    # Fetch the skill requirements for the recipe
+    recipe_skill_requirements = session.query(RecipeSkillRequirement).filter(RecipeSkillRequirement.recipe_id == recipe_id)
+
+    # Iterate through each skill requirement to check if the player has the required skill level
+    for req in recipe_skill_requirements:
+        player_skill_level = player_skills.get(req.skill_id, 0)
+        if player_skill_level < req.level_required:
+            return False  # Player does not meet the skill level requirement for crafting
+
+    # If all requirements are met
+    return True
 
 
 def get_player_by_id(session, player_id):

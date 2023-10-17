@@ -2,14 +2,10 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from config.database_config import DATABASE_URI, DATABASE_PATH
-from database.init_db import init_database
 from ui.main_window import MainWindow
 
 def main():
-    try:
-        # Initialize the database if it doesn't exist
-        init_database()
-        
+    try:      
         # Create an engine and session to interact with the database
         engine = create_engine(DATABASE_URI)
         Session = sessionmaker(bind=engine)
@@ -25,6 +21,7 @@ def main():
     finally:
         # Close the session
         session.close()
+
 
 if __name__ == '__main__':
     main()

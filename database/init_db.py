@@ -129,6 +129,16 @@ def load_recipes(session):
                 session.add(recipe)
                 session.flush()
 
+                # Populate RecipeSkillRequirement table
+                trade_skill = session.query(TradeSkill).filter_by(skill_name=recipe_data["Tradeskill"]).first()
+                if trade_skill:
+                    skill_requirement = RecipeSkillRequirement(
+                        recipe_id=recipe.recipe_id,
+                        skill_id=trade_skill.skill_id,
+                        level_required=recipe_data["RecipeLevel"]
+                    )
+                    session.add(skill_requirement)
+
                 for idx in range(1, 8):  # Assuming up to 7 ingredients based on provided data
                     ingredient_name = recipe_data[f"Ingredient{idx}"].lower()
                     ingredient_qty = recipe_data[f"Qty{idx}"]

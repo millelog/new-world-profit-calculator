@@ -3,12 +3,18 @@ from tkinter import ttk  # Themed Tkinter
 from data_input.json_parse import process_json_data
 from data_input.data_downloader import download_data, save_data_to_file, load_data_from_file
 from database.models import Server
+from database.init_db import init_database
+
 
 class DataInputFrame(tk.Frame):
     def __init__(self, parent, session, data_store):
         super().__init__(parent)
         self.session = session
         self.data_store = data_store
+
+        # Create a button to initialize the database
+        self.init_db_button = tk.Button(self, text="Initialize Database", command=self.init_database)
+        self.init_db_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
         # Create a label for server selection
         self.server_label = tk.Label(self, text="Select Server:")
@@ -25,6 +31,14 @@ class DataInputFrame(tk.Frame):
         # Create a button for updating prices
         self.update_button = tk.Button(self, text="Update Prices", command=self.update_prices)
         self.update_button.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
+
+    def init_database(self):
+        """Initializes the database."""
+        try:
+            init_database()
+            print("Database initialized successfully.")
+        except Exception as e:
+            print(f"An error occurred during database initialization: {e}")
 
     def populate_server_dropdown(self):
         # Query the database for server names

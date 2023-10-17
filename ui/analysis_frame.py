@@ -68,7 +68,7 @@ class AnalysisFrame(tk.Frame):
         self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes(self):
-        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id)
+        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id, "Keenorlin")
         # Convert list of tuples to a dictionary
         self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
         self.listbox.delete(0, tk.END)  # Clear existing listbox items
