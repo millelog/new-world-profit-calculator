@@ -12,17 +12,12 @@ engine = create_engine(DATABASE_URI)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-def get_crafting_cost(session, recipe, server_id, player_name, is_root=True, crafting_tree=None):
+def get_crafting_cost(session, recipe, server_id, player_id, is_root=True, crafting_tree=None):
     if crafting_tree is None:
         crafting_tree = {}  # Initialize crafting tree
 
-    # Get the player's ID
-    player = po.get_player_by_name(session, player_name)
-    if not player:
-        raise ValueError(f"Player '{player_name}' not found!")
-
     # Check if the player can craft the given recipe
-    can_craft = po.can_craft_recipe(session, player['player_id'], recipe.recipe_id)
+    can_craft = po.can_craft_recipe(session, player_id, recipe.recipe_id)
     if not can_craft and is_root:
         return float('inf'), {}  # If it's a root recipe and player can't craft, skip
     elif not can_craft:
@@ -51,7 +46,7 @@ def get_crafting_cost(session, recipe, server_id, player_name, is_root=True, cra
             crafting_options = []  # List to store crafting options and their costs
             for reagent_recipe in reagent_recipes:
                 # Recursive call to evaluate the cost of crafting this reagent
-                reagent_crafting_cost, reagent_crafting_tree = get_crafting_cost(session, reagent_recipe, server_id, player_name, is_root=False, crafting_tree={})
+                reagent_crafting_cost, reagent_crafting_tree = get_crafting_cost(session, reagent_recipe, server_id, player_id, is_root=False, crafting_tree={})
                 crafting_options.append((reagent_crafting_cost, reagent_crafting_tree))
 
             # Choose the cheapest crafting option
@@ -83,7 +78,7 @@ def get_crafting_cost(session, recipe, server_id, player_name, is_root=True, cra
 
 
 
-def calculate_profitability(session, item_id, server_id, player_name):
+def calculate_profitability(session, item_id, server_id, player_id):
     recipes = ro.get_recipes_by_item(session, item_id)
     if not recipes:
         raise ValueError(f"No recipes found for item {item_id}")
@@ -98,7 +93,7 @@ def calculate_profitability(session, item_id, server_id, player_name):
     max_profit_margin_percentage = float('-inf')  # Initialize with negative infinity
 
     for recipe in recipes:
-        crafting_cost, crafting_tree = get_crafting_cost(session, recipe, server_id, player_name)
+        crafting_cost, crafting_tree = get_crafting_cost(session, recipe, server_id, player_id)
         if crafting_cost == 0:
             continue  # Avoid division by zero
 
@@ -134,14 +129,14 @@ def calculate_score(profit_margin_percentage, profit_margin, availability):
     availability_weight = 0  # for example, adjust as needed
     return profit_margin_weight * profit_margin_percentage + availability_weight * availability + profit_margin*profit_weight
 
-def evaluate_all_recipes(session, server_id, player_name):
+def evaluate_all_recipes(session, server_id, player_id):
     all_recipes = session.query(CraftingRecipe).all()
     profitability_info = {}
 
     for recipe in all_recipes:
 
         item_id = recipe.result_item_id
-        score, recommended_recipe, crafting_tree, profit_margin, profit_margin_percentage, crafting_cost, availability = calculate_profitability(session, item_id, server_id, player_name)
+        score, recommended_recipe, crafting_tree, profit_margin, profit_margin_percentage, crafting_cost, availability = calculate_profitability(session, item_id, server_id, player_id)
         profitability_info[item_id] = {
             "Score": score,
             "Recommended Recipe ID": recommended_recipe.recipe_id if recommended_recipe else None,

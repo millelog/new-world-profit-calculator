@@ -10,27 +10,18 @@ class AnalysisFrame(tk.Frame):
         self.session = session
         self.data_store = data_store
         
-        # Entry for item_id input
-        self.item_id_entry = tk.Entry(self)
-        self.item_id_entry.grid(row=0, column=1)
-        self.item_id_label = tk.Label(self, text="Item ID:")
-        self.item_id_label.grid(row=0, column=0)
-        
-        # Button to calculate profitability for a specific item
-        self.calculate_button = tk.Button(self, text="Calculate Profitability", command=self.calculate_profitability)
-        self.calculate_button.grid(row=1, columnspan=2)
         
         # Button to evaluate all recipes and find the most profitable
         self.evaluate_button = tk.Button(self, text="Evaluate All Recipes", command=self.evaluate_all_recipes)
-        self.evaluate_button.grid(row=2, columnspan=2)
+        self.evaluate_button.grid(row=0, columnspan=2)
         
         # Text widget to display results
         self.result_text = tk.Text(self, width=40, height=10)
-        self.result_text.grid(row=3, columnspan=2)
+        self.result_text.grid(row=1, columnspan=2)
 
          # Create Panedwindow to hold the listbox and treeview
         self.panedwindow = ttk.Panedwindow(self, orient=tk.HORIZONTAL)
-        self.panedwindow.grid(row=4, column=0, columnspan=2, sticky='nsew')
+        self.panedwindow.grid(row=2, column=0, columnspan=2, sticky='nsew')
         
         # Frame for Listbox
         self.listbox_frame = tk.Frame(self.panedwindow)
@@ -68,7 +59,7 @@ class AnalysisFrame(tk.Frame):
         self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes(self):
-        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id, "Keenorlin")
+        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id, self.data_store.player_id)
         # Convert list of tuples to a dictionary
         self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
         self.listbox.delete(0, tk.END)  # Clear existing listbox items

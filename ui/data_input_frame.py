@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk  # Themed Tkinter
 from data_input.json_parse import process_json_data
 from data_input.data_downloader import download_data, save_data_to_file, load_data_from_file
-from database.models import Server
+from database.models import Player, Server
 from database.init_db import init_database
 
 
@@ -14,29 +14,67 @@ class DataInputFrame(tk.Frame):
 
         # Create a button to initialize the database
         self.init_db_button = tk.Button(self, text="Initialize Database", command=self.init_database)
-        self.init_db_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+        self.init_db_button.grid(row=0, column=0, padx=5, pady=5)
 
         # Create a label for server selection
         self.server_label = tk.Label(self, text="Select Server:")
-        self.server_label.grid(row=0, column=0, padx=5, pady=5)
+        self.server_label.grid(row=0, column=1, padx=5, pady=5)
+
+        
+        # Create a label for character selection
+        self.character_label = tk.Label(self, text="Select Character:")
+        self.character_label.grid(row=0, column=3, padx=5, pady=5)
+
+        # Create a dropdown menu for character selection
+        self.character_var = tk.StringVar()
+        self.character_dropdown = ttk.Combobox(self, textvariable=self.character_var)
+        self.character_dropdown.grid(row=0, column=4, padx=5, pady=5)
+        self.character_dropdown.bind("<<ComboboxSelected>>", self.on_character_select)
 
         # Create a dropdown menu for server selection
         self.server_var = tk.StringVar()
         self.server_dropdown = ttk.Combobox(self, textvariable=self.server_var)
-        self.server_dropdown.grid(row=0, column=1, padx=5, pady=5)
+        self.server_dropdown.grid(row=0, column=2, padx=5, pady=5)
         self.populate_server_dropdown()
         self.server_dropdown.bind("<<ComboboxSelected>>", self.on_server_select)
 
-
         # Create a button for updating prices
         self.update_button = tk.Button(self, text="Update Prices", command=self.update_prices)
-        self.update_button.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
+        self.update_button.grid(row=0, column=5, padx=5, pady=5)
+
+
+    def populate_character_dropdown(self):
+        # Query the database for characters of the selected server
+        characters = self.session.query(Player).filter(Player.server_id == self.data_store.server_id).all()
+        # Set the names for the dropdown menu
+        self.character_dropdown['values'] = [character.player_name for character in characters]
+        # Set the default selection to the first character in the list
+        if self.character_dropdown['values']:
+            self.character_dropdown.current(0)
+            self.on_character_select(None)
+        else:
+            self.character_dropdown.set('')  # clear the previous value if no characters available
+
+    def on_character_select(self, event):
+        # Update DataStore with the selected character's ID
+        selected_character_name = self.character_var.get()
+        character = self.session.query(Player).filter_by(player_name=selected_character_name).first()
+        if character:
+            self.data_store.player_id = character.player_id
+            print(f"Character selected: {selected_character_name} {self.data_store.player_id}")
+        else:
+            print(f"No character found with name {selected_character_name}")
 
     def init_database(self):
         """Initializes the database."""
         try:
             init_database()
             print("Database initialized successfully.")
+            
+            # Refresh the server and character dropdowns
+            self.populate_server_dropdown()
+            self.populate_character_dropdown()
+            
         except Exception as e:
             print(f"An error occurred during database initialization: {e}")
 
@@ -71,3 +109,4 @@ class DataInputFrame(tk.Frame):
             print(f"Server selected: {selected_server_name} {self.data_store.server_id}")
         else:
             print(f"No server found with name {selected_server_name}")
+        self.populate_character_dropdown()

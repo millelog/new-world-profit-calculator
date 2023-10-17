@@ -1,5 +1,6 @@
 #database/init_db.py
 
+import requests
 import yaml
 from sqlalchemy import create_engine
 from config.database_config import DATABASE_URI
@@ -51,40 +52,62 @@ def load_players(session):
                 session.add(PlayerSkill(player_id=player.player_id, skill_id=skill_entry.skill_id, skill_level=skill["skill_level"]))
 
 
-def load_items_from_file(session, filename):
-    items = load_yaml(os.path.join(DATABASE_DATA_DIR, filename))
-    for item in items:
-        # Check if the item exists
-        existing_item = session.query(Item).filter_by(item_id=item["ItemID"].lower()).first()
+def load_items(session):
+    """
+    Fetch item data from the API, save it to a JSON file, and then load the items to the database.
+    If an item already exists, its fields are updated.
+    """
+    # First, fetch the item data and save it to a JSON file
+    fetch_and_save_item_names()
 
+    # Define the static path to the saved JSON file
+    filename = os.path.join(DATABASE_DATA_DIR, 'nw_marketprices_item_names.json')
+
+    # Load the item data from the JSON file
+    with open(filename, 'r') as file:
+        item_data = json.load(file)
+    
+    # Iterate over each item entry and either update or insert into the database
+    for item, details in item_data.items():
+        # Query the database for an existing item with the same ID
+        existing_item = session.query(Item).filter_by(item_id=details["nwdb_id"]).first()
+        
+        # If the item doesn't already exist in the database, create it
         if not existing_item:
-            new_item = Item(item_id=item["ItemID"].lower(), item_name=item["Name"])
+            new_item = Item(
+                item_id=details["nwdb_id"],
+                item_name=details["name"],
+                nw_market_id=details["name_id"]
+            )
             session.add(new_item)
         else:
-            new_item = existing_item
+            # If the item already exists, update its fields
+            existing_item.item_name = details["name"]
+            existing_item.nw_market_id = details["name_id"]
 
-        # Handle item types
-        item_type_name = item["ItemType"]
-        # Check if the ItemType exists
-        item_type = session.query(ItemType).filter_by(item_type_name=item_type_name).first()
-
-        if not item_type:
-            item_type = ItemType(item_type_name=item_type_name)
-            session.add(item_type)
-
-        # Create or update association
-        if not session.query(item_itemtype_association).filter_by(item_id=new_item.item_id, item_type_id=item_type.item_type_id).first():
-            new_association = {
-                'item_id': new_item.item_id,
-                'item_type_id': item_type.item_type_id
-            }
-            session.execute(item_itemtype_association.insert().values(**new_association))
-
+    # Commit the changes to the database
     session.commit()
 
-def load_items(session):
-    load_items_from_file(session, 'MasterItemDefinitions_Crafting.yml')
-    load_items_from_file(session, 'MasterItemDefinitions_Common.yml')
+def fetch_and_save_item_names():
+    # Define the API endpoint and output file path
+    api_url = "https://nwmarketprices.com/api/confirmed_names/"
+    output_file_path = os.path.join(DATABASE_DATA_DIR, 'nw_marketprices_item_names.json')
+    
+    # Check if the file already exists
+    if os.path.exists(output_file_path):
+        print(f"File {output_file_path} already exists. Skipping download.")
+        return
+
+    # Make a request to the API
+    response = requests.get(api_url)
+    
+    # Check if the request was successful
+    if response.status_code == 200:
+        with open(output_file_path, 'w') as file:
+            json.dump(response.json(), file)
+        print(f"Item names saved to {output_file_path}")
+    else:
+        print(f"Error fetching item names from {api_url}. HTTP Status Code: {response.status_code}")
 
 
 def load_crafting_categories(session):

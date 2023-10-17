@@ -27,7 +27,9 @@ class Item(Base):
     __tablename__ = 'items'
     
     item_id = Column(String, primary_key=True)
-    item_name = Column(String, nullable=False)
+    item_name = Column(String, nullable=True)
+    nw_market_id = Column(Integer, nullable=True)
+
 
     current_price = relationship("CurrentPrice", back_populates="item", uselist=False)
     price_logs = relationship("PriceLog", back_populates="item")
