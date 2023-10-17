@@ -1,0 +1,5634 @@
+{
+  "adamatinedustt1": {
+    "name": "Adamantine Dust",
+    "rarity": 4
+  },
+  "alchemyair": {
+    "name": "Air Reagents",
+    "options": [
+      "twistcapt1",
+      "suncreepert1",
+      "lodestoneairt1",
+      "lightningbeetlewingst1",
+      "shockbulbt1",
+      "shockbulbt2",
+      "shockbulbt3",
+      "alchemyairt1",
+      "alchemyairt2",
+      "alchemyairt3",
+      "essenceairt1"
+    ]
+  },
+  "alchemyairt1": {
+    "name": "Air Mote",
+    "rarity": 0
+  },
+  "alchemyairt2": {
+    "name": "Air Wisp",
+    "raw": [
+      [
+        "alchemyairt1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemyairt3": {
+    "name": "Air Essence",
+    "raw": [
+      [
+        "alchemyairt2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemydeath": {
+    "name": "Death Reagents",
+    "options": [
+      "voidpitchert1",
+      "sporebloomt1",
+      "lodestonedeatht1",
+      "blightmothdustt1",
+      "blightroott1",
+      "blightroott2",
+      "blightroott3",
+      "poisonstingert5",
+      "alchemydeatht1",
+      "alchemydeatht2",
+      "alchemydeatht3",
+      "essencedeatht1"
+    ]
+  },
+  "alchemydeatht1": {
+    "name": "Death Mote",
+    "rarity": 0
+  },
+  "alchemydeatht2": {
+    "name": "Death Wisp",
+    "raw": [
+      [
+        "alchemydeatht1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemydeatht3": {
+    "name": "Death Essence",
+    "raw": [
+      [
+        "alchemydeatht2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemyearth": {
+    "name": "Earth Reagents",
+    "options": [
+      "petalcapt1",
+      "lodestoneeartht1",
+      "earthshelltailt1",
+      "earthspinet1",
+      "earthspinet2",
+      "earthspinet3",
+      "alchemyeartht1",
+      "alchemyeartht2",
+      "alchemyeartht3",
+      "essenceeartht1"
+    ]
+  },
+  "alchemyeartht1": {
+    "name": "Earth Mote",
+    "rarity": 0
+  },
+  "alchemyeartht2": {
+    "name": "Earth Wisp",
+    "raw": [
+      [
+        "alchemyeartht1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemyeartht3": {
+    "name": "Earth Essence",
+    "raw": [
+      [
+        "alchemyeartht2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemyeartht4": {
+    "name": "Tier 4 Earth Reagents",
+    "options": [
+      "earthspinet3",
+      "alchemyeartht3"
+    ]
+  },
+  "alchemyeartht5": {
+    "name": "Tier 5 Earth Reagents",
+    "options": [
+      "earthshelltailt1",
+      "essenceeartht1"
+    ]
+  },
+  "alchemyfire": {
+    "name": "Fire Reagents",
+    "options": [
+      "platecapt1",
+      "tendrilspinet1",
+      "bloodsporet1",
+      "lodestonefiret1",
+      "salamanderslimet1",
+      "dragongloryt1",
+      "dragongloryt2",
+      "dragongloryt3",
+      "alchemyfiret1",
+      "alchemyfiret2",
+      "alchemyfiret3",
+      "essencefiret1"
+    ]
+  },
+  "alchemyfiret1": {
+    "name": "Fire Mote",
+    "rarity": 0
+  },
+  "alchemyfiret2": {
+    "name": "Fire Wisp",
+    "raw": [
+      [
+        "alchemyfiret1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemyfiret3": {
+    "name": "Fire Essence",
+    "raw": [
+      [
+        "alchemyfiret2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemylife": {
+    "name": "Life Reagents",
+    "options": [
+      "spinecapt1",
+      "tanglewispt1",
+      "gillflowert1",
+      "lodestonelifet1",
+      "lifemotheyest1",
+      "lifebloomt1",
+      "lifebloomt2",
+      "lifebloomt3",
+      "alchemylifet1",
+      "alchemylifet2",
+      "alchemylifet3",
+      "essencelifet1"
+    ]
+  },
+  "alchemylifet1": {
+    "name": "Life Mote",
+    "rarity": 0
+  },
+  "alchemylifet2": {
+    "name": "Life Wisp",
+    "raw": [
+      [
+        "alchemylifet1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemylifet3": {
+    "name": "Life Essence",
+    "raw": [
+      [
+        "alchemylifet2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemymagicalt1": {
+    "name": "Tier 1 Magical Reagents",
+    "options": [
+      "briarbudst1"
+    ]
+  },
+  "alchemymagicalt2": {
+    "name": "Tier 2 Magical Reagents",
+    "options": [
+      "bumbleblossomt1",
+      "tanglewispt1",
+      "suncreepert1",
+      "soulsproutt1"
+    ]
+  },
+  "alchemymagicalt3": {
+    "name": "Tier 3 Magical Reagents",
+    "options": [
+      "mushroomfinst1",
+      "paddlefishgillst1",
+      "catfishwhiskerst1",
+      "snailslimet1",
+      "frogfishtailt1",
+      "lodestonesoult1",
+      "soulsproutt2"
+    ]
+  },
+  "alchemymagicalt4": {
+    "name": "Tier 4 Magical Reagents",
+    "options": [
+      "soulsproutt3"
+    ]
+  },
+  "alchemymagicalt5": {
+    "name": "Tier 5 Magical Reagents",
+    "options": [
+      "soulwyrmtonguet1",
+      "dragonfishjawt5"
+    ]
+  },
+  "alchemymedicinalt1": {
+    "name": "Tier 1 Medicinal Reagents",
+    "options": [
+      "herbt1",
+      "bulrushcobt1"
+    ]
+  },
+  "alchemymedicinalt2": {
+    "name": "Tier 2 Medicinal Reagents",
+    "options": [
+      "sporebloomt1",
+      "platecapt1",
+      "gillflowert1",
+      "glowingcapt1",
+      "lifebloomt1"
+    ]
+  },
+  "alchemymedicinalt3": {
+    "name": "Tier 3 Medicinal Reagents",
+    "options": [
+      "halibutviscerat1",
+      "sculpinscalest1",
+      "lodestonelifet1",
+      "lifebloomt2"
+    ]
+  },
+  "alchemymedicinalt4": {
+    "name": "Tier 4 Medicinal Reagents",
+    "options": [
+      "lifebloomt3"
+    ]
+  },
+  "alchemymedicinalt5": {
+    "name": "Tier 5 Medicinal Reagents",
+    "options": [
+      "azothwatert1",
+      "lifemotheyest1",
+      "poisonstingert5"
+    ]
+  },
+  "alchemyoffensivet2": {
+    "name": "Tier 2 Offensive Reagents",
+    "options": [
+      "voidpitchert1",
+      "tubecapt1",
+      "tendrilspinet1",
+      "bloodsporet1",
+      "blightroott1",
+      "dragongloryt1",
+      "shockbulbt1"
+    ]
+  },
+  "alchemyoffensivet3": {
+    "name": "Tier 3 Offensive Reagents",
+    "options": [
+      "fungalslimet1",
+      "lodestonefiret1",
+      "lodestonedeatht1",
+      "lodestoneairt1",
+      "blightroott2",
+      "dragongloryt2",
+      "shockbulbt2"
+    ]
+  },
+  "alchemyoffensivet4": {
+    "name": "Tier 4 Offensive Reagents",
+    "options": [
+      "starfisht1",
+      "blightroott3",
+      "dragongloryt3",
+      "shockbulbt3"
+    ]
+  },
+  "alchemyoffensivet5": {
+    "name": "Tier 5 Offensive Reagents",
+    "options": [
+      "salamanderslimet1",
+      "lightningbeetlewingst1",
+      "blightmothdustt1",
+      "piranhatootht5"
+    ]
+  },
+  "alchemyprotectivet2": {
+    "name": "Tier 2 Protective Reagents",
+    "options": [
+      "spinecapt1",
+      "toadpott1",
+      "petalcapt1",
+      "shellbedt1",
+      "twistcapt1",
+      "earthspinet1",
+      "rivercresst1"
+    ]
+  },
+  "alchemyprotectivet3": {
+    "name": "Tier 3 Protective Reagents",
+    "options": [
+      "fungalsporest1",
+      "toadstoolfringet1",
+      "lodestonewatert1",
+      "lodestoneeartht1",
+      "earthspinet2",
+      "rivercresst2"
+    ]
+  },
+  "alchemyprotectivet4": {
+    "name": "Tier 4 Protective Reagents",
+    "options": [
+      "codeyet1",
+      "earthspinet3",
+      "rivercresst3"
+    ]
+  },
+  "alchemyprotectivet5": {
+    "name": "Tier 5 Protective Reagents",
+    "options": [
+      "earthshelltailt1",
+      "spinefishfinst1"
+    ]
+  },
+  "alchemyspirit": {
+    "name": "Spirit Reagents",
+    "options": [
+      "bumbleblossomt1",
+      "tubecapt1",
+      "shellbedt1",
+      "lodestonesoult1",
+      "soulwyrmtonguet1",
+      "soulsproutt1",
+      "soulsproutt2",
+      "soulsproutt3",
+      "dragonfishjawt5",
+      "alchemyspiritt1",
+      "alchemyspiritt2",
+      "alchemyspiritt3",
+      "essencespiritt1"
+    ]
+  },
+  "alchemyspiritt1": {
+    "name": "Soul Mote",
+    "rarity": 0
+  },
+  "alchemyspiritt2": {
+    "name": "Soul Wisp",
+    "raw": [
+      [
+        "alchemyspiritt1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemyspiritt3": {
+    "name": "Soul Essence",
+    "raw": [
+      [
+        "alchemyspiritt2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemywater": {
+    "name": "Water Reagents",
+    "options": [
+      "toadpott1",
+      "lodestonewatert1",
+      "spinefishfinst1",
+      "rivercresst1",
+      "rivercresst2",
+      "rivercresst3",
+      "piranhatootht5",
+      "alchemywatert1",
+      "alchemywatert2",
+      "alchemywatert3",
+      "essencewatert1"
+    ]
+  },
+  "alchemywatert1": {
+    "name": "Water Mote",
+    "rarity": 0
+  },
+  "alchemywatert2": {
+    "name": "Water Wisp",
+    "raw": [
+      [
+        "alchemywatert1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "alchemywatert3": {
+    "name": "Water Essence",
+    "raw": [
+      [
+        "alchemywatert2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "alchemywatert4": {
+    "name": "Tier 4 Water Reagents",
+    "options": [
+      "rivercresst3",
+      "alchemywatert3"
+    ]
+  },
+  "alchemywatert5": {
+    "name": "Tier 5 Water Reagents",
+    "options": [
+      "spinefishfinst1",
+      "piranhatootht5",
+      "essencewatert1"
+    ]
+  },
+  "ambercutt1": {
+    "name": "Cut Flawed Amber",
+    "raw": [
+      [
+        "ambert1",
+        1
+      ],
+      [
+        "alchemyeartht1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "ambercutt2": {
+    "name": "Cut Amber",
+    "raw": [
+      [
+        "ambert2",
+        1
+      ],
+      [
+        "alchemyeartht2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "ambercutt3": {
+    "name": "Cut Brilliant Amber",
+    "raw": [
+      [
+        "ambert3",
+        1
+      ],
+      [
+        "alchemyeartht3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "ambercutt4": {
+    "name": "Cut Pristine Amber",
+    "raw": [
+      [
+        "ambert4",
+        1
+      ],
+      [
+        "essenceeartht1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "ambert1": {
+    "name": "Flawed Amber",
+    "rarity": 0
+  },
+  "ambert2": {
+    "name": "Amber",
+    "raw": [
+      [
+        "ambert1",
+        3
+      ],
+      [
+        "alchemyeartht2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "ambert3": {
+    "name": "Brilliant Amber",
+    "raw": [
+      [
+        "ambert2",
+        4
+      ],
+      [
+        "alchemyeartht3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "ambert4": {
+    "name": "Pristine Amber",
+    "raw": [
+      [
+        "ambert3",
+        5
+      ],
+      [
+        "essenceeartht1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "amethystcutt1": {
+    "name": "Cut Flawed Amethyst",
+    "raw": [
+      [
+        "amethystt1",
+        1
+      ],
+      [
+        "alchemyspiritt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "amethystcutt2": {
+    "name": "Cut Amethyst",
+    "raw": [
+      [
+        "amethystt2",
+        1
+      ],
+      [
+        "alchemyspiritt2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "amethystcutt3": {
+    "name": "Cut Brilliant Amethyst",
+    "raw": [
+      [
+        "amethystt3",
+        1
+      ],
+      [
+        "alchemyspiritt3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "amethystcutt4": {
+    "name": "Cut Pristine Amethyst",
+    "raw": [
+      [
+        "amethystt4",
+        1
+      ],
+      [
+        "essencespiritt1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "amethystt1": {
+    "name": "Flawed Amethyst",
+    "rarity": 0
+  },
+  "amethystt2": {
+    "name": "Amethyst",
+    "raw": [
+      [
+        "amethystt1",
+        3
+      ],
+      [
+        "alchemyspiritt2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "amethystt3": {
+    "name": "Brilliant Amethyst",
+    "raw": [
+      [
+        "amethystt2",
+        4
+      ],
+      [
+        "alchemyspiritt3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "amethystt4": {
+    "name": "Pristine Amethyst",
+    "raw": [
+      [
+        "amethystt3",
+        5
+      ],
+      [
+        "essencespiritt1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "ancientbearingt1": {
+    "name": "Ancient Bearing",
+    "rarity": 4
+  },
+  "ancientfemurt1": {
+    "name": "Ancient Femur",
+    "rarity": 3
+  },
+  "ancientmandiblet1": {
+    "name": "Ancient Mandible",
+    "rarity": 4
+  },
+  "ancientskullt1": {
+    "name": "Ancient Skull",
+    "rarity": 3
+  },
+  "ancienttextst1": {
+    "name": "Ancient Texts",
+    "rarity": 3
+  },
+  "applet1": {
+    "name": "Apple",
+    "rarity": 0
+  },
+  "aquamarinecutt1": {
+    "name": "Cut Flawed Aquamarine",
+    "raw": [
+      [
+        "aquamarinet1",
+        1
+      ],
+      [
+        "alchemywatert1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "aquamarinecutt2": {
+    "name": "Cut Aquamarine",
+    "raw": [
+      [
+        "aquamarinet2",
+        1
+      ],
+      [
+        "alchemywatert2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "aquamarinecutt3": {
+    "name": "Cut Brilliant Aquamarine",
+    "raw": [
+      [
+        "aquamarinet3",
+        1
+      ],
+      [
+        "alchemywatert3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "aquamarinecutt4": {
+    "name": "Cut Pristine Aquamarine",
+    "raw": [
+      [
+        "aquamarinet4",
+        1
+      ],
+      [
+        "essencewatert1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "aquamarinet1": {
+    "name": "Flawed Aquamarine",
+    "rarity": 0
+  },
+  "aquamarinet2": {
+    "name": "Aquamarine",
+    "raw": [
+      [
+        "aquamarinet1",
+        3
+      ],
+      [
+        "alchemywatert2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "aquamarinet3": {
+    "name": "Brilliant Aquamarine",
+    "raw": [
+      [
+        "aquamarinet2",
+        4
+      ],
+      [
+        "alchemywatert3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "aquamarinet4": {
+    "name": "Pristine Aquamarine",
+    "raw": [
+      [
+        "aquamarinet3",
+        5
+      ],
+      [
+        "essencewatert1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "arcanafire": {
+    "name": "Fire Arcana",
+    "options": [
+      "alchemyfiret1",
+      "alchemyfiret2",
+      "alchemyfiret3",
+      "essencefiret1"
+    ]
+  },
+  "arcanalife": {
+    "name": "Life Arcana",
+    "options": [
+      "alchemylifet1",
+      "alchemylifet2",
+      "alchemylifet3",
+      "essencelifet1"
+    ]
+  },
+  "arcanawater": {
+    "name": "Water Arcana",
+    "options": [
+      "alchemywatert1",
+      "alchemywatert2",
+      "alchemywatert3",
+      "essencewatert1"
+    ]
+  },
+  "armorersjournalt1": {
+    "name": "Armorer's Journal",
+    "rarity": 3
+  },
+  "azothwatert1": {
+    "name": "Azoth Water",
+    "rarity": 2
+  },
+  "azuritechunkt1": {
+    "name": "Azurite Chunk",
+    "rarity": 3
+  },
+  "baitfreshoystert3": {
+    "name": "Oyster Bait",
+    "rarity": 0
+  },
+  "barbvinet1": {
+    "name": "Barbvine",
+    "rarity": 4
+  },
+  "barkflesht1": {
+    "name": "Barkflesh",
+    "rarity": 3
+  },
+  "barleyt1": {
+    "name": "Barley",
+    "rarity": 0
+  },
+  "basilt1": {
+    "name": "Basil",
+    "rarity": 0
+  },
+  "bearflankt1": {
+    "name": "Rich Bear Flank",
+    "rarity": 2
+  },
+  "beeswaxt1": {
+    "name": "Beeswax",
+    "rarity": 0
+  },
+  "berryt1": {
+    "name": "Berry",
+    "rarity": 0
+  },
+  "blessedcruciblet1": {
+    "name": "Blessed Crucible",
+    "rarity": 3
+  },
+  "blessedsceptert1": {
+    "name": "Blessed Scepter",
+    "rarity": 4
+  },
+  "blightseeds": {
+    "name": "Blight Seeds",
+    "rarity": 4
+  },
+  "blisterweavet1": {
+    "name": "Blisterweave",
+    "rarity": 4
+  },
+  "blockt2": {
+    "name": "Stone Block",
+    "raw": [
+      [
+        "stonet1",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "blockt3": {
+    "name": "Stone Brick",
+    "raw": [
+      [
+        "blockt2",
+        4
+      ],
+      [
+        "sandpaper",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "blockt4": {
+    "name": "Lodestone Brick",
+    "raw": [
+      [
+        "stonet4",
+        6
+      ],
+      [
+        "blockt3",
+        2
+      ],
+      [
+        "sandpaper",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "blockt5": {
+    "name": "Obsidian Voidstone",
+    "raw": [
+      [
+        "blockt4",
+        8
+      ],
+      [
+        "stonet4",
+        2
+      ],
+      [
+        "lodestoneeartht1",
+        1
+      ],
+      [
+        "sandpaper",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "blockt51": {
+    "name": "Runestone",
+    "raw": [
+      [
+        "blockt5",
+        5
+      ],
+      [
+        "lodestonedeatht1",
+        1
+      ],
+      [
+        "sandpapert5",
+        1
+      ]
+    ],
+    "rarity": 3
+  },
+  "blueberryt1": {
+    "name": "Blueberry",
+    "rarity": 0
+  },
+  "breachdrop1": {
+    "name": "Corrupted Sliver",
+    "rarity": 0
+  },
+  "breachdrop2": {
+    "name": "Corrupted Fragment",
+    "raw": [
+      [
+        "breachdrop1",
+        5
+      ]
+    ],
+    "rarity": 1
+  },
+  "breachdrop3": {
+    "name": "Corrupted Shard",
+    "raw": [
+      [
+        "breachdrop2",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "breachdrop4": {
+    "name": "Corrupted Crystal",
+    "raw": [
+      [
+        "breachdrop3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "breachdrop5": {
+    "name": "Corrupted Lodestone",
+    "raw": [
+      [
+        "breachdrop4",
+        2
+      ]
+    ],
+    "rarity": 4
+  },
+  "breadt1": {
+    "name": "Bread",
+    "raw": [
+      [
+        "flourt1",
+        1
+      ],
+      [
+        "yeastt1",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "brightscalehidet1": {
+    "name": "Brightscale Hide",
+    "rarity": 3
+  },
+  "broccolit1": {
+    "name": "Broccoli",
+    "rarity": 0
+  },
+  "brokenhatchett1": {
+    "name": "Broken Hatchet",
+    "rarity": 4
+  },
+  "buttert1": {
+    "name": "Butter",
+    "raw": [
+      [
+        "milkt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "cabbaget1": {
+    "name": "Cabbage",
+    "rarity": 0
+  },
+  "carneliancutt1": {
+    "name": "Cut Flawed Carnelian",
+    "raw": [
+      [
+        "carneliant1",
+        1
+      ],
+      [
+        "alchemyfiret1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "carneliancutt2": {
+    "name": "Cut Carnelian",
+    "raw": [
+      [
+        "carneliant2",
+        1
+      ],
+      [
+        "alchemyfiret2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "carneliancutt3": {
+    "name": "Cut Brilliant Carnelian",
+    "raw": [
+      [
+        "carneliant3",
+        1
+      ],
+      [
+        "alchemyfiret3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "carneliancutt4": {
+    "name": "Cut Pristine Carnelian",
+    "raw": [
+      [
+        "carneliant4",
+        1
+      ],
+      [
+        "essencefiret1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "carneliant1": {
+    "name": "Flawed Carnelian",
+    "rarity": 0
+  },
+  "carneliant2": {
+    "name": "Carnelian",
+    "raw": [
+      [
+        "carneliant1",
+        3
+      ],
+      [
+        "alchemyfiret2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "carneliant3": {
+    "name": "Brilliant Carnelian",
+    "raw": [
+      [
+        "carneliant2",
+        4
+      ],
+      [
+        "alchemyfiret3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "carneliant4": {
+    "name": "Pristine Carnelian",
+    "raw": [
+      [
+        "carneliant3",
+        5
+      ],
+      [
+        "essencefiret1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "carrott1": {
+    "name": "Carrot",
+    "rarity": 0
+  },
+  "cauliflowert1": {
+    "name": "Cauliflower",
+    "rarity": 0
+  },
+  "charcoalt1": {
+    "name": "Charcoal",
+    "rarity": 0
+  },
+  "cheeset1": {
+    "name": "Cheese",
+    "raw": [
+      [
+        "milkt1",
+        2
+      ],
+      [
+        "yeastt1",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "chefssecretcookbookt1": {
+    "name": "Chef's Secret Cookbook",
+    "rarity": 4
+  },
+  "chefssecrettechniquest1": {
+    "name": "Chef's Secret Techniques",
+    "rarity": 3
+  },
+  "cinnabart1": {
+    "name": "Cinnabar",
+    "rarity": 4
+  },
+  "cinnamont1": {
+    "name": "Cinnamon",
+    "rarity": 0
+  },
+  "clawt5": {
+    "name": "Infused Claw",
+    "rarity": 3
+  },
+  "cloth": {
+    "name": "Cloth",
+    "options": [
+      "clotht2",
+      "clotht3",
+      "clotht4",
+      "clotht5",
+      "clotht51",
+      "shadeclotht1",
+      "phasefibert1",
+      "glintwoolt1",
+      "scalecordt1",
+      "blisterweavet1",
+      "scaleclotht1"
+    ]
+  },
+  "clotht2": {
+    "name": "Linen",
+    "raw": [
+      [
+        "fibert1",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "clotht3": {
+    "name": "Sateen",
+    "raw": [
+      [
+        "clotht2",
+        4
+      ],
+      [
+        "clothweave",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "clotht4": {
+    "name": "Silk",
+    "raw": [
+      [
+        "fibert4",
+        6
+      ],
+      [
+        "clotht3",
+        2
+      ],
+      [
+        "clothweave",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "clotht5": {
+    "name": "Infused Silk",
+    "raw": [
+      [
+        "fibert5",
+        8
+      ],
+      [
+        "clotht4",
+        2
+      ],
+      [
+        "clothweave",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "clotht51": {
+    "name": "Phoenixweave",
+    "raw": [
+      [
+        "clotht5",
+        5
+      ],
+      [
+        "scaleclotht1",
+        1
+      ],
+      [
+        "blisterweavet1",
+        1
+      ],
+      [
+        "clothweavet5",
+        1
+      ]
+    ],
+    "rarity": 3
+  },
+  "clothweave": {
+    "name": "Cloth Weave",
+    "options": [
+      "clothweavet3",
+      "clothweavet4",
+      "clothweavet5"
+    ]
+  },
+  "clothweavet3": {
+    "name": "Crossweave",
+    "rarity": 0
+  },
+  "clothweavet4": {
+    "name": "Silkweave",
+    "rarity": 1
+  },
+  "clothweavet5": {
+    "name": "Wireweave",
+    "rarity": 2
+  },
+  "coagulatedbloodt1": {
+    "name": "Coagulated Blood",
+    "rarity": 1
+  },
+  "coconutt1": {
+    "name": "Coconut",
+    "rarity": 0
+  },
+  "collarjadet1": {
+    "name": "Jade Collar",
+    "rarity": 1
+  },
+  "cookingoilt1": {
+    "name": "Cooking Oil",
+    "raw": [
+      [
+        "fishoilt1",
+        2
+      ],
+      [
+        "nutt1",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "corecrystalfiret5": {
+    "name": "Fire Crystal Core",
+    "rarity": 4
+  },
+  "corecrystalicet5": {
+    "name": "Ice Crystal Core",
+    "rarity": 4
+  },
+  "corecrystallifet5": {
+    "name": "Life Crystal Core",
+    "rarity": 4
+  },
+  "cornt1": {
+    "name": "Corn",
+    "rarity": 0
+  },
+  "corruptedcrestt1": {
+    "name": "Corrupted Crest",
+    "rarity": 3
+  },
+  "corruptedtalismant1": {
+    "name": "Corrupted Talisman",
+    "rarity": 1
+  },
+  "corruptedtotemt1": {
+    "name": "Corrupted Totem",
+    "rarity": 4
+  },
+  "corruptedtreatiset1": {
+    "name": "Corrupted Treatise",
+    "rarity": 1
+  },
+  "cranberryt1": {
+    "name": "Cranberry",
+    "rarity": 0
+  },
+  "crestoffortitudet1": {
+    "name": "Crest of Fortitude",
+    "rarity": 4
+  },
+  "diamondcutt1": {
+    "name": "Cut Flawed Diamond",
+    "raw": [
+      [
+        "diamondt1",
+        1
+      ],
+      [
+        "alchemylifet1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "diamondcutt2": {
+    "name": "Cut Diamond",
+    "raw": [
+      [
+        "diamondt2",
+        1
+      ],
+      [
+        "alchemylifet2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "diamondcutt3": {
+    "name": "Cut Brilliant Diamond",
+    "raw": [
+      [
+        "diamondt3",
+        1
+      ],
+      [
+        "alchemylifet3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "diamondcutt4": {
+    "name": "Cut Pristine Diamond",
+    "raw": [
+      [
+        "diamondt4",
+        1
+      ],
+      [
+        "essencelifet1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "diamondt1": {
+    "name": "Flawed Diamond",
+    "rarity": 0
+  },
+  "diamondt2": {
+    "name": "Diamond",
+    "raw": [
+      [
+        "diamondt1",
+        3
+      ],
+      [
+        "alchemylifet2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "diamondt3": {
+    "name": "Brilliant Diamond",
+    "raw": [
+      [
+        "diamondt2",
+        4
+      ],
+      [
+        "alchemylifet3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "diamondt4": {
+    "name": "Pristine Diamond",
+    "raw": [
+      [
+        "diamondt3",
+        5
+      ],
+      [
+        "essencelifet1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "dillt1": {
+    "name": "Dill",
+    "rarity": 0
+  },
+  "dummyframe": {
+    "name": "Dummy Frame",
+    "rarity": 4
+  },
+  "ebonwoodt1": {
+    "name": "Ebonwood",
+    "rarity": 3
+  },
+  "ectoplasmicessencet1": {
+    "name": "Ectoplasmic Essence",
+    "rarity": 3
+  },
+  "eggt1": {
+    "name": "Egg",
+    "rarity": 0
+  },
+  "emberstonet1": {
+    "name": "Ember Stone",
+    "rarity": 3
+  },
+  "emblemoffortitudet1": {
+    "name": "Emblem of Fortitude",
+    "rarity": 4
+  },
+  "embossedwrappingt5": {
+    "name": "Embossed Wrapping",
+    "rarity": 4
+  },
+  "emeraldcutt1": {
+    "name": "Cut Flawed Emerald",
+    "raw": [
+      [
+        "emeraldt1",
+        1
+      ],
+      [
+        "alchemyeartht1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "emeraldcutt2": {
+    "name": "Cut Emerald",
+    "raw": [
+      [
+        "emeraldt2",
+        1
+      ],
+      [
+        "alchemyeartht2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "emeraldcutt3": {
+    "name": "Cut Brilliant Emerald",
+    "raw": [
+      [
+        "emeraldt3",
+        1
+      ],
+      [
+        "alchemyeartht3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "emeraldcutt4": {
+    "name": "Cut Pristine Emerald",
+    "raw": [
+      [
+        "emeraldt4",
+        1
+      ],
+      [
+        "essenceeartht1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "emeraldt1": {
+    "name": "Flawed Emerald",
+    "rarity": 0
+  },
+  "emeraldt2": {
+    "name": "Emerald",
+    "raw": [
+      [
+        "emeraldt1",
+        3
+      ],
+      [
+        "alchemyeartht2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "emeraldt3": {
+    "name": "Brilliant Emerald",
+    "raw": [
+      [
+        "emeraldt2",
+        4
+      ],
+      [
+        "alchemyeartht3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "emeraldt4": {
+    "name": "Pristine Emerald",
+    "raw": [
+      [
+        "emeraldt3",
+        5
+      ],
+      [
+        "essenceeartht1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "empoweredcounterbalancet5": {
+    "name": "Empowered Counterbalance",
+    "rarity": 4
+  },
+  "enchantedbowstringt5": {
+    "name": "Enchanted Bow String",
+    "rarity": 4
+  },
+  "engineerstechniquemanualst1": {
+    "name": "Engineer's Technique Manuals",
+    "rarity": 3
+  },
+  "ephemeralsealt1": {
+    "name": "Ephemeral Seal",
+    "rarity": 4
+  },
+  "essenceairt1": {
+    "name": "Air Quintessence",
+    "raw": [
+      [
+        "alchemyairt3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "essencedeatht1": {
+    "name": "Death Quintessence",
+    "raw": [
+      [
+        "alchemydeatht3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "essenceeartht1": {
+    "name": "Earth Quintessence",
+    "raw": [
+      [
+        "alchemyeartht3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "essencefiret1": {
+    "name": "Fire Quintessence",
+    "raw": [
+      [
+        "alchemyfiret3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "essencelifet1": {
+    "name": "Life Quintessence",
+    "raw": [
+      [
+        "alchemylifet3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "essencespiritt1": {
+    "name": "Soul Quintessence",
+    "raw": [
+      [
+        "alchemyspiritt3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "essencewatert1": {
+    "name": "Water Quintessence",
+    "raw": [
+      [
+        "alchemywatert3",
+        3
+      ]
+    ],
+    "rarity": 3
+  },
+  "etchedhandguardt5": {
+    "name": "Etched Handguard",
+    "rarity": 4
+  },
+  "eternalicet1": {
+    "name": "Eternal Ice",
+    "rarity": 4
+  },
+  "factionchisel1": {
+    "name": "Iron Chisel",
+    "rarity": 0
+  },
+  "factionchisel2": {
+    "name": "Steel Chisel",
+    "rarity": 1
+  },
+  "factionchisel3": {
+    "name": "Starmetal Chisel",
+    "rarity": 2
+  },
+  "factionchisel4": {
+    "name": "Orichalcum Chisel",
+    "rarity": 3
+  },
+  "factionchisel5": {
+    "name": "Asmodeum Chisel",
+    "rarity": 4
+  },
+  "faeiront1": {
+    "name": "Fae Iron",
+    "rarity": 1
+  },
+  "fangt4": {
+    "name": "Infused Fang",
+    "rarity": 3
+  },
+  "feathert1": {
+    "name": "Feathers",
+    "rarity": 0
+  },
+  "fibert1": {
+    "name": "Fibers",
+    "rarity": 0
+  },
+  "fibert4": {
+    "name": "Silk Threads",
+    "rarity": 0
+  },
+  "fibert5": {
+    "name": "Wirefiber",
+    "rarity": 0
+  },
+  "fish": {
+    "name": "Fish",
+    "options": [
+      "fisht1",
+      "fisht2",
+      "fisht3",
+      "fisht4",
+      "fishingbasssmallt1",
+      "fishingbassmediumt1",
+      "fishingbasslarget1",
+      "fishingperchsmallt1",
+      "fishingperchmediumt1",
+      "fishingperchlarget1",
+      "fishingpikesmallt1",
+      "fishingpikemediumt1",
+      "fishingpikelarget1",
+      "fishingtroutsmallt1",
+      "fishingtroutmediumt1",
+      "fishingtroutlarget1",
+      "fishingsunfishsmallt1",
+      "fishingsunfishmediumt1",
+      "fishingsunfishlarget1",
+      "fishingsalmonsmallt1",
+      "fishingsalmonmediumt1",
+      "fishingsalmonlarget1",
+      "fishingmackerelsmallt1",
+      "fishingmackerelmediumt1",
+      "fishingmackerellarget1",
+      "fishingsnappersmallt1",
+      "fishingsnappermediumt1",
+      "fishingsnapperlarget1",
+      "fishingfloundersmallt1",
+      "fishingfloundermediumt1",
+      "fishingflounderlarget1",
+      "fishingbluefishsmallt1",
+      "fishingbluefishmediumt1",
+      "fishingbluefishlarget1",
+      "fishinghakesmallt1",
+      "fishinghakemediumt1",
+      "fishinghakelarget1",
+      "fishingsturgeonsmallt2",
+      "fishingsturgeonmediumt2",
+      "fishingsturgeonlarget2",
+      "fishingcatfishsmallt2",
+      "fishingcatfishmediumt2",
+      "fishingcatfishlarget2",
+      "fishingcodsmallt2",
+      "fishingcodmediumt2",
+      "fishingcodlarget2",
+      "fishinghalibutsmallt2",
+      "fishinghalibutmediumt2",
+      "fishinghalibutlarget2",
+      "fishingclamssmallt2",
+      "fishingsquidsmallt2",
+      "fishingsquidmediumt2",
+      "fishingsquidlarget2",
+      "fishingpiranhasmallt3",
+      "fishingpiranhamediumt3",
+      "fishingpiranhalarget3",
+      "fishingpaddlefishsmallt3",
+      "fishingpaddlefishmediumt3",
+      "fishingpaddlefishlarget3",
+      "fishingspeartoothsharksmallt3",
+      "fishingspeartoothsharkmediumt3",
+      "fishingspeartoothsharklarget3",
+      "fishingmadtomsmallt3",
+      "fishingmadtommediumt3",
+      "fishingmadtomlarget3",
+      "fishingfrogfishsmallt3",
+      "fishingfrogfishmediumt3",
+      "fishingfrogfishlarget3",
+      "fishingdragonfishsmallt3",
+      "fishingdragonfishmediumt3",
+      "fishingdragonfishlarget3",
+      "fishingpearloystersmallt3",
+      "fishingstingraysmallt3",
+      "fishingstingraymediumt3",
+      "fishingstingraylarget3",
+      "fishingsculpinsmallt3",
+      "fishingsculpinmediumt3",
+      "fishingsculpinlarget3",
+      "fishingswordfishsmallt3",
+      "fishingswordfishmediumt3",
+      "fishingswordfishlarget3",
+      "fishingmerrowt5",
+      "fishinganglerfisht5",
+      "fishingbishopfisht5",
+      "fishingmoragt5",
+      "fishingselkiet5",
+      "fishingmandjemandjet5",
+      "fishingegedeserpet5",
+      "fishingnamazut5",
+      "fishingogopogot5",
+      "fishingtessiet5",
+      "fishinghafgufat5",
+      "fishingabaiat5",
+      "fishingmerliont5",
+      "fishingmishipeshut5"
+    ]
+  },
+  "fishinganglerfisht5": {
+    "name": "Albenaja",
+    "rarity": 4
+  },
+  "fishingbishopfisht5": {
+    "name": "Abaia Serpe",
+    "rarity": 4
+  },
+  "fishingclamssmallt2": {
+    "name": "Clam",
+    "rarity": 1
+  },
+  "fishingmerrowt5": {
+    "name": "Glowing Gnufish",
+    "rarity": 4
+  },
+  "fishingmishipeshut5": {
+    "name": "Lava Barb",
+    "rarity": 4
+  },
+  "fishingmoragt5": {
+    "name": "Ray-Finned Barb",
+    "rarity": 4
+  },
+  "fishingsalmonlarget1": {
+    "name": "Large Salmon",
+    "rarity": 0
+  },
+  "fishoilt1": {
+    "name": "Fish Oil",
+    "rarity": 0
+  },
+  "fishroet1": {
+    "name": "Fish Roe",
+    "rarity": 2
+  },
+  "fisht1": {
+    "name": "Fish Filet",
+    "rarity": 0
+  },
+  "flintt1": {
+    "name": "Flint",
+    "rarity": 0
+  },
+  "flourt1": {
+    "name": "Flour",
+    "raw": [
+      [
+        "grain",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "fluffystuffingt1": {
+    "name": "Fluffy Stuffing",
+    "rarity": 4
+  },
+  "flux": {
+    "name": "Flux",
+    "options": [
+      "fluxt3",
+      "fluxt4",
+      "fluxt5"
+    ]
+  },
+  "fluxt3": {
+    "name": "Sand Flux",
+    "rarity": 0
+  },
+  "fluxt4": {
+    "name": "Shelldust Flux",
+    "rarity": 1
+  },
+  "fluxt5": {
+    "name": "Obsidian Flux",
+    "rarity": 2
+  },
+  "foodingredient": {
+    "name": "Raw Foods",
+    "options": [
+      "meatgamet1",
+      "venisont1",
+      "porkt1",
+      "turkeybreastt1",
+      "turkeythight1",
+      "bearflankt1",
+      "hamhockt1",
+      "rabbitt1",
+      "venisontenderloint1",
+      "wolfloint1",
+      "primeredmeatt1",
+      "porkbellyt1",
+      "fishroet1",
+      "meatsquidt1",
+      "redmeatt1",
+      "fisht1",
+      "fisht2",
+      "fisht3",
+      "fisht4",
+      "wheatt1",
+      "ricet1",
+      "eggt1",
+      "poultryt1",
+      "strawberryt1",
+      "cranberryt1",
+      "broccolit1",
+      "melont1",
+      "squasht1",
+      "nutt1",
+      "berryt1",
+      "barleyt1",
+      "potatot1",
+      "cornt1",
+      "carrott1",
+      "cabbaget1",
+      "honeyt1",
+      "mushroomt1",
+      "cauliflowert1",
+      "breadt1",
+      "sausaget1",
+      "pastat1",
+      "pastrycrustt1",
+      "oranget1",
+      "lemont1",
+      "applet1",
+      "stringbeant1",
+      "coconutt1",
+      "milkt1",
+      "tomatot1",
+      "oniont1",
+      "blueberryt1",
+      "fishingbasssmallt1",
+      "fishingbassmediumt1",
+      "fishingbasslarget1",
+      "fishingperchsmallt1",
+      "fishingperchmediumt1",
+      "fishingperchlarget1",
+      "fishingpikesmallt1",
+      "fishingpikemediumt1",
+      "fishingpikelarget1",
+      "fishingtroutsmallt1",
+      "fishingtroutmediumt1",
+      "fishingtroutlarget1",
+      "fishingsunfishsmallt1",
+      "fishingsunfishmediumt1",
+      "fishingsunfishlarget1",
+      "fishingsalmonsmallt1",
+      "fishingsalmonmediumt1",
+      "fishingsalmonlarget1",
+      "fishingmackerelsmallt1",
+      "fishingmackerelmediumt1",
+      "fishingmackerellarget1",
+      "fishingsnappersmallt1",
+      "fishingsnappermediumt1",
+      "fishingsnapperlarget1",
+      "fishingfloundersmallt1",
+      "fishingfloundermediumt1",
+      "fishingflounderlarget1",
+      "fishingbluefishsmallt1",
+      "fishingbluefishmediumt1",
+      "fishingbluefishlarget1",
+      "fishinghakesmallt1",
+      "fishinghakemediumt1",
+      "fishinghakelarget1",
+      "fishingsturgeonsmallt2",
+      "fishingsturgeonmediumt2",
+      "fishingsturgeonlarget2",
+      "fishingcatfishsmallt2",
+      "fishingcatfishmediumt2",
+      "fishingcatfishlarget2",
+      "fishingcodsmallt2",
+      "fishingcodmediumt2",
+      "fishingcodlarget2",
+      "fishinghalibutsmallt2",
+      "fishinghalibutmediumt2",
+      "fishinghalibutlarget2",
+      "fishingclamssmallt2",
+      "fishingsquidsmallt2",
+      "fishingsquidmediumt2",
+      "fishingsquidlarget2",
+      "fishingpiranhasmallt3",
+      "fishingpiranhamediumt3",
+      "fishingpiranhalarget3",
+      "fishingpaddlefishsmallt3",
+      "fishingpaddlefishmediumt3",
+      "fishingpaddlefishlarget3",
+      "fishingspeartoothsharksmallt3",
+      "fishingspeartoothsharkmediumt3",
+      "fishingspeartoothsharklarget3",
+      "fishingmadtomsmallt3",
+      "fishingmadtommediumt3",
+      "fishingmadtomlarget3",
+      "fishingfrogfishsmallt3",
+      "fishingfrogfishmediumt3",
+      "fishingfrogfishlarget3",
+      "fishingdragonfishsmallt3",
+      "fishingdragonfishmediumt3",
+      "fishingdragonfishlarget3",
+      "fishingpearloystersmallt3",
+      "fishingstingraysmallt3",
+      "fishingstingraymediumt3",
+      "fishingstingraylarget3",
+      "fishingsculpinsmallt3",
+      "fishingsculpinmediumt3",
+      "fishingsculpinlarget3",
+      "fishingswordfishsmallt3",
+      "fishingswordfishmediumt3",
+      "fishingswordfishlarget3",
+      "fishingmerrowt5",
+      "fishinganglerfisht5",
+      "fishingbishopfisht5",
+      "fishingmoragt5",
+      "fishingselkiet5",
+      "fishingmandjemandjet5",
+      "fishingegedeserpet5",
+      "fishingnamazut5",
+      "fishingogopogot5",
+      "fishingtessiet5",
+      "fishinghafgufat5",
+      "fishingabaiat5",
+      "fishingmerliont5",
+      "fishingmishipeshut5"
+    ]
+  },
+  "foodingredientt1": {
+    "name": "Tier 1 Raw Foods",
+    "options": [
+      "meatgamet1",
+      "porkt1",
+      "fisht1",
+      "eggt1",
+      "poultryt1",
+      "nutt1",
+      "mushroomt1",
+      "milkt1"
+    ]
+  },
+  "foodingredientt2": {
+    "name": "Tier 2 Raw Foods",
+    "options": [
+      "redmeatt1",
+      "fisht2",
+      "strawberryt1",
+      "cranberryt1",
+      "squasht1",
+      "cornt1",
+      "carrott1",
+      "breadt1",
+      "sausaget1",
+      "pastat1",
+      "pastrycrustt1"
+    ]
+  },
+  "foodingredientt3": {
+    "name": "Tier 3 Raw Foods",
+    "options": [
+      "venisont1",
+      "hamhockt1",
+      "meatsquidt1",
+      "fisht3",
+      "melont1",
+      "berryt1",
+      "barleyt1",
+      "potatot1",
+      "cabbaget1",
+      "oniont1",
+      "blueberryt1"
+    ]
+  },
+  "foodingredientt4": {
+    "name": "Tier 4 Raw Foods",
+    "options": [
+      "turkeybreastt1",
+      "venisontenderloint1",
+      "wolfloint1",
+      "fisht4",
+      "wheatt1",
+      "broccolit1",
+      "cauliflowert1",
+      "oranget1",
+      "lemont1"
+    ]
+  },
+  "foodingredientt5": {
+    "name": "Tier 5 Raw Foods",
+    "options": [
+      "turkeythight1",
+      "bearflankt1",
+      "rabbitt1",
+      "primeredmeatt1",
+      "porkbellyt1",
+      "fishroet1",
+      "ricet1",
+      "applet1",
+      "stringbeant1",
+      "coconutt1",
+      "tomatot1"
+    ]
+  },
+  "forgemastersnotest1": {
+    "name": "Forgemaster's Notes",
+    "rarity": 4
+  },
+  "fragmentedmuskett1": {
+    "name": "Fragmented Musket",
+    "rarity": 4
+  },
+  "furt3": {
+    "name": "Fur",
+    "rarity": 0
+  },
+  "furt4": {
+    "name": "Thick Fur",
+    "rarity": 0
+  },
+  "furt5": {
+    "name": "Infused Fur",
+    "rarity": 0
+  },
+  "garlict1": {
+    "name": "Garlic",
+    "rarity": 0
+  },
+  "gemstonet1": {
+    "name": "Flawed Gemstones",
+    "options": [
+      "ambert1",
+      "amethystt1",
+      "aquamarinet1",
+      "carneliant1",
+      "diamondt1",
+      "emeraldt1",
+      "jaspert1",
+      "malachitet1",
+      "moonstonet1",
+      "onyxt1",
+      "opalt1",
+      "pearlt1",
+      "rubyt1",
+      "sapphiret1",
+      "topazt1"
+    ]
+  },
+  "gemstonet2": {
+    "name": "Standard Gemstones",
+    "options": [
+      "ambert2",
+      "amethystt2",
+      "aquamarinet2",
+      "carneliant2",
+      "diamondt2",
+      "emeraldt2",
+      "jaspert2",
+      "malachitet2",
+      "moonstonet2",
+      "onyxt2",
+      "opalt2",
+      "pearlt2",
+      "rubyt2",
+      "sapphiret2",
+      "topazt2"
+    ]
+  },
+  "gemstonet3": {
+    "name": "Brilliant Gemstones",
+    "options": [
+      "ambert3",
+      "amethystt3",
+      "aquamarinet3",
+      "carneliant3",
+      "diamondt3",
+      "emeraldt3",
+      "jaspert3",
+      "malachitet3",
+      "moonstonet3",
+      "onyxt3",
+      "opalt3",
+      "pearlt3",
+      "rubyt3",
+      "sapphiret3",
+      "topazt3"
+    ]
+  },
+  "gemstonet4": {
+    "name": "Pristine Gemstones",
+    "options": [
+      "ambert4",
+      "amethystt4",
+      "aquamarinet4",
+      "carneliant4",
+      "diamondt4",
+      "emeraldt4",
+      "jaspert4",
+      "malachitet4",
+      "moonstonet4",
+      "onyxt4",
+      "opalt4",
+      "pearlt4",
+      "rubyt4",
+      "sapphiret4",
+      "topazt4"
+    ]
+  },
+  "gingert1": {
+    "name": "Ginger",
+    "rarity": 0
+  },
+  "glintwoolt1": {
+    "name": "Glintstrands",
+    "rarity": 3
+  },
+  "glowingsapt1": {
+    "name": "Glowing Sap",
+    "rarity": 4
+  },
+  "grain": {
+    "name": "Cooked Grain",
+    "options": [
+      "barleyt1",
+      "cornt1"
+    ]
+  },
+  "gunpowdert2": {
+    "name": "Gunpowder",
+    "raw": [
+      [
+        "charcoalt1",
+        5
+      ],
+      [
+        "flintt1",
+        2
+      ],
+      [
+        "saltpetert1",
+        1
+      ]
+    ],
+    "rarity": 1
+  },
+  "hamhockt1": {
+    "name": "Juicy Ham Hock",
+    "rarity": 1
+  },
+  "herbt1": {
+    "name": "Hyssop",
+    "rarity": 0
+  },
+  "holdingrunet2": {
+    "name": "Minor Rune of Holding",
+    "rarity": 0
+  },
+  "holdingrunet3": {
+    "name": "Major Rune of Holding",
+    "rarity": 1
+  },
+  "holdingrunet4": {
+    "name": "Greater Rune of Holding",
+    "rarity": 2
+  },
+  "holdingrunet5": {
+    "name": "Grand Rune of Holding",
+    "rarity": 3
+  },
+  "honeyt1": {
+    "name": "Honey",
+    "rarity": 0
+  },
+  "hornt5": {
+    "name": "Animal Horn",
+    "rarity": 3
+  },
+  "house_housingitem_buff_alchemy_bonus_t1": {
+    "name": "Minor Arcana Crafting Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyeartht1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_alchemy_bonus_t2": {
+    "name": "Basic Arcana Crafting Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "ancienttextst1",
+        1
+      ],
+      [
+        "house_housingitem_buff_alchemy_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_blacksmithing_bonus_t1": {
+    "name": "Minor Weaponsmithing Crafting Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyfiret1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_blacksmithing_bonus_t2": {
+    "name": "Basic Weaponsmithing Crafting Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "quartermastersnotest1",
+        1
+      ],
+      [
+        "house_housingitem_buff_blacksmithing_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_cooking_bonus_t1": {
+    "name": "Minor Cooking Crafting Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemywatert1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_cooking_bonus_t2": {
+    "name": "Basic Cooking Crafting Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "chefssecrettechniquest1",
+        1
+      ],
+      [
+        "house_housingitem_buff_cooking_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_damage_vs_ancients_t1": {
+    "name": "Minor Ancients Combat Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyspiritt1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_damage_vs_ancients_t2": {
+    "name": "Basic Ancients Combat Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "ancientfemurt1",
+        1
+      ],
+      [
+        "house_housingitem_buff_damage_vs_ancients_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_damage_vs_angryearth_t1": {
+    "name": "Minor Angry Earth Combat Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyeartht1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_damage_vs_angryearth_t2": {
+    "name": "Basic Angry Earth Combat Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "barkflesht1",
+        1
+      ],
+      [
+        "house_housingitem_buff_damage_vs_angryearth_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_damage_vs_beasts_t1": {
+    "name": "Minor Wildlife Combat Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyfiret1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_damage_vs_beasts_t2": {
+    "name": "Basic Wildlife Combat Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "pristinewolfclawt1",
+        1
+      ],
+      [
+        "house_housingitem_buff_damage_vs_beasts_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_damage_vs_corrupted_t1": {
+    "name": "Minor Corrupted Combat Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemylifet1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_damage_vs_corrupted_t2": {
+    "name": "Basic Corrupted Combat Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "corruptedcrestt1",
+        1
+      ],
+      [
+        "house_housingitem_buff_damage_vs_corrupted_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_damage_vs_lost_t1": {
+    "name": "Minor Lost Combat Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemydeatht1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_damage_vs_lost_t2": {
+    "name": "Basic Lost Combat Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "ectoplasmicessencet1",
+        1
+      ],
+      [
+        "house_housingitem_buff_damage_vs_lost_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_engineering_bonus_t1": {
+    "name": "Minor Engineering Crafting Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyairt1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_engineering_bonus_t2": {
+    "name": "Basic Engineering Crafting Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "engineerstechniquemanualst1",
+        1
+      ],
+      [
+        "house_housingitem_buff_engineering_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_fishing_bonus_t1": {
+    "name": "Minor Fishing Gathering Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemywatert1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_fishing_bonus_t2": {
+    "name": "Basic Fishing Gathering Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "house_housingitem_fishing_veryrarefish_a3",
+        1
+      ],
+      [
+        "house_housingitem_buff_fishing_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_harvesting_bonus_t1": {
+    "name": "Minor Harvesting Gathering Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemywatert1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_harvesting_bonus_t2": {
+    "name": "Basic Harvesting Gathering Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "journalflorat1",
+        1
+      ],
+      [
+        "house_housingitem_buff_harvesting_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_logging_bonus_t1": {
+    "name": "Minor Logging Gathering Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyairt1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_logging_bonus_t2": {
+    "name": "Basic Logging Gathering Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "lumberjackstokent1",
+        1
+      ],
+      [
+        "house_housingitem_buff_logging_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_luck_bonus_t1": {
+    "name": "Minor Loot Luck Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "rabbitsfoott1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_luck_bonus_t2": {
+    "name": "Basic Loot Luck Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "stackeddeckt1",
+        1
+      ],
+      [
+        "house_housingitem_buff_luck_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 3
+  },
+  "house_housingitem_buff_mining_bonus_t1": {
+    "name": "Minor Mining Gathering Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyeartht1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_mining_bonus_t2": {
+    "name": "Basic Mining Gathering Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "surveyorstoolst1",
+        1
+      ],
+      [
+        "house_housingitem_buff_mining_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_outfitting_bonus_t1": {
+    "name": "Minor Armoring Crafting Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyfiret1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_outfitting_bonus_t2": {
+    "name": "Basic Armoring Crafting Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "armorersjournalt1",
+        1
+      ],
+      [
+        "house_housingitem_buff_outfitting_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_buff_skinning_bonus_t1": {
+    "name": "Minor Skinning Gathering Trophy",
+    "raw": [
+      [
+        "timbert3",
+        25
+      ],
+      [
+        "ingott3",
+        20
+      ],
+      [
+        "woodstaint3",
+        1
+      ],
+      [
+        "alchemyairt1",
+        25
+      ]
+    ],
+    "rarity": 1
+  },
+  "house_housingitem_buff_skinning_bonus_t2": {
+    "name": "Basic Skinning Gathering Trophy",
+    "raw": [
+      [
+        "timbert4",
+        25
+      ],
+      [
+        "ingott4",
+        20
+      ],
+      [
+        "woodstaint4",
+        1
+      ],
+      [
+        "notesonaeternumfaunat1",
+        1
+      ],
+      [
+        "house_housingitem_buff_skinning_bonus_t1",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "house_housingitem_fishing_veryrarefish_a3": {
+    "name": "Taxidermied Blue-blooded Barb",
+    "rarity": 3
+  },
+  "house_housingitem_fishing_veryrarefish_c1": {
+    "name": "Taxidermied Daemonaja",
+    "rarity": 3
+  },
+  "house_housingitem_oldbookgroup_b": {
+    "name": "Old Books Row Short",
+    "rarity": 1
+  },
+  "house_housingitem_oldbookgroup_e": {
+    "name": "Old Books Stack",
+    "rarity": 1
+  },
+  "house_housingitem_oldbookgroup_f": {
+    "name": "Old Books Row Long",
+    "rarity": 1
+  },
+  "ingotprecioust1": {
+    "name": "Silver Ingot",
+    "raw": [
+      [
+        "oreprecioust1",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingotprecioust2": {
+    "name": "Gold Ingot",
+    "raw": [
+      [
+        "oreprecioust2",
+        5
+      ],
+      [
+        "ingotprecioust1",
+        2
+      ],
+      [
+        "flux",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingotprecioust3": {
+    "name": "Platinum Ingot",
+    "raw": [
+      [
+        "oreprecioust3",
+        6
+      ],
+      [
+        "ingotprecioust2",
+        2
+      ],
+      [
+        "flux",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingott2": {
+    "name": "Iron Ingot",
+    "raw": [
+      [
+        "oret1",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingott3": {
+    "name": "Steel Ingot",
+    "raw": [
+      [
+        "ingott2",
+        3
+      ],
+      [
+        "flux",
+        1
+      ],
+      [
+        "charcoalt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingott4": {
+    "name": "Starmetal Ingot",
+    "raw": [
+      [
+        "oret4",
+        6
+      ],
+      [
+        "ingott3",
+        2
+      ],
+      [
+        "flux",
+        1
+      ],
+      [
+        "charcoalt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingott5": {
+    "name": "Orichalcum Ingot",
+    "raw": [
+      [
+        "oret5",
+        8
+      ],
+      [
+        "ingott4",
+        2
+      ],
+      [
+        "flux",
+        1
+      ],
+      [
+        "charcoalt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "ingott51": {
+    "name": "Asmodeum",
+    "raw": [
+      [
+        "ingott5",
+        5
+      ],
+      [
+        "tolviumt1",
+        1
+      ],
+      [
+        "cinnabart1",
+        1
+      ],
+      [
+        "fluxt5",
+        1
+      ],
+      [
+        "charcoalt1",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "intricatelockt5": {
+    "name": "Intricate Firearm Lock",
+    "rarity": 4
+  },
+  "jadetalismant1": {
+    "name": "Jade Talisman",
+    "rarity": 1
+  },
+  "jaspercutt1": {
+    "name": "Cut Flawed Jasper",
+    "raw": [
+      [
+        "jaspert1",
+        1
+      ],
+      [
+        "alchemyairt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "jaspercutt2": {
+    "name": "Cut Jasper",
+    "raw": [
+      [
+        "jaspert2",
+        1
+      ],
+      [
+        "alchemyairt2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "jaspercutt3": {
+    "name": "Cut Brilliant Jasper",
+    "raw": [
+      [
+        "jaspert3",
+        1
+      ],
+      [
+        "alchemyairt3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "jaspercutt4": {
+    "name": "Cut Pristine Jasper",
+    "raw": [
+      [
+        "jaspert4",
+        1
+      ],
+      [
+        "essenceairt1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "jaspert1": {
+    "name": "Flawed Jasper",
+    "rarity": 0
+  },
+  "jaspert2": {
+    "name": "Jasper",
+    "raw": [
+      [
+        "jaspert1",
+        3
+      ],
+      [
+        "alchemyairt2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "jaspert3": {
+    "name": "Brilliant Jasper",
+    "raw": [
+      [
+        "jaspert2",
+        4
+      ],
+      [
+        "alchemyairt3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "jaspert4": {
+    "name": "Pristine Jasper",
+    "raw": [
+      [
+        "jaspert3",
+        5
+      ],
+      [
+        "essenceairt1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "journalflorat1": {
+    "name": "Journal of Aeternum Flora",
+    "rarity": 3
+  },
+  "keymat_edentotem": {
+    "name": "Earth Totem",
+    "rarity": 4
+  },
+  "keymat_foxfire": {
+    "name": "Firefox",
+    "rarity": 3
+  },
+  "keymat_glowingspore": {
+    "name": "Glowing Spore",
+    "rarity": 4
+  },
+  "keymat_greatcleaverune": {
+    "name": "Corrupted Rune",
+    "rarity": 4
+  },
+  "keymat_moss": {
+    "name": "Glowing Swamp Moss",
+    "rarity": 3
+  },
+  "keymat_shatteredrune": {
+    "name": "Molten Rune",
+    "rarity": 4
+  },
+  "keymat_shell": {
+    "name": "Fancy Shell",
+    "rarity": 3
+  },
+  "keypart_core": {
+    "name": "Energy Core",
+    "raw": [
+      [
+        "keypart_elementalheart",
+        1
+      ],
+      [
+        "keypart_eternalheart",
+        1
+      ]
+    ],
+    "rarity": 2
+  },
+  "keypart_coregenesis": {
+    "name": "Genesis Core",
+    "raw": [
+      [
+        "keypart_elementalheart",
+        3
+      ],
+      [
+        "keypart_eternalheart",
+        3
+      ],
+      [
+        "keymat_greatcleaverune",
+        3
+      ],
+      [
+        "keymat_shatteredrune",
+        3
+      ]
+    ],
+    "rarity": 4
+  },
+  "keypart_corelazarus": {
+    "name": "Lazarus Core",
+    "raw": [
+      [
+        "keypart_elementalheart",
+        1
+      ],
+      [
+        "keypart_undyingheart",
+        1
+      ],
+      [
+        "keymat_glowingspore",
+        3
+      ],
+      [
+        "keymat_edentotem",
+        3
+      ]
+    ],
+    "rarity": 4
+  },
+  "keypart_elementalheart": {
+    "name": "Elemental Heart",
+    "raw": [
+      [
+        "alchemywatert1",
+        50
+      ],
+      [
+        "alchemyeartht1",
+        50
+      ],
+      [
+        "alchemyfiret1",
+        50
+      ],
+      [
+        "alchemyairt1",
+        50
+      ]
+    ],
+    "rarity": 2
+  },
+  "keypart_eternalheart": {
+    "name": "Eternal Heart",
+    "raw": [
+      [
+        "alchemydeatht1",
+        50
+      ],
+      [
+        "alchemylifet1",
+        50
+      ],
+      [
+        "alchemyspiritt1",
+        50
+      ]
+    ],
+    "rarity": 2
+  },
+  "keypart_undyingheart": {
+    "name": "Undying Heart",
+    "raw": [
+      [
+        "essencedeatht1",
+        10
+      ],
+      [
+        "essencelifet1",
+        10
+      ],
+      [
+        "essencespiritt1",
+        10
+      ],
+      [
+        "blightseeds",
+        10
+      ]
+    ],
+    "rarity": 4
+  },
+  "leather": {
+    "name": "Leathers",
+    "options": [
+      "leathert2",
+      "leathert3",
+      "leathert4",
+      "leathert5",
+      "leathert51",
+      "scalyhidet1",
+      "ragehidet1",
+      "shadowfurt1",
+      "brightscalehidet1",
+      "shifthidet1",
+      "smolderhidet1",
+      "scarhidet1"
+    ]
+  },
+  "leathert2": {
+    "name": "Coarse Leather",
+    "raw": [
+      [
+        "rawhidet1",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "leathert3": {
+    "name": "Rugged Leather",
+    "raw": [
+      [
+        "leathert2",
+        4
+      ],
+      [
+        "tannin",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "leathert4": {
+    "name": "Layered Leather",
+    "raw": [
+      [
+        "rawhidet4",
+        6
+      ],
+      [
+        "leathert3",
+        2
+      ],
+      [
+        "tannin",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "leathert5": {
+    "name": "Infused Leather",
+    "raw": [
+      [
+        "rawhidet5",
+        8
+      ],
+      [
+        "leathert4",
+        2
+      ],
+      [
+        "tannin",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "leathert51": {
+    "name": "Runic Leather",
+    "raw": [
+      [
+        "leathert5",
+        5
+      ],
+      [
+        "smolderhidet1",
+        1
+      ],
+      [
+        "scarhidet1",
+        1
+      ],
+      [
+        "tannint5",
+        1
+      ]
+    ],
+    "rarity": 3
+  },
+  "lemont1": {
+    "name": "Lemon",
+    "rarity": 0
+  },
+  "loadeddicet1": {
+    "name": "Loaded Dice",
+    "rarity": 4
+  },
+  "lodestonedeatht1": {
+    "name": "Putrid Lodestone",
+    "rarity": 1
+  },
+  "lodestoneeartht1": {
+    "name": "Loamy Lodestone",
+    "rarity": 1
+  },
+  "lumberjackstokent1": {
+    "name": "Lumberjack's Token",
+    "rarity": 3
+  },
+  "malachitecutt1": {
+    "name": "Cut Flawed Malachite",
+    "raw": [
+      [
+        "malachitet1",
+        1
+      ],
+      [
+        "alchemyspiritt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "malachitecutt2": {
+    "name": "Cut Malachite",
+    "raw": [
+      [
+        "malachitet2",
+        1
+      ],
+      [
+        "alchemyspiritt2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "malachitecutt3": {
+    "name": "Cut Brilliant Malachite",
+    "raw": [
+      [
+        "malachitet3",
+        1
+      ],
+      [
+        "alchemyspiritt3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "malachitecutt4": {
+    "name": "Cut Pristine Malachite",
+    "raw": [
+      [
+        "malachitet4",
+        1
+      ],
+      [
+        "essencespiritt1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "malachitet1": {
+    "name": "Flawed Malachite",
+    "rarity": 0
+  },
+  "malachitet2": {
+    "name": "Malachite",
+    "raw": [
+      [
+        "malachitet1",
+        3
+      ],
+      [
+        "alchemyspiritt2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "malachitet3": {
+    "name": "Brilliant Malachite",
+    "raw": [
+      [
+        "malachitet2",
+        4
+      ],
+      [
+        "alchemyspiritt3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "malachitet4": {
+    "name": "Pristine Malachite",
+    "raw": [
+      [
+        "malachitet3",
+        5
+      ],
+      [
+        "essencespiritt1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "meatgamet1": {
+    "name": "Game Meat",
+    "rarity": 0
+  },
+  "meats": {
+    "name": "Raw Meats",
+    "options": [
+      "meatgamet1",
+      "venisont1",
+      "porkt1",
+      "turkeybreastt1",
+      "turkeythight1",
+      "bearflankt1",
+      "hamhockt1",
+      "rabbitt1",
+      "venisontenderloint1",
+      "wolfloint1",
+      "primeredmeatt1",
+      "porkbellyt1",
+      "meatsquidt1",
+      "redmeatt1",
+      "poultryt1",
+      "sausaget1"
+    ]
+  },
+  "meatsquidt1": {
+    "name": "Squid Meat",
+    "rarity": 1
+  },
+  "melont1": {
+    "name": "Melon",
+    "rarity": 0
+  },
+  "mercurialtokent1": {
+    "name": "Mercurial Token",
+    "rarity": 4
+  },
+  "metal": {
+    "name": "Metals",
+    "options": [
+      "ingott2",
+      "ingott3",
+      "ingott4",
+      "ingott5",
+      "ingott51",
+      "faeiront1",
+      "voidsteelt1",
+      "blessedcruciblet1",
+      "azuritechunkt1",
+      "cinnabart1",
+      "tolviumt1"
+    ]
+  },
+  "metallicboneweavet1": {
+    "name": "Metallic Boneweave",
+    "rarity": 1
+  },
+  "metalprecious": {
+    "name": "Precious Metals",
+    "options": [
+      "ingott5",
+      "ingott51",
+      "ingotprecioust1",
+      "ingotprecioust2",
+      "ingotprecioust3"
+    ]
+  },
+  "metalt2": {
+    "name": "Tier 2 Metals",
+    "options": [
+      "ingott2",
+      "faeiront1"
+    ]
+  },
+  "metalt3": {
+    "name": "Tier 3 Metals",
+    "options": [
+      "ingott3",
+      "voidsteelt1"
+    ]
+  },
+  "metalt4": {
+    "name": "Tier 4 Metals",
+    "options": [
+      "ingott4",
+      "blessedcruciblet1",
+      "azuritechunkt1"
+    ]
+  },
+  "metalt5": {
+    "name": "Tier 5 Metals",
+    "options": [
+      "ingott5",
+      "ingott51",
+      "cinnabart1",
+      "tolviumt1"
+    ]
+  },
+  "milkt1": {
+    "name": "Milk",
+    "rarity": 0
+  },
+  "mintt1": {
+    "name": "Mint",
+    "rarity": 0
+  },
+  "moonstonecutt1": {
+    "name": "Cut Flawed Moonstone",
+    "raw": [
+      [
+        "moonstonet1",
+        1
+      ],
+      [
+        "alchemydeatht1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "moonstonecutt2": {
+    "name": "Cut Moonstone",
+    "raw": [
+      [
+        "moonstonet2",
+        1
+      ],
+      [
+        "alchemydeatht2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "moonstonecutt3": {
+    "name": "Cut Brilliant Moonstone",
+    "raw": [
+      [
+        "moonstonet3",
+        1
+      ],
+      [
+        "alchemydeatht3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "moonstonecutt4": {
+    "name": "Cut Pristine Moonstone",
+    "raw": [
+      [
+        "moonstonet4",
+        1
+      ],
+      [
+        "essencedeatht1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "moonstonet1": {
+    "name": "Flawed Moonstone",
+    "rarity": 0
+  },
+  "moonstonet2": {
+    "name": "Moonstone",
+    "raw": [
+      [
+        "moonstonet1",
+        3
+      ],
+      [
+        "alchemydeatht2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "moonstonet3": {
+    "name": "Brilliant Moonstone",
+    "raw": [
+      [
+        "moonstonet2",
+        4
+      ],
+      [
+        "alchemydeatht3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "moonstonet4": {
+    "name": "Pristine Moonstone",
+    "raw": [
+      [
+        "moonstonet3",
+        5
+      ],
+      [
+        "essencedeatht1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "mushroomt1": {
+    "name": "Mushroom",
+    "rarity": 0
+  },
+  "mutagenlostt1": {
+    "name": "Vial Of Ectoplasmic Mutagen",
+    "rarity": 1
+  },
+  "mutagentancientt1": {
+    "name": "Vial of Ancient Mutagen",
+    "rarity": 1
+  },
+  "notesonaeternumfaunat1": {
+    "name": "Notes on Aeternum Fauna",
+    "rarity": 3
+  },
+  "nutmegt1": {
+    "name": "Nutmeg",
+    "rarity": 0
+  },
+  "nutt1": {
+    "name": "Nut",
+    "rarity": 0
+  },
+  "oilt1": {
+    "name": "Oil",
+    "rarity": 0
+  },
+  "oniont1": {
+    "name": "Onion",
+    "rarity": 0
+  },
+  "onyxcutt1": {
+    "name": "Cut Flawed Onyx",
+    "raw": [
+      [
+        "onyxt1",
+        1
+      ],
+      [
+        "alchemylifet1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "onyxcutt2": {
+    "name": "Cut Onyx",
+    "raw": [
+      [
+        "onyxt2",
+        1
+      ],
+      [
+        "alchemylifet2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "onyxcutt3": {
+    "name": "Cut Brilliant Onyx",
+    "raw": [
+      [
+        "onyxt3",
+        1
+      ],
+      [
+        "alchemylifet3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "onyxcutt4": {
+    "name": "Cut Pristine Onyx",
+    "raw": [
+      [
+        "onyxt4",
+        1
+      ],
+      [
+        "essencelifet1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "onyxt1": {
+    "name": "Flawed Onyx",
+    "rarity": 0
+  },
+  "onyxt2": {
+    "name": "Onyx",
+    "raw": [
+      [
+        "onyxt1",
+        3
+      ],
+      [
+        "alchemylifet2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "onyxt3": {
+    "name": "Brilliant Onyx",
+    "raw": [
+      [
+        "onyxt2",
+        4
+      ],
+      [
+        "alchemylifet3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "onyxt4": {
+    "name": "Pristine Onyx",
+    "raw": [
+      [
+        "onyxt3",
+        5
+      ],
+      [
+        "essencelifet1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "opalcutt1": {
+    "name": "Cut Flawed Opal",
+    "raw": [
+      [
+        "opalt1",
+        1
+      ],
+      [
+        "alchemyspiritt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "opalcutt2": {
+    "name": "Cut Opal",
+    "raw": [
+      [
+        "opalt2",
+        1
+      ],
+      [
+        "alchemyspiritt2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "opalcutt3": {
+    "name": "Cut Brilliant Opal",
+    "raw": [
+      [
+        "opalt3",
+        1
+      ],
+      [
+        "alchemyspiritt3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "opalcutt4": {
+    "name": "Cut Pristine Opal",
+    "raw": [
+      [
+        "opalt4",
+        1
+      ],
+      [
+        "essencespiritt1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "opalt1": {
+    "name": "Flawed Opal",
+    "rarity": 0
+  },
+  "opalt2": {
+    "name": "Opal",
+    "raw": [
+      [
+        "opalt1",
+        3
+      ],
+      [
+        "alchemyspiritt2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "opalt3": {
+    "name": "Brilliant Opal",
+    "raw": [
+      [
+        "opalt2",
+        4
+      ],
+      [
+        "alchemyspiritt3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "opalt4": {
+    "name": "Pristine Opal",
+    "raw": [
+      [
+        "opalt3",
+        5
+      ],
+      [
+        "essencespiritt1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "oranget1": {
+    "name": "Orange",
+    "rarity": 0
+  },
+  "oreganot1": {
+    "name": "Oregano",
+    "rarity": 0
+  },
+  "oreprecioust1": {
+    "name": "Silver Ore",
+    "rarity": 0
+  },
+  "oreprecioust2": {
+    "name": "Gold Ore",
+    "rarity": 0
+  },
+  "oreprecioust3": {
+    "name": "Platinum Ore",
+    "rarity": 0
+  },
+  "oret1": {
+    "name": "Iron Ore",
+    "rarity": 0
+  },
+  "oret4": {
+    "name": "Starmetal Ore",
+    "rarity": 0
+  },
+  "oret5": {
+    "name": "Orichalcum Ore",
+    "rarity": 0
+  },
+  "paprikat1": {
+    "name": "Paprika",
+    "rarity": 0
+  },
+  "parsleyt1": {
+    "name": "Parsley",
+    "rarity": 0
+  },
+  "pastat1": {
+    "name": "Pasta",
+    "raw": [
+      [
+        "flourt1",
+        1
+      ],
+      [
+        "eggt1",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "pastrycrustt1": {
+    "name": "Pastry Crust",
+    "raw": [
+      [
+        "flourt1",
+        1
+      ],
+      [
+        "saltt1",
+        1
+      ],
+      [
+        "watert1",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "pearlt1": {
+    "name": "Flawed Pearl",
+    "rarity": 0
+  },
+  "pearlt2": {
+    "name": "Pearl",
+    "rarity": 1
+  },
+  "pearlt3": {
+    "name": "Brilliant Pearl",
+    "rarity": 2
+  },
+  "pearlt4": {
+    "name": "Pristine Pearl",
+    "rarity": 3
+  },
+  "peppercornt1": {
+    "name": "Peppercorn",
+    "rarity": 0
+  },
+  "petrifiedfiret1": {
+    "name": "Petrified Fire",
+    "rarity": 4
+  },
+  "petrifiedwoodt1": {
+    "name": "Petrified Wood",
+    "rarity": 1
+  },
+  "philosophersstonet1": {
+    "name": "Philosopher's Stone",
+    "rarity": 4
+  },
+  "pigmentblack": {
+    "name": "Black Pigment",
+    "rarity": 0
+  },
+  "pigmentblue": {
+    "name": "Blue Pigment",
+    "rarity": 0
+  },
+  "pigmentbrown": {
+    "name": "Brown Pigment",
+    "rarity": 0
+  },
+  "pigmentcyan": {
+    "name": "Cyan Pigment",
+    "rarity": 0
+  },
+  "pigmentgreen": {
+    "name": "Green Pigment",
+    "rarity": 0
+  },
+  "pigmentmagenta": {
+    "name": "Magenta Pigment",
+    "rarity": 0
+  },
+  "pigmentorange": {
+    "name": "Orange Pigment",
+    "rarity": 0
+  },
+  "pigmentpurple": {
+    "name": "Purple Pigment",
+    "rarity": 0
+  },
+  "pigmentred": {
+    "name": "Red Pigment",
+    "rarity": 0
+  },
+  "pigmentturquoise": {
+    "name": "Turquoise Pigment",
+    "rarity": 0
+  },
+  "pigmentwhite": {
+    "name": "White Pigment",
+    "rarity": 0
+  },
+  "pigmentyellow": {
+    "name": "Yellow Pigment",
+    "rarity": 0
+  },
+  "porkbellyt1": {
+    "name": "Pork Belly",
+    "rarity": 1
+  },
+  "porkt1": {
+    "name": "Pork",
+    "rarity": 0
+  },
+  "potatot1": {
+    "name": "Potato",
+    "rarity": 0
+  },
+  "poultryt1": {
+    "name": "Poultry",
+    "rarity": 0
+  },
+  "precisionarmoringtoolst1": {
+    "name": "Precision Armoring Tools",
+    "rarity": 4
+  },
+  "precisionengineeringtoolst1": {
+    "name": "Precision Engineering Tools",
+    "rarity": 4
+  },
+  "primeredmeatt1": {
+    "name": "Prime Red Meat",
+    "rarity": 2
+  },
+  "pristinebearclawt1": {
+    "name": "Pristine Bear Claw",
+    "rarity": 4
+  },
+  "pristinebearpeltt1": {
+    "name": "Pristine Bear Pelt",
+    "rarity": 3
+  },
+  "pristinewolfclawt1": {
+    "name": "Pristine Wolf Claw",
+    "rarity": 3
+  },
+  "pureresint1": {
+    "name": "Pure Resin",
+    "rarity": 4
+  },
+  "putridbarkt1": {
+    "name": "Putrid Bark",
+    "rarity": 1
+  },
+  "quartermastersnotest1": {
+    "name": "Quartermaster's Notes",
+    "rarity": 3
+  },
+  "quillbarkt1": {
+    "name": "Quillbark",
+    "rarity": 3
+  },
+  "rabbitsfoott1": {
+    "name": "Rabbit's Foot",
+    "rarity": 3
+  },
+  "rabbitt1": {
+    "name": "Sumptuous Rabbit",
+    "rarity": 2
+  },
+  "rawhidet1": {
+    "name": "Rawhide",
+    "rarity": 0
+  },
+  "rawhidet4": {
+    "name": "Thick Hide",
+    "rarity": 0
+  },
+  "rawhidet5": {
+    "name": "Iron Hide",
+    "rarity": 0
+  },
+  "redmeatt1": {
+    "name": "Red Meat",
+    "rarity": 0
+  },
+  "reedt1": {
+    "name": "Reeds",
+    "rarity": 0
+  },
+  "ricet1": {
+    "name": "Rice",
+    "rarity": 0
+  },
+  "rosemaryt1": {
+    "name": "Rosemary",
+    "rarity": 0
+  },
+  "rubycutt1": {
+    "name": "Cut Flawed Ruby",
+    "raw": [
+      [
+        "rubyt1",
+        1
+      ],
+      [
+        "alchemyfiret1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "rubycutt2": {
+    "name": "Cut Ruby",
+    "raw": [
+      [
+        "rubyt2",
+        1
+      ],
+      [
+        "alchemyfiret2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "rubycutt3": {
+    "name": "Cut Brilliant Ruby",
+    "raw": [
+      [
+        "rubyt3",
+        1
+      ],
+      [
+        "alchemyfiret3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "rubycutt4": {
+    "name": "Cut Pristine Ruby",
+    "raw": [
+      [
+        "rubyt4",
+        1
+      ],
+      [
+        "essencefiret1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "rubyt1": {
+    "name": "Flawed Ruby",
+    "rarity": 0
+  },
+  "rubyt2": {
+    "name": "Ruby",
+    "raw": [
+      [
+        "rubyt1",
+        3
+      ],
+      [
+        "alchemyfiret2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "rubyt3": {
+    "name": "Brilliant Ruby",
+    "raw": [
+      [
+        "rubyt2",
+        4
+      ],
+      [
+        "alchemyfiret3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "rubyt4": {
+    "name": "Pristine Ruby",
+    "raw": [
+      [
+        "rubyt3",
+        5
+      ],
+      [
+        "essencefiret1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "runicthreadt5": {
+    "name": "Runic Thread",
+    "rarity": 4
+  },
+  "saffront1": {
+    "name": "Saffron",
+    "rarity": 0
+  },
+  "saget1": {
+    "name": "Sage",
+    "rarity": 0
+  },
+  "saltpetert1": {
+    "name": "Saltpeter",
+    "rarity": 0
+  },
+  "saltt1": {
+    "name": "Salt",
+    "rarity": 0
+  },
+  "sandpaper": {
+    "name": "Sandpaper",
+    "options": [
+      "sandpapert3",
+      "sandpapert4",
+      "sandpapert5"
+    ]
+  },
+  "sandpapert3": {
+    "name": "Coarse Sandpaper",
+    "rarity": 0
+  },
+  "sandpapert4": {
+    "name": "Fine Sandpaper",
+    "rarity": 1
+  },
+  "sandpapert5": {
+    "name": "Obsidian Sandpaper",
+    "rarity": 2
+  },
+  "sapphirecutt1": {
+    "name": "Cut Flawed Sapphire",
+    "raw": [
+      [
+        "sapphiret1",
+        1
+      ],
+      [
+        "alchemydeatht1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "sapphirecutt2": {
+    "name": "Cut Sapphire",
+    "raw": [
+      [
+        "sapphiret2",
+        1
+      ],
+      [
+        "alchemydeatht2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "sapphirecutt3": {
+    "name": "Cut Brilliant Sapphire",
+    "raw": [
+      [
+        "sapphiret3",
+        1
+      ],
+      [
+        "alchemydeatht3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "sapphirecutt4": {
+    "name": "Cut Pristine Sapphire",
+    "raw": [
+      [
+        "sapphiret4",
+        1
+      ],
+      [
+        "essencedeatht1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "sapphiret1": {
+    "name": "Flawed Sapphire",
+    "rarity": 0
+  },
+  "sapphiret2": {
+    "name": "Sapphire",
+    "raw": [
+      [
+        "sapphiret1",
+        3
+      ],
+      [
+        "alchemydeatht2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "sapphiret3": {
+    "name": "Brilliant Sapphire",
+    "raw": [
+      [
+        "sapphiret2",
+        4
+      ],
+      [
+        "alchemydeatht3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "sapphiret4": {
+    "name": "Pristine Sapphire",
+    "raw": [
+      [
+        "sapphiret3",
+        5
+      ],
+      [
+        "essencedeatht1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "sausaget1": {
+    "name": "Sausage",
+    "raw": [
+      [
+        "meats",
+        1
+      ],
+      [
+        "seasoning",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "scaleclotht1": {
+    "name": "Scalecloth",
+    "rarity": 4
+  },
+  "scalecordt1": {
+    "name": "Scalecord",
+    "rarity": 3
+  },
+  "scalingpowdert1": {
+    "name": "Scaling Powder",
+    "rarity": 4
+  },
+  "scarhidet1": {
+    "name": "Scarhide",
+    "rarity": 4
+  },
+  "seasoning": {
+    "name": "Seasonings",
+    "options": [
+      "basilt1",
+      "saffront1",
+      "thymet1",
+      "oreganot1",
+      "dillt1",
+      "parsleyt1",
+      "rosemaryt1",
+      "tarragont1",
+      "saget1",
+      "mintt1",
+      "peppercornt1",
+      "cinnamont1",
+      "nutmegt1",
+      "paprikat1",
+      "gingert1",
+      "garlict1",
+      "saltt1",
+      "sugart1",
+      "seasoningblendt1",
+      "honeyt1"
+    ]
+  },
+  "seasoningblendt1": {
+    "name": "Seasoning Blend",
+    "raw": [
+      [
+        "seasoning",
+        1
+      ],
+      [
+        "seasoning",
+        1
+      ],
+      [
+        "seasoning",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "serpentinehandguardt1": {
+    "name": "Serpentine Handguard",
+    "rarity": 4
+  },
+  "shatteredswordt1": {
+    "name": "Shattered Sword",
+    "rarity": 4
+  },
+  "shifthidet1": {
+    "name": "Shifthide",
+    "rarity": 3
+  },
+  "smolderhidet1": {
+    "name": "Smolderhide",
+    "rarity": 4
+  },
+  "solvent": {
+    "name": "Solvent",
+    "options": [
+      "solventt3",
+      "solventt4",
+      "solventt5"
+    ]
+  },
+  "solventt3": {
+    "name": "Weak Solvent",
+    "rarity": 0
+  },
+  "solventt4": {
+    "name": "Potent Solvent",
+    "rarity": 1
+  },
+  "solventt5": {
+    "name": "Pure Solvent",
+    "rarity": 2
+  },
+  "sparklingbonedustt1": {
+    "name": "Sparkling Bone Dust",
+    "rarity": 1
+  },
+  "spectraldustt1": {
+    "name": "Spectral Dust",
+    "rarity": 1
+  },
+  "splinteredbowt1": {
+    "name": "Splintered Bow",
+    "rarity": 4
+  },
+  "squasht1": {
+    "name": "Squash",
+    "rarity": 0
+  },
+  "squidinkt1": {
+    "name": "Squid Ink",
+    "rarity": 2
+  },
+  "stackeddeckt1": {
+    "name": "Stacked Deck",
+    "rarity": 4
+  },
+  "stickyvinest1": {
+    "name": "Sticky Vines",
+    "rarity": 1
+  },
+  "stonet1": {
+    "name": "Stone",
+    "rarity": 0
+  },
+  "stonet4": {
+    "name": "Lodestone",
+    "rarity": 0
+  },
+  "strawberryt1": {
+    "name": "Strawberry",
+    "rarity": 0
+  },
+  "stringbeant1": {
+    "name": "String Bean",
+    "rarity": 0
+  },
+  "sugart1": {
+    "name": "Sugar",
+    "rarity": 0
+  },
+  "surveyorstoolst1": {
+    "name": "Surveyor's Tools",
+    "rarity": 3
+  },
+  "tannin": {
+    "name": "Tannin",
+    "options": [
+      "tannint3",
+      "tannint4",
+      "tannint5"
+    ]
+  },
+  "tannint3": {
+    "name": "Tannin",
+    "rarity": 0
+  },
+  "tannint4": {
+    "name": "Rested Tannin",
+    "rarity": 1
+  },
+  "tannint5": {
+    "name": "Aged Tannin",
+    "rarity": 2
+  },
+  "tarragont1": {
+    "name": "Tarragon",
+    "rarity": 0
+  },
+  "thymet1": {
+    "name": "Thyme",
+    "rarity": 0
+  },
+  "timber": {
+    "name": "Refined Wood",
+    "options": [
+      "timbert2",
+      "timbert3",
+      "timbert4",
+      "timbert5",
+      "timbert51",
+      "petrifiedwoodt1",
+      "whisperwoodt1",
+      "quillbarkt1",
+      "ebonwoodt1",
+      "wildwoodt1",
+      "barbvinet1",
+      "hornt5"
+    ]
+  },
+  "timbert2": {
+    "name": "Timber",
+    "raw": [
+      [
+        "woodt1",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "timbert3": {
+    "name": "Lumber",
+    "raw": [
+      [
+        "woodt2",
+        4
+      ],
+      [
+        "timbert2",
+        2
+      ],
+      [
+        "sandpaper",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "timbert4": {
+    "name": "Wyrdwood Planks",
+    "raw": [
+      [
+        "woodt4",
+        6
+      ],
+      [
+        "timbert3",
+        2
+      ],
+      [
+        "sandpaper",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "timbert5": {
+    "name": "Ironwood Planks",
+    "raw": [
+      [
+        "woodt5",
+        8
+      ],
+      [
+        "timbert4",
+        2
+      ],
+      [
+        "sandpaper",
+        1
+      ]
+    ],
+    "rarity": 0
+  },
+  "timbert51": {
+    "name": "Glittering Ebony",
+    "raw": [
+      [
+        "timbert5",
+        5
+      ],
+      [
+        "wildwoodt1",
+        2
+      ],
+      [
+        "barbvinet1",
+        1
+      ],
+      [
+        "sandpapert5",
+        1
+      ]
+    ],
+    "rarity": 3
+  },
+  "tolviumt1": {
+    "name": "Tolvium",
+    "rarity": 4
+  },
+  "tomatot1": {
+    "name": "Tomato",
+    "rarity": 0
+  },
+  "topazcutt1": {
+    "name": "Cut Flawed Topaz",
+    "raw": [
+      [
+        "topazt1",
+        1
+      ],
+      [
+        "alchemyairt1",
+        2
+      ]
+    ],
+    "rarity": 0
+  },
+  "topazcutt2": {
+    "name": "Cut Topaz",
+    "raw": [
+      [
+        "topazt2",
+        1
+      ],
+      [
+        "alchemyairt2",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "topazcutt3": {
+    "name": "Cut Brilliant Topaz",
+    "raw": [
+      [
+        "topazt3",
+        1
+      ],
+      [
+        "alchemyairt3",
+        2
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "topazcutt4": {
+    "name": "Cut Pristine Topaz",
+    "raw": [
+      [
+        "topazt4",
+        1
+      ],
+      [
+        "essenceairt1",
+        3
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "topazt1": {
+    "name": "Flawed Topaz",
+    "rarity": 0
+  },
+  "topazt2": {
+    "name": "Topaz",
+    "raw": [
+      [
+        "topazt1",
+        3
+      ],
+      [
+        "alchemyairt2",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 1
+  },
+  "topazt3": {
+    "name": "Brilliant Topaz",
+    "raw": [
+      [
+        "topazt2",
+        4
+      ],
+      [
+        "alchemyairt3",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 2
+  },
+  "topazt4": {
+    "name": "Pristine Topaz",
+    "raw": [
+      [
+        "topazt3",
+        5
+      ],
+      [
+        "essenceairt1",
+        1
+      ],
+      [
+        "solvent",
+        2
+      ]
+    ],
+    "rarity": 3
+  },
+  "trackerssealt1": {
+    "name": "Tracker's Seal",
+    "rarity": 4
+  },
+  "trinketband": {
+    "name": "Trinket Bands",
+    "options": [
+      "trinket_bandt2",
+      "trinket_bandt3",
+      "trinket_bandt4",
+      "trinket_bandt5",
+      "trinket_bandt51"
+    ]
+  },
+  "trinketchain": {
+    "name": "Trinket Chains",
+    "options": [
+      "trinket_chaint2",
+      "trinket_chaint3",
+      "trinket_chaint4",
+      "trinket_chaint5",
+      "trinket_chaint51"
+    ]
+  },
+  "trinkethook": {
+    "name": "Trinket Hooks",
+    "options": [
+      "trinket_hookt2",
+      "trinket_hookt3",
+      "trinket_hookt4",
+      "trinket_hookt5",
+      "trinket_hookt51"
+    ]
+  },
+  "trinketsetting": {
+    "name": "Trinket Gem Settings",
+    "options": [
+      "trinket_settingt2",
+      "trinket_settingt3",
+      "trinket_settingt4",
+      "trinket_settingt5",
+      "trinket_settingt51"
+    ]
+  },
+  "turkeybreastt1": {
+    "name": "Poultry Breast",
+    "rarity": 2
+  },
+  "turkeythight1": {
+    "name": "Poultry Thigh",
+    "rarity": 1
+  },
+  "venisont1": {
+    "name": "Venison",
+    "rarity": 0
+  },
+  "venisontenderloint1": {
+    "name": "Venison Tenderloin",
+    "rarity": 2
+  },
+  "voidbentingot": {
+    "name": "Voidbent Ingot",
+    "raw": [
+      [
+        "voidore",
+        1
+      ],
+      [
+        "voidessence",
+        1
+      ],
+      [
+        "keypart_core",
+        10
+      ]
+    ],
+    "rarity": 4
+  },
+  "voidessence": {
+    "name": "Void Essence",
+    "rarity": 4
+  },
+  "voidore": {
+    "name": "Void Ore",
+    "rarity": 4
+  },
+  "voidsteelt1": {
+    "name": "Voidmetal",
+    "rarity": 2
+  },
+  "watert1": {
+    "name": "Water",
+    "rarity": 0
+  },
+  "wheatt1": {
+    "name": "Wheat",
+    "rarity": 0
+  },
+  "whisperwoodt1": {
+    "name": "Whisperwood",
+    "rarity": 2
+  },
+  "wildwoodt1": {
+    "name": "Wildwood",
+    "rarity": 4
+  },
+  "witheredbought1": {
+    "name": "Withered Bough",
+    "rarity": 4
+  },
+  "wolfloint1": {
+    "name": "Tender Wolf Loin",
+    "rarity": 2
+  },
+  "wood": {
+    "name": "Wood",
+    "options": [
+      "woodt1",
+      "woodt2",
+      "woodt4",
+      "woodt5",
+      "timbert2",
+      "timbert3",
+      "timbert4",
+      "timbert5",
+      "timbert51"
+    ]
+  },
+  "woodstaint2": {
+    "name": "Ash Stain",
+    "raw": [
+      [
+        "charcoalt1",
+        10
+      ],
+      [
+        "solventt3",
+        4
+      ]
+    ],
+    "rarity": 0
+  },
+  "woodstaint3": {
+    "name": "Maple Stain",
+    "raw": [
+      [
+        "solventt3",
+        10
+      ],
+      [
+        "oilt1",
+        4
+      ]
+    ],
+    "rarity": 1
+  },
+  "woodstaint4": {
+    "name": "Oak Stain",
+    "raw": [
+      [
+        "solventt4",
+        10
+      ],
+      [
+        "oilt1",
+        4
+      ]
+    ],
+    "rarity": 2
+  },
+  "woodstaint5": {
+    "name": "Mahogany Stain",
+    "raw": [
+      [
+        "solventt5",
+        10
+      ],
+      [
+        "oilt1",
+        4
+      ]
+    ],
+    "rarity": 3
+  },
+  "woodt1": {
+    "name": "Green Wood",
+    "rarity": 0
+  },
+  "woodt2": {
+    "name": "Aged Wood",
+    "rarity": 0
+  },
+  "woodt4": {
+    "name": "Wyrdwood",
+    "rarity": 0
+  },
+  "woodt5": {
+    "name": "Ironwood",
+    "rarity": 0
+  },
+  "yeastt1": {
+    "name": "Yeast",
+    "rarity": 0
+  }
+}

@@ -1,5 +1,6 @@
 #database/init_db.py
 
+import yaml
 from sqlalchemy import create_engine
 from config.database_config import DATABASE_URI
 from database.models import (Base, Item, CraftingRecipe, RecipeReagent, TradeSkill,
@@ -9,6 +10,12 @@ import os
 import json
 
 DATABASE_DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
+
+def load_yaml(filename):
+    """Helper function to load YAML data from a file."""
+    with open(filename, 'r') as file:
+        return yaml.safe_load(file)
+
 
 def load_json(filename):
     """Helper function to load JSON data from a file."""
@@ -44,108 +51,114 @@ def load_players(session):
                 session.add(PlayerSkill(player_id=player.player_id, skill_id=skill_entry.skill_id, skill_level=skill["skill_level"]))
 
 
-def load_tracked_items(session):
-    tracked_items = load_json(os.path.join(DATABASE_DATA_DIR, 'tracked_items.json'))
-
-    for item in tracked_items:
+def load_items(session):
+    items = load_yaml(os.path.join(DATABASE_DATA_DIR, 'MasterItemDefinitions_Crafting.yml'))
+    for item in items:
         # Check if the item exists
-        existing_item = session.query(Item).filter_by(item_id=item["item_id"]).first()
-        
+        existing_item = session.query(Item).filter_by(item_id=item["ItemID"]).first()
+
         if not existing_item:
-            new_item = Item(item_id=item["item_id"], item_name=item["item_name"])
+            new_item = Item(item_id=item["ItemID"], item_name=item["Name"])
             session.add(new_item)
         else:
             new_item = existing_item
 
         # Handle item types
-        if "item_type" in item:
-            for type_name in item["item_type"]:
-                # Check if the ItemType exists
-                item_type = session.query(ItemType).filter_by(item_type_name=type_name).first()
-                
-                if not item_type:
-                    item_type = ItemType(item_type_name=type_name)
-                    session.add(item_type)
-                
-                # Create or update association
-                if not session.query(item_itemtype_association).filter_by(item_id=new_item.item_id, item_type_id=item_type.item_type_id).first():
-                    new_association = {
-                        'item_id': new_item.item_id,
-                        'item_type_id': item_type.item_type_id
-                    }
-                    # Insert the new association into the association table
-                    session.execute(item_itemtype_association.insert().values(**new_association))
+        item_type_name = item["ItemType"]
+        # Check if the ItemType exists
+        item_type = session.query(ItemType).filter_by(item_type_name=item_type_name).first()
+
+        if not item_type:
+            item_type = ItemType(item_type_name=item_type_name)
+            session.add(item_type)
+
+        # Create or update association
+        if not session.query(item_itemtype_association).filter_by(item_id=new_item.item_id, item_type_id=item_type.item_type_id).first():
+            new_association = {
+                'item_id': new_item.item_id,
+                'item_type_id': item_type.item_type_id
+            }
+            session.execute(item_itemtype_association.insert().values(**new_association))
 
     session.commit()
 
+def load_crafting_categories(session):
+    category_data = load_yaml(os.path.join(DATABASE_DATA_DIR, 'CraftingCategory.json'))
+    
+    for category, details in category_data.items():
+        # Check if the item type exists
+        item_type = session.query(ItemType).filter_by(item_type_name=details["name"]).first()
+        
+        # If not, add it
+        if not item_type:
+            item_type = ItemType(item_type_name=details["name"])
+            session.add(item_type)
+            session.flush()  # So that we can get the item_type_id
 
+        # Check if the items for this category exist and if not, add them
+        for item_id in details.get("options", []):
+            item = session.query(Item).filter_by(item_id=item_id).first()
+            if not item:
+                # If the specific item details are in category_data, we can get its name
+                item_name = category_data.get(item_id, {}).get("name", "")
+                item = Item(item_id=item_id, item_name=item_name)
+                session.add(item)
+                
+            # Add the item type association for this item
+            if not session.query(item_itemtype_association).filter_by(item_id=item.item_id, item_type_id=item_type.item_type_id).first():
+                association = {
+                    'item_id': item.item_id,
+                    'item_type_id': item_type.item_type_id
+                }
+                session.execute(item_itemtype_association.insert().values(**association))
 
+    session.commit()
 
 def load_recipes(session):
-    recipe_category_dir = os.path.join(DATABASE_DATA_DIR, 'recipes')
-    for category_file in os.listdir(recipe_category_dir):
-        if category_file.endswith(".json"):
-            recipes = load_json(os.path.join(recipe_category_dir, category_file))
-            for recipe_data in recipes:
-                with session.no_autoflush:
-                    # Find the item based on the recipe_name from the recipe_data
-                    result_item = session.query(Item).filter_by(item_name=recipe_data["recipe_name"]).first()
-                    if result_item:
-                        # Use result_item_id instead of result_item_name
-                        if not session.query(CraftingRecipe).filter_by(result_item_id=result_item.item_id).first():
-                            recipe = CraftingRecipe(result_item_id=result_item.item_id, quantity_produced=recipe_data["craft_amount"])
-                            session.add(recipe)
-                            session.flush()
-                            
-                            for ingredient in recipe_data["ingredients"]:
-                                # Get the ingredient_name and item_type values
-                                ingredient_name = ingredient.get("ingredient_name")
-                                item_type = ingredient.get("item_type")
+    recipes = load_yaml(os.path.join(DATABASE_DATA_DIR, 'CraftingRecipes.yml'))
+    for recipe_data in recipes:
+        with session.no_autoflush:
+            result_item = session.query(Item).filter_by(item_id=recipe_data["ItemID"]).first()
+            if result_item:
+                if not session.query(CraftingRecipe).filter_by(result_item_id=result_item.item_id).first():
+                    recipe = CraftingRecipe(result_item_id=result_item.item_id, quantity_produced=recipe_data["OutputQty"])
+                    session.add(recipe)
+                    session.flush()
 
-                                # Initialize reagent_item_id and reagent_item_type_id to None
-                                reagent_item_id = None
-                                reagent_item_type_id = None
+                    for idx in range(1, 8):  # Assuming up to 7 ingredients based on provided data
+                        ingredient_name = recipe_data[f"Ingredient{idx}"]
+                        ingredient_qty = recipe_data[f"Qty{idx}"]
+                        ingredient_type = recipe_data[f"Type{idx}"]
 
-                                if ingredient_name:
-                                    # If ingredient_name is provided, get the corresponding item
-                                    ingredient_item = session.query(Item).filter_by(item_name=ingredient_name).first()
-                                    if ingredient_item:
-                                        reagent_item_id = ingredient_item.item_id
-                                elif item_type:
-                                    # If item_type is provided, get the corresponding item type
-                                    ingredient_item_type = session.query(ItemType).filter_by(item_type_name=item_type).first()
-                                    if ingredient_item_type:
-                                        reagent_item_type_id = ingredient_item_type.item_type_id
-
-                                # Now create the RecipeReagent entry if it doesn't already exist
-                                existing_reagent = session.query(RecipeReagent).filter_by(
-                                    recipe_id=recipe.recipe_id, 
-                                    reagent_item_id=reagent_item_id, 
-                                    reagent_item_type_id=reagent_item_type_id
-                                ).first()
-
-                                if not existing_reagent:
+                        if ingredient_name and ingredient_qty:
+                            if ingredient_type == "Category_Only":
+                                # Here, instead of an item_id, we set item_type
+                                ingredient_item_type = session.query(ItemType).filter_by(item_type_name=ingredient_name).first()
+                                if ingredient_item_type:
                                     session.add(RecipeReagent(
-                                        recipe_id=recipe.recipe_id, 
-                                        reagent_item_id=reagent_item_id, 
-                                        reagent_item_type_id=reagent_item_type_id, 
-                                        quantity_required=ingredient["quantity"]
+                                        recipe_id=recipe.recipe_id,
+                                        reagent_item_type_id=ingredient_item_type.item_type_id,
+                                        quantity_required=ingredient_qty
                                     ))
-
-                            for skill_req in recipe_data["skills_required"]:
-                                # Update to use 'skills_required' and the new field names 'skill_name' and 'level_required'
-                                skill = session.query(TradeSkill).filter_by(skill_name=skill_req["skill_name"]).first()
-                                if skill and not session.query(RecipeSkillRequirement).filter_by(recipe_id=recipe.recipe_id, skill_id=skill.skill_id).first():
-                                    session.add(RecipeSkillRequirement(recipe_id=recipe.recipe_id, skill_id=skill.skill_id, level_required=skill_req["level_required"]))
-                    else:
-                        print(f"Item {recipe_data['recipe_name']} not found in database.")
-
+                            else:
+                                ingredient_item = session.query(Item).filter_by(item_name=ingredient_name).first()
+                                if ingredient_item:
+                                    session.add(RecipeReagent(
+                                        recipe_id=recipe.recipe_id,
+                                        reagent_item_id=ingredient_item.item_id,
+                                        quantity_required=ingredient_qty
+                                    ))
+            else:
+                print(f"Item {recipe_data['ItemID']} not found in database.")
+    
+    session.commit()
 
 def init_data(session):
     load_servers(session)
     load_trade_skills(session)
     load_players(session)
-    load_tracked_items(session)
+    load_crafting_categories(session)
+    load_items(session)
     load_recipes(session)
     
     session.commit()
