@@ -51,14 +51,14 @@ def load_players(session):
                 session.add(PlayerSkill(player_id=player.player_id, skill_id=skill_entry.skill_id, skill_level=skill["skill_level"]))
 
 
-def load_items(session):
-    items = load_yaml(os.path.join(DATABASE_DATA_DIR, 'MasterItemDefinitions_Crafting.yml'))
+def load_items_from_file(session, filename):
+    items = load_yaml(os.path.join(DATABASE_DATA_DIR, filename))
     for item in items:
         # Check if the item exists
-        existing_item = session.query(Item).filter_by(item_id=item["ItemID"]).first()
+        existing_item = session.query(Item).filter_by(item_id=item["ItemID"].lower()).first()
 
         if not existing_item:
-            new_item = Item(item_id=item["ItemID"], item_name=item["Name"])
+            new_item = Item(item_id=item["ItemID"].lower(), item_name=item["Name"])
             session.add(new_item)
         else:
             new_item = existing_item
@@ -81,6 +81,11 @@ def load_items(session):
             session.execute(item_itemtype_association.insert().values(**new_association))
 
     session.commit()
+
+def load_items(session):
+    load_items_from_file(session, 'MasterItemDefinitions_Crafting.yml')
+    load_items_from_file(session, 'MasterItemDefinitions_Common.yml')
+
 
 def load_crafting_categories(session):
     category_data = load_yaml(os.path.join(DATABASE_DATA_DIR, 'CraftingCategory.json'))
@@ -117,39 +122,38 @@ def load_crafting_categories(session):
 def load_recipes(session):
     recipes = load_yaml(os.path.join(DATABASE_DATA_DIR, 'CraftingRecipes.yml'))
     for recipe_data in recipes:
-        with session.no_autoflush:
-            result_item = session.query(Item).filter_by(item_id=recipe_data["ItemID"]).first()
-            if result_item:
-                if not session.query(CraftingRecipe).filter_by(result_item_id=result_item.item_id).first():
-                    recipe = CraftingRecipe(result_item_id=result_item.item_id, quantity_produced=recipe_data["OutputQty"])
-                    session.add(recipe)
-                    session.flush()
+        result_item = session.query(Item).filter_by(item_id=recipe_data["ItemID"].lower()).first()
+        if result_item:
+            if not session.query(CraftingRecipe).filter_by(result_item_id=result_item.item_id).first():
+                recipe = CraftingRecipe(result_item_id=result_item.item_id, quantity_produced=recipe_data["OutputQty"])
+                session.add(recipe)
+                session.flush()
 
-                    for idx in range(1, 8):  # Assuming up to 7 ingredients based on provided data
-                        ingredient_name = recipe_data[f"Ingredient{idx}"]
-                        ingredient_qty = recipe_data[f"Qty{idx}"]
-                        ingredient_type = recipe_data[f"Type{idx}"]
+                for idx in range(1, 8):  # Assuming up to 7 ingredients based on provided data
+                    ingredient_name = recipe_data[f"Ingredient{idx}"].lower()
+                    ingredient_qty = recipe_data[f"Qty{idx}"]
+                    ingredient_type = recipe_data[f"Type{idx}"]
 
-                        if ingredient_name and ingredient_qty:
-                            if ingredient_type == "Category_Only":
-                                # Here, instead of an item_id, we set item_type
-                                ingredient_item_type = session.query(ItemType).filter_by(item_type_name=ingredient_name).first()
-                                if ingredient_item_type:
-                                    session.add(RecipeReagent(
-                                        recipe_id=recipe.recipe_id,
-                                        reagent_item_type_id=ingredient_item_type.item_type_id,
-                                        quantity_required=ingredient_qty
-                                    ))
-                            else:
-                                ingredient_item = session.query(Item).filter_by(item_name=ingredient_name).first()
-                                if ingredient_item:
-                                    session.add(RecipeReagent(
-                                        recipe_id=recipe.recipe_id,
-                                        reagent_item_id=ingredient_item.item_id,
-                                        quantity_required=ingredient_qty
-                                    ))
-            else:
-                print(f"Item {recipe_data['ItemID']} not found in database.")
+                    if ingredient_name and ingredient_qty:
+                        if ingredient_type == "Category_Only":
+                            # Here, instead of an item_id, we set item_type
+                            ingredient_item_type = session.query(ItemType).filter_by(item_type_name=ingredient_name).first()
+                            if ingredient_item_type:
+                                session.add(RecipeReagent(
+                                    recipe_id=recipe.recipe_id,
+                                    reagent_item_type_id=ingredient_item_type.item_type_id,
+                                    quantity_required=ingredient_qty
+                                ))
+                        else:
+                            ingredient_item = session.query(Item).filter_by(item_id=ingredient_name).first()
+                            if ingredient_item:
+                                session.add(RecipeReagent(
+                                    recipe_id=recipe.recipe_id,
+                                    reagent_item_id=ingredient_item.item_id,
+                                    quantity_required=ingredient_qty
+                                ))
+        else:
+            print(f"Item {recipe_data['ItemID']} not found in database.")
     
     session.commit()
 
