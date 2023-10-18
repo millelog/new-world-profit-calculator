@@ -1,6 +1,8 @@
 #database/operations/item_operations.py
 
-from database.models import Item 
+from database.models import Item, item_itemtype_association
+import database.operations.current_price_operations as cpo
+
 
 
 def add_item(session, item_data):
@@ -27,3 +29,15 @@ def get_item_by_id(session, item_id):
 def get_item_by_name(session, item_name):
     item = session.query(Item).filter_by(name=item_name).first()
     return item
+
+def get_items_for_item_type(session, item_type_id, server_id):
+    """
+    Retrieves all items associated with a given item type, ordered by their market cost.
+    """
+    items = session.query(Item).join(item_itemtype_association).filter(
+        item_itemtype_association.c.item_type_id == item_type_id
+    ).all()
+    # Fetch market prices and order by them. 
+    # Note: You'd need a function to get the price for each item.
+    items_sorted = sorted(items, key=lambda item: cpo.get_current_price(session, item.item_id, server_id)['price'] if cpo.get_current_price(session, item.item_id, server_id) else float('inf'))
+    return items_sorted

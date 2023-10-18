@@ -114,12 +114,12 @@ def load_crafting_categories(session):
     category_data = load_yaml(os.path.join(DATABASE_DATA_DIR, 'CraftingCategory.json'))
     
     for category, details in category_data.items():
-        # Check if the item type exists
-        item_type = session.query(ItemType).filter_by(item_type_name=details["name"]).first()
+        # Use category (key from the JSON) as the item type name
+        item_type = session.query(ItemType).filter_by(item_type_name=category).first()
         
         # If not, add it
         if not item_type:
-            item_type = ItemType(item_type_name=details["name"])
+            item_type = ItemType(item_type_name=category)
             session.add(item_type)
             session.flush()  # So that we can get the item_type_id
 
@@ -141,6 +141,7 @@ def load_crafting_categories(session):
                 session.execute(item_itemtype_association.insert().values(**association))
 
     session.commit()
+
 
 def load_recipes(session):
     recipes = load_yaml(os.path.join(DATABASE_DATA_DIR, 'CraftingRecipes.yml'))

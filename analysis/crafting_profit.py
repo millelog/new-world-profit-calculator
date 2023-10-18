@@ -2,6 +2,7 @@ from database.models import CraftingRecipe
 import database.operations.current_price_operations as cpo
 import database.operations.recipe_operations as ro
 import database.operations.player_operations as po
+import database.operations.item_operations as io
 
 
 def calculate_item_cost(session, item_id, server_id, player_id):
@@ -18,14 +19,28 @@ def calculate_item_cost(session, item_id, server_id, player_id):
 
     # If recipes exist, determine the cheapest method
     crafting_options = [
-        get_crafting_cost(session, recipe, server_id, player_id, is_root=True)
+        get_crafting_cost(session, recipe, server_id, player_id)
         for recipe in recipes
     ]
     return min(crafting_options, key=lambda x: x[0])
 
 
 
-def get_crafting_cost(session, recipe, server_id, player_id, is_root=True):
+def get_reagent_item_id(session, reagent, used_reagents, server_id):
+    """
+    Determines the reagent item ID for crafting, prioritizing specific item IDs or selecting from available item types.
+    """
+    if reagent.reagent_item_id:
+        return reagent.reagent_item_id
+    potential_items = io.get_items_for_item_type(session, reagent.reagent_item_type_id, server_id) #returns sorted by market price
+    potential_items = [item for item in potential_items if item.item_id not in used_reagents]  # Filter out already used reagents
+    if not potential_items:
+        return None  # No valid items to use for this reagent
+    # Assuming potential_items is sorted by price, return cheapest
+    return potential_items[0].item_id
+
+
+def get_crafting_cost(session, recipe, server_id, player_id):
     """
     Calculates the crafting cost of a given recipe.
     """
@@ -39,8 +54,14 @@ def get_crafting_cost(session, recipe, server_id, player_id, is_root=True):
     total_cost = 0
     crafting_tree = {}
 
+    local_used_reagents = set()  # For uniqueness within this recipe level
     for reagent in recipe.recipe_reagents:
-        reagent_item_id = reagent.reagent_item_id
+        reagent_item_id = get_reagent_item_id(session, reagent, local_used_reagents, server_id)
+        if not reagent_item_id:
+            return float('inf'), {}
+
+        local_used_reagents.add(reagent_item_id)
+
         reagent_quantity = reagent.quantity_required
 
         # Calculate cost for the reagent
