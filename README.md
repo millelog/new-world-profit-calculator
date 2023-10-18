@@ -1,25 +1,42 @@
 # NEW-WORLD-Profit-Calculator
 
+![UI Screenshot](Readme.png)
+
 ## Overview
-The NEW-WORLD-Profit-Calculator is a data processing and management tool designed specifically for the New World game. It not only manages in-game item prices, player details, and crafting recipes but also performs extensive analyses on the data to assist players in making more informed in-game decisions.
+The NEW-WORLD-Profit-Calculator is a dedicated tool for the New World game that enhances player experience. It serves as a comprehensive data manager for in-game item prices, player profiles, and crafting recipes. In addition, it offers insightful analyses on the data, ensuring players make well-informed decisions in-game.
 
 ## Features
-- **Data Parsing**: Efficiently processes JSON data of item prices.
-- **Transaction Logging**: Keeps a log of item transactions.
-- **Player Management**: Add, update, and retrieve player data and their associated trade skills.
-- **Recipe Handling**: Manage in-game crafting recipes and their skill requirements.
+- **Data Parsing**: Seamlessly processes item prices from JSON data.
+- **Transaction Logging**: Maintains a detailed log of item transactions.
+- **Player Management**: Allows adding, updating, and retrieving player profiles along with their trade skills.
+- **Recipe Handling**: Enables efficient management of in-game crafting recipes and the respective skill requirements.
 - **Data Analysis**:
-  - **Price Trends Analysis**: Analyzes price trends over time for specific items, helping to understand market dynamics.
-  - **Profitability Analysis**: Determines the profitability of crafting items versus buying/selling them directly, aiding players in choosing the most profitable actions.
-  - **Recommendation System**: Generates buy/sell recommendations based on previous analyses, providing actionable insights to the players.
+  - **Price Trends Analysis**: Investigates price fluctuations over a period, granting insights into the market's behavior.
+  - **Profitability Analysis**: Evaluates the financial benefits of crafting items in comparison to direct buy/sell, guiding players to financially sound choices.
+  - **Recommendation System**: Furnishes buy/sell advice derived from prior analyses, offering players actionable recommendations.
 
 ## Setup
-1. Set up the database configurations in `config/database_config.py`.
-2. Ensure all dependencies are installed.
-3. Run the main script to initiate the data processing and analyses.
 
-## Contributing
-Contributions are welcome! Please read the contribution guidelines before making any changes.
+### For Windows/Powershell:
+1. Ensure you have Python 3.x installed (Version 3.11 recommended).
+2. Install `virtualenv` using pip:
+    ```powershell
+    pip install virtualenv
+    ```
+3. Create a virtual environment, activate it, and install the required packages:
+    ```powershell
+    python -m venv venv
+    .\venv\Scripts\activate.ps1
+    pip install -r requirements.txt
+    ```
+4. Optionally, customize the server details in database/data/servers.json using the ID from NW Market Prices. When selecting a server on the site, note the ID in the URL - that's the numeric ID required for your server definition. Servers 'Isabella' and 'Leo' are pre-configured for your convenience. Further, you can set up your character and skills based on the example in database/data/players.json. However, the application does offer an interface for this task.
+5. Run the main script:
+    ```
+    python main.py
+    ```
+6. Click 'Initialize Database' in the application. This process may be time-consuming and may render the UI unresponsive temporarily.
+7. After database initialization, select your server and ensure your characters' skills are correctly configured.
+8. Click 'Update Prices'. The latest prices from [NW Market Prices](https://nwmarketprices.com/) will be fetched. For up-to-date prices, consider becoming a scanner on their site and execute a scan before employing this tool.
+9. Once prices are refreshed and the UI becomes responsive, click 'Evaluate All Items'. The list will be populated with the top 50 items, ranked by the score function located in analysis/crafting_profit.py:calculate_score(), currently based on the formula: profit x availability.
+10. Select an item_id from the left panel to view the associated graphical data and item specifics.
 
-## License
-This project is licensed under the MIT License. See `LICENSE` for details.
