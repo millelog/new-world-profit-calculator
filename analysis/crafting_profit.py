@@ -84,7 +84,11 @@ def calculate_profitability(session, item_id, server_id, player_id):
         raise ValueError(f"No recipes found for item {item_id}")
 
     market_price_data = cpo.get_current_price(session, item_id, server_id)
-    market_price = market_price_data['price'] if market_price_data else float('inf')  # Assume infinite price if no market data
+
+    if not market_price_data:
+        return None, None, None, None, None, None, None, None
+
+    market_price = market_price_data['price']
 
     max_score = float('-inf')
     recommended_recipe = None
@@ -125,7 +129,7 @@ def calculate_score(profit_margin, profit, availability):
     if profit_margin < 0:
         return 0
     
-    return profit
+    return profit*availability*profit_margin
 
 def evaluate_all_recipes(session, server_id, player_id):
     all_recipes = session.query(CraftingRecipe).all()
@@ -135,6 +139,10 @@ def evaluate_all_recipes(session, server_id, player_id):
 
         item_id = recipe.result_item_id
         score, recommended_recipe, crafting_tree, profit, profit_margin, crafting_cost, availability, market_price = calculate_profitability(session, item_id, server_id, player_id)
+
+        if not score:
+            continue
+
         profitability_info[item_id] = {
             "Score": score,
             "Recommended Recipe ID": recommended_recipe.recipe_id if recommended_recipe else None,
