@@ -12,17 +12,27 @@ def calculate_item_cost(session, item_id, server_id, player_id):
     # Fetch potential crafting recipes for the item
     recipes = ro.get_recipes_by_item(session, item_id)
 
+    # Fetch the market price for the item
+    market_price_data = cpo.get_current_price(session, item_id, server_id)
+    market_price = market_price_data['price'] if market_price_data else float('inf')
+
     # If no crafting recipes, default to market price
     if not recipes:
-        market_price_data = cpo.get_current_price(session, item_id, server_id)
-        return market_price_data['price'] if market_price_data else float('inf'), {}
+        return market_price, {}
 
     # If recipes exist, determine the cheapest method
     crafting_options = [
         get_crafting_cost(session, recipe, server_id, player_id)
         for recipe in recipes
     ]
-    return min(crafting_options, key=lambda x: x[0])
+    min_crafting_cost = min(crafting_options, key=lambda x: x[0])[0]
+
+    # Compare market price with crafting cost and return the cheaper option
+    if market_price <= min_crafting_cost:
+        return market_price, {}
+    else:
+        return min(crafting_options, key=lambda x: x[0])
+
 
 
 

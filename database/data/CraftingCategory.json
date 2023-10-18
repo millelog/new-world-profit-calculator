@@ -255,6 +255,14 @@
             "spinefishfinst1"
         ]
     },
+    "alchemyalkahestt1":{
+      "name": "Alkahest",
+      "options": [
+          "herbt1",
+          "aloegelt1",
+          "poppyseedt3"
+      ]
+    },
     "alchemyspirit": {
         "name": "Spirit Reagents",
         "options": [
