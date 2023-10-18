@@ -40,3 +40,6 @@ The New-World-Profit-Calculator is a dedicated tool for the New World game that 
 9. Once prices are refreshed and the UI becomes responsive, click 'Evaluate All Items'. The list will be populated with the top 50 items, ranked by the score function located in analysis/crafting_profit.py:calculate_score(), currently based on the formula: profit x availability.
 10. Select an item_id from the left panel to view the associated graphical data and item specifics.
 
+
+## To Do
+- [ ] shopping list that you can add items to with total cost calculation
