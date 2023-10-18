@@ -125,7 +125,7 @@ def calculate_score(profit_margin, profit, availability):
     if profit_margin < 0:
         return 0
     
-    return profit * availability
+    return profit
 
 def evaluate_all_recipes(session, server_id, player_id):
     all_recipes = session.query(CraftingRecipe).all()
@@ -147,9 +147,9 @@ def evaluate_all_recipes(session, server_id, player_id):
         }
 
     # Sort items by score and get the top 50
-    top_50_items = sorted(profitability_info.items(), key=lambda x: x[1]["Score"], reverse=True)[:50]
+    top_items = sorted(profitability_info.items(), key=lambda x: x[1]["Score"], reverse=True)[:100]
 
-    return top_50_items
+    return top_items
 
 
 
