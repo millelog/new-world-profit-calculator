@@ -1,18 +1,18 @@
-# NEW-WORLD-Profit-Calculator
+# New-World-Profit-Calculator
 
 ![UI Screenshot](Readme.png)
 
 ## Overview
-The NEW-WORLD-Profit-Calculator is a dedicated tool for the New World game that enhances player experience. It serves as a comprehensive data manager for in-game item prices, player profiles, and crafting recipes. In addition, it offers insightful analyses on the data, ensuring players make well-informed decisions in-game.
+The New-World-Profit-Calculator is a dedicated tool for the New World game that enhances player experience. It serves as a comprehensive data manager for in-game item prices, player profiles, and crafting recipes. In addition, it offers insightful analyses on the data, ensuring players make well-informed decisions in-game.
 
 ## Features
-- **Data Parsing**: Seamlessly processes item prices from JSON data.
+- **Data Parsing**: Seamlessly processes item prices from current market data.
 - **Transaction Logging**: Maintains a detailed log of item transactions.
 - **Player Management**: Allows adding, updating, and retrieving player profiles along with their trade skills.
 - **Recipe Handling**: Enables efficient management of in-game crafting recipes and the respective skill requirements.
 - **Data Analysis**:
   - **Price Trends Analysis**: Investigates price fluctuations over a period, granting insights into the market's behavior.
-  - **Profitability Analysis**: Evaluates the financial benefits of crafting items in comparison to direct buy/sell, guiding players to financially sound choices.
+  - **Profitability Analysis**: Evaluates the financial benefits of crafting items in comparison to direct buy/sell.
   - **Recommendation System**: Furnishes buy/sell advice derived from prior analyses, offering players actionable recommendations.
 
 ## Setup
