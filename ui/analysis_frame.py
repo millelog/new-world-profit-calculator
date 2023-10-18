@@ -92,15 +92,17 @@ class AnalysisFrame(tk.Frame):
         availability = info.get("Availability", "N/A")
         recommended_recipe_id = info.get("Recommended Recipe ID", "N/A")
         crafting_cost = info.get("Crafting Cost", "N/A")
+        market_price = info.get("Market Price", "N/A")
         crafting_tree = info.get("Crafting Tree", {})
 
         result_text = (f"Item Name: {item_name}\n"
+                          f"Market Price: {market_price}\n"
+                       f"Crafting Cost: {crafting_cost}\n"                       
                        f"Profit: {profit}\n"
-                       f"Profit Margin: {profit_margin}\n"
+                       f"Profit Margin: {profit_margin}%\n"
                        f"Score: {score}\n"
                        f"Availability: {availability}\n"
-                       f"Recommended Recipe ID: {recommended_recipe_id}\n"
-                       f"Crafting Cost: {crafting_cost}")
+                       f"Recommended Recipe ID: {recommended_recipe_id}\n")
 
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)

@@ -89,8 +89,8 @@ def calculate_profitability(session, item_id, server_id, player_id):
     max_score = float('-inf')
     recommended_recipe = None
     recommended_crafting_tree = None
-    max_profit = float('-inf')  # Initialize with negative infinity
-    max_profit = float('-inf')  # Initialize with negative infinity
+    max_profit = float('-inf')
+    max_profit_margin = float('-inf') 
 
     for recipe in recipes:
         crafting_cost, crafting_tree = get_crafting_cost(session, recipe, server_id, player_id)
@@ -106,17 +106,18 @@ def calculate_profitability(session, item_id, server_id, player_id):
             max_score = score
             recommended_recipe = recipe
             recommended_crafting_tree = crafting_tree
-            max_profit = profit  # Update max profit margin
-            max_profit = profit_margin  # Update max profit margin percentage
+            max_profit = profit
+            max_profit_margin = profit_margin
 
     return (
         max_score,
         recommended_recipe,
         recommended_crafting_tree,
         max_profit,
-        max_profit,
+        max_profit_margin,
         crafting_cost,
-        market_price_data['qty'] if market_price_data and market_price_data['qty'] else (market_price_data['availability'] if market_price_data else None)
+        market_price_data['availability'] if market_price_data and market_price_data['availability'] else None,
+        market_price
     )
 
 
@@ -133,7 +134,7 @@ def evaluate_all_recipes(session, server_id, player_id):
     for recipe in all_recipes:
 
         item_id = recipe.result_item_id
-        score, recommended_recipe, crafting_tree, profit, profit_margin, crafting_cost, availability = calculate_profitability(session, item_id, server_id, player_id)
+        score, recommended_recipe, crafting_tree, profit, profit_margin, crafting_cost, availability, market_price = calculate_profitability(session, item_id, server_id, player_id)
         profitability_info[item_id] = {
             "Score": score,
             "Recommended Recipe ID": recommended_recipe.recipe_id if recommended_recipe else None,
@@ -141,6 +142,7 @@ def evaluate_all_recipes(session, server_id, player_id):
             "Profit": profit,
             "Profit Margin": profit_margin,
             "Crafting Cost": crafting_cost,
+            "Market Price": market_price,
             "Availability": availability
         }
 
