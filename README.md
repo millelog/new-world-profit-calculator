@@ -37,7 +37,7 @@ The New-World-Profit-Calculator is a dedicated tool for the New World game that 
 6. Click 'Initialize Database' in the application. This process may be time-consuming and may render the UI unresponsive temporarily. This only needs to be ran the first time the program runs, it's left in for debugging purposes.
 7. After database initialization, select your server and ensure your characters' skills are correctly configured.
 8. Click 'Update Prices'. The latest prices from [NW Market Prices](https://nwmarketprices.com/) will be fetched. For up-to-date prices, consider becoming a scanner on their site and execute a scan before employing this tool.
-9. Once prices are refreshed and the UI becomes responsive, click 'Evaluate All Items'. The list will be populated with the top 50 items, ranked by the score function located in analysis/crafting_profit.py:calculate_score(), currently based on the formula: profit x availability.
+9. Once prices are refreshed and the UI becomes responsive, click 'Evaluate All Items'. The list will be populated with the top items, ranked by the score function located in analysis/crafting_profit.py:calculate_score(), currently based on the formula: profit x profit_margin x availability.
 10. Select an item_id from the left panel to view the associated graphical data and item specifics.
 
 
