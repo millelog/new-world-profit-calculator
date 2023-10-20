@@ -122,6 +122,52 @@
             "soulsproutt2"
         ]
     },
+    "fluxreagentst5": {
+        "name": "Tier 5 Flux Reagents",
+        "options": [
+            "sandpapert5",
+            "tannint5",
+            "solventt5",
+            "clothweavet5"
+        ]
+    },
+    "solventreagentst5": {
+        "name": "Tier 5 Flux Reagents",
+        "options": [
+            "sandpapert5",
+            "tannint5",
+            "clothweavet5",
+            "fluxt5"
+        ]
+    },
+    "tanninreagentst5": {
+        "name": "Tier 5 Flux Reagents",
+        "options": [
+            "sandpapert5",
+            "solventt5",
+            "clothweavet5",
+            "fluxt5"
+        ]
+    },
+    "clothweavereagentst5": {
+        "name": "Tier 5 Flux Reagents",
+        "options": [
+            "sandpapert5",
+            "tannint5",
+            "solventt5",
+            "fluxt5"
+        ]
+    },
+    "sandpaperreagentst5": {
+        "name": "Tier 5 Flux Reagents",
+        "options": [
+            "tannint5",
+            "solventt5",
+            "clothweavet5",
+            "fluxt5"
+        ]
+    },
+    
     "alchemymagicalt4": {
         "name": "Tier 4 Magical Reagents",
         "options": [
