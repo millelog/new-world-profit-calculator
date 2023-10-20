@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-from analysis.crafting_profit import calculate_profitability, evaluate_all_recipes
+from analysis.crafting_profit import CraftingProfitAnalyzer
 from database.operations.item_operations import get_item_by_id
 from ui.graph_frame import ItemGraphFrame
 
@@ -10,25 +10,27 @@ class AnalysisFrame(tk.Frame):
         super().__init__(parent)
         self.session = session
         self.data_store = data_store
+        self.crafting_profit_analyzer = CraftingProfitAnalyzer(self.session, self.data_store.server_id, self.data_store.player_id)
         
         self.progress = ttk.Progressbar(self, orient="horizontal", length=200, mode="determinate")
-        self.progress.grid(row=1, columnspan=2, pady=(5,5))
+        self.progress.grid(row=0, column=1, pady=(5,5))
 
         # Button to evaluate all recipes and find the most profitable
         self.evaluate_button = tk.Button(self, text="Evaluate All Recipes", command=self.evaluate_all_recipes_ui)
-        self.evaluate_button.grid(row=0, columnspan=2)
+        self.evaluate_button.grid(row=0, column=0)
+
         
         # Text widget to display results
         self.result_text = tk.Text(self, width=40, height=10)
-        self.result_text.grid(row=2, columnspan=2)
+        self.result_text.grid(row=1, columnspan=2)
 
          # Create Panedwindow to hold the listbox and treeview
         self.panedwindow = ttk.Panedwindow(self, orient=tk.HORIZONTAL)
-        self.panedwindow.grid(row=3, column=0, columnspan=2, sticky='nsew')
+        self.panedwindow.grid(row=2, column=0, columnspan=2, sticky='nsew')
         
          # Create the ItemPriceGraphFrame and place it in the AnalysisFrame
         self.price_graph_frame = ItemGraphFrame(self, self.session, self.data_store)
-        self.price_graph_frame.grid(row=4, column=0, columnspan=2, sticky='nsew')
+        self.price_graph_frame.grid(row=3, column=0, columnspan=2, sticky='nsew')
 
         # Frame for Listbox
         self.listbox_frame = tk.Frame(self.panedwindow)
@@ -66,7 +68,7 @@ class AnalysisFrame(tk.Frame):
         self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes_ui(self):
-        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id, self.data_store.player_id, callback=self.update_progress)
+        profitability_info_list = self.crafting_profit_analyzer.evaluate_all_recipes(callback=self.update_progress)
         # Convert list of tuples to a dictionary
         self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
         self.listbox.delete(0, tk.END)  # Clear existing listbox items
