@@ -1,14 +1,23 @@
+#analysis/crafting_profit.py
+
 from database.models import CraftingRecipe
 import database.operations.current_price_operations as cpo
 import database.operations.recipe_operations as ro
 import database.operations.player_operations as po
 import database.operations.item_operations as io
 
+MAX_DEPTH=10
 
-def calculate_item_cost(session, item_id, server_id, player_id):
+def calculate_item_cost(session, item_id, server_id, player_id, depth=0):
     """
     Calculates the cost of an item either by crafting or market price.
     """
+    if depth > MAX_DEPTH:
+        # Return market price or some default value
+        market_price_data = cpo.get_current_price(session, item_id, server_id)
+        market_price = market_price_data['price'] if market_price_data else float('inf')
+        return market_price, {}
+
     # Fetch potential crafting recipes for the item
     recipes = ro.get_recipes_by_item(session, item_id)
 
@@ -22,7 +31,7 @@ def calculate_item_cost(session, item_id, server_id, player_id):
 
     # If recipes exist, determine the cheapest method
     crafting_options = [
-        get_crafting_cost(session, recipe, server_id, player_id)
+        get_crafting_cost(session, recipe, server_id, player_id, depth)
         for recipe in recipes
     ]
     min_crafting_cost = min(crafting_options, key=lambda x: x[0])[0]
@@ -50,7 +59,7 @@ def get_reagent_item_id(session, reagent, used_reagents, server_id):
     return potential_items[0].item_id
 
 
-def get_crafting_cost(session, recipe, server_id, player_id):
+def get_crafting_cost(session, recipe, server_id, player_id, depth=0):
     """
     Calculates the crafting cost of a given recipe.
     """
@@ -75,7 +84,7 @@ def get_crafting_cost(session, recipe, server_id, player_id):
         reagent_quantity = reagent.quantity_required
 
         # Calculate cost for the reagent
-        reagent_cost, reagent_tree = calculate_item_cost(session, reagent_item_id, server_id, player_id)
+        reagent_cost, reagent_tree = calculate_item_cost(session, reagent_item_id, server_id, player_id, depth + 1)
         
         crafting_tree[reagent_item_id] = {
             'cost': reagent_cost,
@@ -97,7 +106,6 @@ def get_crafting_cost(session, recipe, server_id, player_id):
 
 
 
-
 def normalize_values(values):
     """
     Normalize values to a range of 0 to 100 based on their position in the range of all items.
@@ -108,6 +116,7 @@ def normalize_values(values):
         return [100 if v == max_val else 0 for v in values]
     else:
         return [(v - min_val) / (max_val - min_val) * 100 for v in values]
+    
 
 def calculate_score(profitability_info):
     """
@@ -154,20 +163,27 @@ def calculate_profitability(session, item_id, server_id, player_id):
         "Availability": availability
     }
 
-def evaluate_all_recipes(session, server_id, player_id):
+def evaluate_all_recipes(session, server_id, player_id, callback=None):
     """
     Evaluate profitability for all recipes in the database.
     """
     all_recipes = session.query(CraftingRecipe).all()
+    total_recipes = len(all_recipes)
     profitability_info = {}
 
-    for recipe in all_recipes:
+    for index, recipe in enumerate(all_recipes):
+        
+    
         item_id = recipe.result_item_id
         profitability_data = calculate_profitability(session, item_id, server_id, player_id)
         if not profitability_data:
             continue
 
         profitability_info[item_id] = profitability_data
+
+        # Update the progress bar after processing each recipe
+        if callback:
+            callback(index + 1, total_recipes)
 
     # Calculate scores based on normalized values
     profitability_info = calculate_score(profitability_info)

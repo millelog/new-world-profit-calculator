@@ -11,22 +11,24 @@ class AnalysisFrame(tk.Frame):
         self.session = session
         self.data_store = data_store
         
-        
+        self.progress = ttk.Progressbar(self, orient="horizontal", length=200, mode="determinate")
+        self.progress.grid(row=1, columnspan=2, pady=(5,5))
+
         # Button to evaluate all recipes and find the most profitable
-        self.evaluate_button = tk.Button(self, text="Evaluate All Recipes", command=self.evaluate_all_recipes)
+        self.evaluate_button = tk.Button(self, text="Evaluate All Recipes", command=self.evaluate_all_recipes_ui)
         self.evaluate_button.grid(row=0, columnspan=2)
         
         # Text widget to display results
         self.result_text = tk.Text(self, width=40, height=10)
-        self.result_text.grid(row=1, columnspan=2)
+        self.result_text.grid(row=2, columnspan=2)
 
          # Create Panedwindow to hold the listbox and treeview
         self.panedwindow = ttk.Panedwindow(self, orient=tk.HORIZONTAL)
-        self.panedwindow.grid(row=2, column=0, columnspan=2, sticky='nsew')
+        self.panedwindow.grid(row=3, column=0, columnspan=2, sticky='nsew')
         
          # Create the ItemPriceGraphFrame and place it in the AnalysisFrame
         self.price_graph_frame = ItemGraphFrame(self, self.session, self.data_store)
-        self.price_graph_frame.grid(row=3, column=0, columnspan=2, sticky='nsew')
+        self.price_graph_frame.grid(row=4, column=0, columnspan=2, sticky='nsew')
 
         # Frame for Listbox
         self.listbox_frame = tk.Frame(self.panedwindow)
@@ -63,15 +65,20 @@ class AnalysisFrame(tk.Frame):
         self.result_text.insert(tk.END, result_text)
         self.populate_tree(info.get("Crafting Tree", {}))
     
-    def evaluate_all_recipes(self):
-        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id, self.data_store.player_id)
+    def evaluate_all_recipes_ui(self):
+        profitability_info_list = evaluate_all_recipes(self.session, self.data_store.server_id, self.data_store.player_id, callback=self.update_progress)
         # Convert list of tuples to a dictionary
         self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
         self.listbox.delete(0, tk.END)  # Clear existing listbox items
         for item_id in self.profitability_info:
             self.listbox.insert(tk.END, item_id)
 
-    
+    def update_progress(self, current, total):
+        progress = (current / total) * 100
+        self.progress["value"] = progress
+        self.update_idletasks()
+
+
     def on_listbox_select(self, event):
         selected_item_index = self.listbox.curselection()
         
