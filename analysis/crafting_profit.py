@@ -139,7 +139,7 @@ class CraftingProfitAnalyzer:
 
         # Calculate scores for each item
         for idx, item_id in enumerate(profitability_info.keys()):
-            score = normalized_profits[idx] * normalized_profit_margins[idx] * normalized_availabilities[idx]
+            score = normalized_profit_margins[idx] #* normalized_profits[idx] * normalized_availabilities[idx]
             profitability_info[item_id]["Score"] = score
 
         return profitability_info
@@ -203,6 +203,11 @@ class CraftingProfitAnalyzer:
         profitability_info = self.calculate_score(profitability_info)
 
         # Sort items by score and get the top
-        top_items = sorted(profitability_info.items(), key=lambda x: x[1]["Score"], reverse=True)[:100]
+        top_items = sorted(
+            [item for item in profitability_info.items() if item[1]["Profit"] > 0],
+            key=lambda x: x[1]["Score"], 
+            reverse=True
+        )[:100]
+
         return top_items
 
