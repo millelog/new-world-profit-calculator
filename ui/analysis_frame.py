@@ -86,13 +86,13 @@ class AnalysisFrame(tk.Frame):
         # Lookup the item info from the stored profitability_info
         info = self.profitability_info.get(item_id, {})
         item_name = get_item_by_id(self.session, item_id).item_name
-        profit = info.get("Profit", "N/A")
+        profit = "{:.2f}".format(info.get("Profit", "N/A"))
         profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
         score = "{:.2f}".format(info.get("Score", 0.00))
         availability = info.get("Availability", "N/A")
         recommended_recipe_id = info.get("Recommended Recipe ID", "N/A")
-        crafting_cost = info.get("Crafting Cost", "N/A")
-        market_price = info.get("Market Price", "N/A")
+        crafting_cost = "{:.2f}".format(info.get("Crafting Cost", "N/A"))
+        market_price = "{:.2f}".format(info.get("Market Price", "N/A"))
         crafting_tree = info.get("Crafting Tree", {})
 
         result_text = (f"Item Name: {item_name}\n"
