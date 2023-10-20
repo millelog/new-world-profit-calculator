@@ -64,7 +64,7 @@ def get_crafting_cost(session, recipe, server_id, player_id):
     total_cost = 0
     crafting_tree = {}
 
-    local_used_reagents = set()  # For uniqueness within this recipe level
+    local_used_reagents = set()  # For item tyupe uniqueness within this recipe level
     for reagent in recipe.recipe_reagents:
         reagent_item_id = get_reagent_item_id(session, reagent, local_used_reagents, server_id)
         if not reagent_item_id:
@@ -87,10 +87,14 @@ def get_crafting_cost(session, recipe, server_id, player_id):
         # Accumulate the cost
         total_cost += reagent_cost * reagent_quantity
 
+    # Adjust for the quantity produced by the recipe
+    unit_cost = total_cost / recipe.quantity_produced if recipe.quantity_produced else total_cost
+
     # Include any crafting fee (assumed to be 0 for simplicity)
-    total_cost += 0  # Adjust if there's a crafting fee
+    unit_cost += 0  # Adjust if there's a crafting fee
     
-    return total_cost, crafting_tree
+    return unit_cost, crafting_tree
+
 
 
 
