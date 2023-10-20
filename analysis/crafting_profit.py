@@ -94,15 +94,36 @@ def get_crafting_cost(session, recipe, server_id, player_id):
 
 
 
-def calculate_score(profit, availability, profit_margin):
+def normalize_values(values):
     """
-    Calculate score based on profitability factors.
+    Normalize values to a range of 0 to 100 based on their position in the range of all items.
     """
-    if profit < 0:
-        return 0
-    return profit * availability * profit_margin
+    min_val = min(values)
+    max_val = max(values)
+    if max_val == min_val:
+        return [100 if v == max_val else 0 for v in values]
+    else:
+        return [(v - min_val) / (max_val - min_val) * 100 for v in values]
 
+def calculate_score(profitability_info):
+    """
+    Calculate score based on normalized profitability factors.
+    """
+    profits = [info["Profit"] for info in profitability_info.values()]
+    profit_margins = [info["Profit Margin"] for info in profitability_info.values()]
+    availabilities = [info["Availability"] for info in profitability_info.values()]
 
+    # Normalize values
+    normalized_profits = normalize_values(profits)
+    normalized_profit_margins = normalize_values(profit_margins)
+    normalized_availabilities = normalize_values(availabilities)
+
+    # Calculate scores for each item
+    for idx, item_id in enumerate(profitability_info.keys()):
+        score = normalized_profits[idx] * normalized_profit_margins[idx] * normalized_availabilities[idx]
+        profitability_info[item_id]["Score"] = score
+
+    return profitability_info
 
 def calculate_profitability(session, item_id, server_id, player_id):
     """
@@ -119,10 +140,8 @@ def calculate_profitability(session, item_id, server_id, player_id):
     profit = market_price - crafting_cost
     profit_margin = (profit / crafting_cost) * 100 if crafting_cost != 0 else 0
     availability = market_price_data['availability'] if market_price_data else 0
-    score = calculate_score(profit, availability, profit_margin)
 
     return {
-        "Score": score,
         "Crafting Tree": crafting_tree,
         "Profit": profit,
         "Profit Margin": profit_margin,
@@ -130,9 +149,6 @@ def calculate_profitability(session, item_id, server_id, player_id):
         "Market Price": market_price,
         "Availability": availability
     }
-
-
-
 
 def evaluate_all_recipes(session, server_id, player_id):
     """
@@ -149,6 +165,10 @@ def evaluate_all_recipes(session, server_id, player_id):
 
         profitability_info[item_id] = profitability_data
 
+    # Calculate scores based on normalized values
+    profitability_info = calculate_score(profitability_info)
+
     # Sort items by score and get the top
     top_items = sorted(profitability_info.items(), key=lambda x: x[1]["Score"], reverse=True)[:100]
     return top_items
+
