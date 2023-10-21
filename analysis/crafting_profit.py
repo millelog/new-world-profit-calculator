@@ -137,14 +137,9 @@ class CraftingProfitAnalyzer:
         normalized_profit_margins = self._normalize_values(profit_margins)
         normalized_availabilities = self._normalize_values(availabilities)
 
-        # Weights
-        profit_weight = 0.3
-        profit_margin_weight = 0.5
-        availability_weight = 0.2
-
         # Calculate scores for each item
         for idx, item_id in enumerate(profitability_info.keys()):
-            score = normalized_profit_margins[idx] * profit_weight + normalized_availabilities[idx] * availability_weight + normalized_profits[idx] * profit_margin_weight
+            score = normalized_profit_margins[idx] * normalized_availabilities[idx]  * normalized_profits[idx]
             profitability_info[item_id]["Score"] = score
 
         return profitability_info
