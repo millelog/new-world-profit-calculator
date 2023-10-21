@@ -97,21 +97,23 @@ class AnalysisFrame(tk.Frame):
         item_name = get_item_by_id(self.session, item_id).item_name
         profit = "{:.2f}".format(info.get("Profit", "N/A"))
         profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
-        score = "{:.2f}".format(info.get("Score", 0.00))
-        availability = info.get("Availability", "N/A")
-        recommended_recipe_id = info.get("Recommended Recipe ID", "N/A")
+        profit_potential = "{:.2f}".format(info.get("profit_potential", 0.00))
+        average_availability = info.get("avg_available", "N/A")
+        active = info.get("active", "N/A")
         crafting_cost = "{:.2f}".format(info.get("Crafting Cost", "N/A"))
         market_price = "{:.2f}".format(info.get("Market Price", "N/A"))
         crafting_tree = info.get("Crafting Tree", {})
+        upward_price = info.get("upward_price", "N/A")
 
         result_text = (f"Item Name: {item_name}\n"
                           f"Market Price: {market_price}\n"
                        f"Crafting Cost: {crafting_cost}\n"                       
                        f"Profit: {profit}\n"
                        f"Profit Margin: {profit_margin}%\n"
-                       f"Score: {score}\n"
-                       f"Availability: {availability}\n"
-                       f"Recommended Recipe ID: {recommended_recipe_id}\n")
+                       f"Avg Availability: {average_availability}\n"
+                       f"Profit Potential: {profit_potential}\n"
+                       f"Is Market Active: {active}\n"
+                       f"Has Upward Price: {upward_price}\n")
 
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)

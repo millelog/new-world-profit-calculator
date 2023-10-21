@@ -22,29 +22,18 @@ def is_market_active(derivatives):
     for key, values in derivatives.items():
         if len([val for val in values if val == 0]) > len(values) / 2:
             return False
-
-    #for key, values in derivatives.items():
-    #    mean_derivative = np.mean(values)
-    #    std_deviation = np.std(values)
-
-        # Check for extreme values
-    #    for val in values:
-    #        if val < mean_derivative - 4*std_deviation or val > mean_derivative + 4*std_deviation:
-    #            return False
     
     return True
 
-def calculate_profit_potential(item_data, average_availabilities):
+def calculate_profit_potential(item_data):
     """Calculate the raw money-making potential of an item."""
-    
-    # Extract the relevant data from item_data
-    avg_availability = np.mean(average_availabilities)
     profit_per_unit = item_data["Profit"]
+    average_available = item_data["avg_available"]
 
-    # Calculate the profit potential
-    profit_potential = avg_availability * profit_per_unit
+    profit_potential = average_available * profit_per_unit
 
     return profit_potential
+
 
 def is_price_trending_upwards(price_data):
     """Check if the price of an item is trending upwards."""
@@ -72,7 +61,7 @@ def rank_items(items_dict):
         key=lambda x: (
             x[1]["active"], 
             x[1]["upward_price"], 
-            -x[1]["profit_potential"]
+            x[1]["profit_potential"]
         ),
         reverse=True
     )
@@ -89,6 +78,8 @@ def analyze_market_health(session, server_id, items_dict):
         # Extract data from cache
         price_data = get_price_data(session, item_id, server_id)
 
+        item_data["avg_available"] = np.mean([data_point["avg_avail"] for data_point in price_data["price_graph_data"]])
+
         # Check market activity
         activity_derivatives = {
             "avg_avail": calculate_derivative([data_point["avg_avail"] for data_point in price_data["price_graph_data"]]),
@@ -100,7 +91,7 @@ def analyze_market_health(session, server_id, items_dict):
         item_data["upward_price"] = 1 if is_price_trending_upwards(price_data) else 0
 
         # Calculate raw profit-making potential
-        item_data["profit_potential"] = calculate_profit_potential(item_data, [data_point["avg_avail"] for data_point in price_data["price_graph_data"]])
+        item_data["profit_potential"] = calculate_profit_potential(item_data)
 
     # Rank the items
     ranked_items_dict = rank_items(items_dict)
