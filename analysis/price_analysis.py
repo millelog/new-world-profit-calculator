@@ -71,6 +71,49 @@ def rank_items(items_dict):
     
     return ranked_dict
 
+def get_mean_avg_availability(price_data):
+    mean_value = np.mean([data_point["avg_avail"] for data_point in price_data["price_graph_data"]])
+
+    if mean_value > 10:
+        rounded_value = round(mean_value, -1)
+    else:
+        rounded_value = round(mean_value) 
+
+    return rounded_value
+
+def get_upward_price_signals(price_data, activity_derivatives):
+    # Extract the necessary data
+    avg_avails = [data_point["avg_avail"] for data_point in price_data["price_graph_data"]]
+    avg_avail_derivative = activity_derivatives["avg_avail"]
+    lowest_price_derivative = activity_derivatives["lowest_price"]
+    
+    # Ensure there are enough data points to analyze
+    if len(avg_avails) < 2 or len(avg_avail_derivative) < 1 or len(lowest_price_derivative) < 1:
+        return 0
+
+    # Initialize the score to 0
+    score = 0
+    
+    # Check for decreasing availability
+    if avg_avail_derivative[-1] < 0:
+        score += 1
+
+    # Check for decreasing price with low availability
+    if lowest_price_derivative[-1] < 0 and avg_avails[-1] < np.mean(avg_avails):
+        score += 1
+
+    # Check for inflection point in price
+    # If the second last derivative is negative and the last one is positive
+    if len(lowest_price_derivative) > 1 and lowest_price_derivative[-2] < 0 and lowest_price_derivative[-1] > 0:
+        score += 1
+
+    # Check for inflection point in availability
+    if len(avg_avail_derivative) > 1 and avg_avail_derivative[-2] < 0 and avg_avail_derivative[-1] > 0:
+        score += 1
+
+    return score
+
+
 def analyze_market_health(session, server_id, items_dict):
     """Main function to analyze and rank items based on market health."""
     
@@ -78,17 +121,18 @@ def analyze_market_health(session, server_id, items_dict):
         # Extract data from cache
         price_data = get_price_data(session, item_id, server_id)
 
-        item_data["avg_available"] = np.mean([data_point["avg_avail"] for data_point in price_data["price_graph_data"]])
+        item_data["avg_available"] = get_mean_avg_availability(price_data)
 
         # Check market activity
         activity_derivatives = {
             "avg_avail": calculate_derivative([data_point["avg_avail"] for data_point in price_data["price_graph_data"]]),
-            "lowest_price": calculate_derivative([data_point["lowest_price"] for data_point in price_data["price_graph_data"]])
+            "lowest_price": calculate_derivative([data_point["lowest_price"] for data_point in price_data["price_graph_data"]]),
+            "avg_price": calculate_derivative([data_point["avg_price"] for data_point in price_data["price_graph_data"]])
         }
         item_data["active"] = 1 if is_market_active(activity_derivatives) else 0
 
         # Check price trend
-        item_data["upward_price"] = 1 if is_price_trending_upwards(price_data) else 0
+        item_data["upward_price"] = get_upward_price_signals(price_data, activity_derivatives)
 
         # Calculate raw profit-making potential
         item_data["profit_potential"] = calculate_profit_potential(item_data)
