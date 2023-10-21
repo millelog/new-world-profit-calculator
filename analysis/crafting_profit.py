@@ -162,6 +162,7 @@ class CraftingProfitAnalyzer:
         availability = market_price_data['availability'] if market_price_data else 0
 
         return {
+            "Item ID": item_id,
             "Crafting Tree": crafting_tree,
             "Profit": profit,
             "Profit Margin": profit_margin,

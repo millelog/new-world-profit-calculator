@@ -94,6 +94,7 @@ class AnalysisFrame(tk.Frame):
     def display_item_info(self, item_id):
         # Lookup the item info from the stored profitability_info
         info = self.profitability_info.get(item_id, {})
+        self.data_store.selected_item_info = info
         item_name = get_item_by_id(self.session, item_id).item_name
         profit = "{:.2f}".format(info.get("Profit", "N/A"))
         profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
