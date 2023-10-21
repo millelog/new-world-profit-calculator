@@ -42,7 +42,7 @@ The New-World-Profit-Calculator is a dedicated tool for the New World game that 
 
 
 ## To Do
-- [ ] Crafting shopping list that you can add items to with total cost calculation
+- [x] Crafting shopping list that you can add items to with total cost calculation
 - [ ] Integrate shopping list into transaction table
 - [ ] Pull in completed transactions from NW Market Prices into transaction history
 - [ ] KPI Dashboard for transaction log and profit analysis
