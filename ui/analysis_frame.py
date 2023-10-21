@@ -68,9 +68,8 @@ class AnalysisFrame(tk.Frame):
         self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes_ui(self):
-        profitability_info_list = self.crafting_profit_analyzer.evaluate_all_recipes(callback=self.update_progress)
-        # Convert list of tuples to a dictionary
-        self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
+        self.profitability_info = self.crafting_profit_analyzer.evaluate_all_recipes(callback=self.update_progress)
+
         self.listbox.delete(0, tk.END)  # Clear existing listbox items
         for item_id in self.profitability_info:
             self.listbox.insert(tk.END, item_id)
@@ -133,10 +132,4 @@ class AnalysisFrame(tk.Frame):
 
 
 
-# Usage:
-if __name__ == '__main__':
-    root = tk.Tk()
-    session = None  # Assume you have a way to get your SQLAlchemy session
-    analysis_frame = AnalysisFrame(root, session)
-    analysis_frame.pack()
-    root.mainloop()
+

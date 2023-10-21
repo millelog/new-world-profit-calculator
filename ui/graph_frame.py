@@ -2,10 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
-import requests
-
-from database.operations.item_operations import get_item_by_id
-
+from database.operations.cache_operations import get_price_data
 class ItemGraphFrame(ttk.Frame):
     def __init__(self, parent, session, data_store):
         super().__init__(parent)
@@ -15,24 +12,12 @@ class ItemGraphFrame(ttk.Frame):
         self.plot_button = ttk.Button(self, text="Fetch & Plot", command=self.plot_prices)
         self.plot_button.pack(pady=20)
 
-    def fetch_price_data(self):
-        item = get_item_by_id(self.session, self.data_store.item_id)
-        if not item:
-            print("Item not found!")
-            return None
-
-        nw_market_id = item.nw_market_id
-        url = f"https://nwmarketprices.com/0/{self.data_store.server_id}/?cn_id={nw_market_id}"
-        response = requests.get(url)
-        if response.status_code == 200:
-            return response.json()
-        else:
-            print("Failed to fetch data from the API!")
-            return None
-
 
     def plot_prices(self):
-        data = self.fetch_price_data()
+        plt.close()
+
+        data =  get_price_data(self.session, self.data_store.item_id, self.data_store.server_id)
+
         if not data:
             return
 
