@@ -5,6 +5,7 @@ import database.operations.current_price_operations as cpo
 import database.operations.recipe_operations as ro
 import database.operations.player_operations as po
 import database.operations.item_operations as io
+from analysis.price_analysis import analyze_market_health
 
 class CraftingProfitAnalyzer:
     def __init__(self, session, server_id, player_id):
@@ -112,39 +113,6 @@ class CraftingProfitAnalyzer:
         return unit_cost, crafting_tree
 
 
-    def _normalize_values(self, values):
-        """
-        Normalize values to a range of 0 to 100 based on their position in the range of all items.
-        """
-        min_val = min(values)
-        max_val = max(values)
-        if max_val == min_val:
-            return [100 if v == max_val else 0 for v in values]
-        else:
-            return [(v - min_val) / (max_val - min_val) * 100 for v in values]
-        
-
-    def calculate_score(self, profitability_info):
-        """
-        Calculate score based on normalized profitability factors.
-        """
-        profits = [info["Profit"] for info in profitability_info.values()]
-        profit_margins = [info["Profit Margin"] for info in profitability_info.values()]
-        availabilities = [info["Availability"] for info in profitability_info.values()]
-
-        # Normalize values
-        normalized_profits = self._normalize_values(profits)
-        normalized_profit_margins = self._normalize_values(profit_margins)
-        normalized_availabilities = self._normalize_values(availabilities)
-
-        # Calculate scores for each item
-        for idx, item_id in enumerate(profitability_info.keys()):
-            score = normalized_profit_margins[idx] * normalized_availabilities[idx]  * normalized_profits[idx]
-            profitability_info[item_id]["Score"] = score
-
-        return profitability_info
-
-
     def calculate_profitability(self, item_id):
         """
         Calculate profitability for an item based on crafting or buying.
@@ -160,6 +128,9 @@ class CraftingProfitAnalyzer:
         profit = market_price - crafting_cost
         profit_margin = (profit / crafting_cost) * 100 if crafting_cost != 0 else 0
         availability = market_price_data['availability'] if market_price_data else 0
+
+        if profit_margin < 5:
+            return None
 
         return {
             "Item ID": item_id,
@@ -183,11 +154,6 @@ class CraftingProfitAnalyzer:
 
         for index, recipe in enumerate(all_recipes):
             item_id = recipe.result_item_id
-            market_price_data = cpo.get_current_price(self.session, item_id, self.server_id)
-            if not market_price_data:
-                continue
-
-            market_price = market_price_data['price']
             
             profitability_data = self.calculate_profitability(item_id)
             
@@ -200,15 +166,5 @@ class CraftingProfitAnalyzer:
             if callback:
                 callback(index + 1, total_recipes)
 
-        # Calculate scores based on normalized values
-        profitability_info = self.calculate_score(profitability_info)
-
-        # Sort items by score and get the top
-        top_items = sorted(
-            [item for item in profitability_info.items() if item[1]["Profit"] > 0],
-            key=lambda x: x[1]["Score"], 
-            reverse=True
-        )[:100]
-
-        return top_items
+        return analyze_market_health(self.session, self.server_id, profitability_info)
 

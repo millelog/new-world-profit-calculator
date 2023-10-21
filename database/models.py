@@ -1,6 +1,7 @@
 #database/models.py
 
-from sqlalchemy import Table, create_engine, Column, Integer, String, Float, ForeignKey, DateTime
+from datetime import datetime
+from sqlalchemy import Table, create_engine, Column, Integer, String, Float, ForeignKey, DateTime, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
@@ -12,6 +13,14 @@ item_itemtype_association = Table('item_itemtype_association', Base.metadata,
     Column('item_id', String, ForeignKey('items.item_id')),
     Column('item_type_id', Integer, ForeignKey('item_types.item_type_id'))
 )
+
+class APICache(Base):
+    __tablename__ = 'api_cache'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    item_id = Column(String, unique=True, nullable=False)
+    cached_data = Column(Text, nullable=False) 
+    last_cached = Column(DateTime, default=datetime.utcnow())  
 
 class ItemType(Base):
     __tablename__ = 'item_types'

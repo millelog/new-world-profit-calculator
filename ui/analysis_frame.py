@@ -68,9 +68,8 @@ class AnalysisFrame(tk.Frame):
         self.populate_tree(info.get("Crafting Tree", {}))
     
     def evaluate_all_recipes_ui(self):
-        profitability_info_list = self.crafting_profit_analyzer.evaluate_all_recipes(callback=self.update_progress)
-        # Convert list of tuples to a dictionary
-        self.profitability_info = {item_id: info for item_id, info in profitability_info_list}
+        self.profitability_info = self.crafting_profit_analyzer.evaluate_all_recipes(callback=self.update_progress)
+
         self.listbox.delete(0, tk.END)  # Clear existing listbox items
         for item_id in self.profitability_info:
             self.listbox.insert(tk.END, item_id)
@@ -98,21 +97,23 @@ class AnalysisFrame(tk.Frame):
         item_name = get_item_by_id(self.session, item_id).item_name
         profit = "{:.2f}".format(info.get("Profit", "N/A"))
         profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
-        score = "{:.2f}".format(info.get("Score", 0.00))
-        availability = info.get("Availability", "N/A")
-        recommended_recipe_id = info.get("Recommended Recipe ID", "N/A")
+        profit_potential = "{:.2f}".format(info.get("profit_potential", 0.00))
+        average_availability = info.get("avg_available", "N/A")
+        active = info.get("active", "N/A")
         crafting_cost = "{:.2f}".format(info.get("Crafting Cost", "N/A"))
         market_price = "{:.2f}".format(info.get("Market Price", "N/A"))
         crafting_tree = info.get("Crafting Tree", {})
+        upward_price = info.get("upward_price", "N/A")
 
         result_text = (f"Item Name: {item_name}\n"
                           f"Market Price: {market_price}\n"
                        f"Crafting Cost: {crafting_cost}\n"                       
                        f"Profit: {profit}\n"
                        f"Profit Margin: {profit_margin}%\n"
-                       f"Score: {score}\n"
-                       f"Availability: {availability}\n"
-                       f"Recommended Recipe ID: {recommended_recipe_id}\n")
+                       f"Avg Availability: {average_availability}\n"
+                       f"Profit Potential: {profit_potential}\n"
+                       f"Is Market Active: {active}\n"
+                       f"Has Upward Price: {upward_price}\n")
 
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)
@@ -133,10 +134,4 @@ class AnalysisFrame(tk.Frame):
 
 
 
-# Usage:
-if __name__ == '__main__':
-    root = tk.Tk()
-    session = None  # Assume you have a way to get your SQLAlchemy session
-    analysis_frame = AnalysisFrame(root, session)
-    analysis_frame.pack()
-    root.mainloop()
+
