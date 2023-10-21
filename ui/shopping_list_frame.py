@@ -27,8 +27,6 @@ class ShoppingListFrame(ttk.Frame):
         
         # Update the cost preview whenever the quantity changes
         self.quantity_entry.bind('<KeyRelease>', self.update_cost_preview)
-        
-
 
         # Total cost label
         self.total_cost_label = ttk.Label(self, text="Total Cost: ")
@@ -79,6 +77,14 @@ class ShoppingListFrame(ttk.Frame):
         self.clear_button = ttk.Button(self, text="Clear Shopping List", command=self.clear_shopping_list)
         self.clear_button.grid(row=2, column=0, columnspan=3, padx=2, pady=5)
 
+        # Start the check for changes in selected item info
+        self.data_store.add_observer(self.on_selected_item_info_changed)
+
+
+    def on_selected_item_info_changed(self):
+        # Update the selected_item_quantity here
+        self.selected_item_quantity = self.data_store.selected_item_info.get("avg_availability")
+        
 
     def _populate_crafting_tree(self, node, multiplier=1):
         for item_id, info in node.items():

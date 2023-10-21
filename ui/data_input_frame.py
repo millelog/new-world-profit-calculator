@@ -114,6 +114,7 @@ class DataInputFrame(tk.Frame):
             process_json_data(self.session, data, self.data_store.server_id)
             # Clear old API cache
             clear_cache(self.session)
+            print("Prices pulled from NW Market Prices")
         else:
             print(f"No server found with name {self.data_store.server_id}")
 
