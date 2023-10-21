@@ -23,7 +23,7 @@ The New-World-Profit-Calculator is a dedicated tool for the New World game that 
     ```powershell
     pip install virtualenv
     ```
-3. Create a virtual environment, activate it, and install the required packages:
+3. Create a virtual environment, activate it, and install the required packages. From a terminal in the repository's directory execute:
     ```powershell
     python -m venv venv
     .\venv\Scripts\activate.ps1
