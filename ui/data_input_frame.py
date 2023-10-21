@@ -5,6 +5,7 @@ from data_input.data_downloader import download_data, save_data_to_file, load_da
 from database.models import Player, Server
 from database.init_db import init_database
 from ui.character_frame import CharacterFrame
+from database.operations.cache_operations import clear_cache
 
 
 class DataInputFrame(tk.Frame):
@@ -111,6 +112,8 @@ class DataInputFrame(tk.Frame):
             save_data_to_file(data)
             # Now process the downloaded data
             process_json_data(self.session, data, self.data_store.server_id)
+            # Clear old API cache
+            clear_cache(self.session)
         else:
             print(f"No server found with name {self.data_store.server_id}")
 

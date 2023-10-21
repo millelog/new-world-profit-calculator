@@ -20,6 +20,19 @@ def get_cached_data(session, item_id):
     return None
 
 
+def clear_cache(session):
+    """
+    Clear all entries from the APICache table.
+    """
+    try:
+        session.query(APICache).delete()
+        session.commit()
+        print("Cache cleared successfully!")
+    except Exception as e:
+        session.rollback()
+        print(f"Error clearing cache: {e}")
+
+
 def update_cache(session, item_id, data):
     serialized_data = json.dumps(data)
     cached_data = session.query(APICache).filter_by(item_id=item_id).first()
