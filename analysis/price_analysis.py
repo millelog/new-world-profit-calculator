@@ -108,7 +108,7 @@ def get_upward_price_signals(price_data, activity_derivatives):
         score += 1
 
     # Check for inflection point in availability
-    if len(avg_avail_derivative) > 1 and avg_avail_derivative[-2] < 0 and avg_avail_derivative[-1] > 0:
+    if avg_avails[-1] < np.mean(avg_avails):
         score += 1
 
     return score
