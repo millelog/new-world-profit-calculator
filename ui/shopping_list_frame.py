@@ -13,17 +13,22 @@ class ShoppingListFrame(ttk.Frame):
         
         # Label and Entry for Quantity
         self.quantity_label = ttk.Label(self, text="Quantity:")
-        self.quantity_label.grid(row=0, column=0, padx=2, pady=5)
+        self.quantity_label.grid(row=0, column=0, padx=(2, 0), pady=5)
         
-        self.quantity_entry = ttk.Entry(self, width=5)
-        self.quantity_entry.grid(row=0, column=1, padx=2, pady=5)
+        # Define StringVar for quantity_entry
+        self.quantity_var = tk.StringVar()
+        
+        # Bind StringVar to quantity_entry
+        self.quantity_entry = ttk.Entry(self, width=10, textvariable=self.quantity_var)
+        self.quantity_entry.grid(row=0, column=1, padx=(0, 5), pady=5)
+
 
         # Cost Preview Label
         self.cost_preview_label = ttk.Label(self, text="Cost Preview:")
-        self.cost_preview_label.grid(row=0, column=3, padx=2, pady=5)
+        self.cost_preview_label.grid(row=0, column=4, padx=(5, 2), pady=5)
         
         self.cost_preview_value = ttk.Label(self, text="0.0")
-        self.cost_preview_value.grid(row=0, column=4, padx=2, pady=5)
+        self.cost_preview_value.grid(row=0, column=5, padx=(2, 5), pady=5)
         
         # Update the cost preview whenever the quantity changes
         self.quantity_entry.bind('<KeyRelease>', self.update_cost_preview)
@@ -34,10 +39,14 @@ class ShoppingListFrame(ttk.Frame):
         
         self.total_cost_value = ttk.Label(self, text="0.0")
         self.total_cost_value.grid(row=2, column=4, padx=2, pady=5)
+
+        # Buy Reagents button
+        self.auto_fill_button = ttk.Button(self, text="Autofill", command=self.auto_populate_quantity_entry)
+        self.auto_fill_button.grid(row=0, column=2, padx=5, pady=5)
         
         # Buy Reagents button
         self.buy_button = ttk.Button(self, text="Buy Reagents", command=self.add_to_shopping_list)
-        self.buy_button.grid(row=0, column=2, padx=2, pady=5)
+        self.buy_button.grid(row=0, column=3, padx=5, pady=5)
         
         # Create Treeview for displaying the shopping list
         self.tree = ttk.Treeview(self, columns=("Item ID", "Item Name", "Market Price", "Quantity", "Cost"), show="headings", height=25)
@@ -77,13 +86,11 @@ class ShoppingListFrame(ttk.Frame):
         self.clear_button = ttk.Button(self, text="Clear Shopping List", command=self.clear_shopping_list)
         self.clear_button.grid(row=2, column=0, columnspan=3, padx=2, pady=5)
 
-        # Start the check for changes in selected item info
-        self.data_store.add_observer(self.on_selected_item_info_changed)
 
-
-    def on_selected_item_info_changed(self):
-        # Update the selected_item_quantity here
-        self.selected_item_quantity = self.data_store.selected_item_info.get("avg_availability")
+    def auto_populate_quantity_entry(self):
+        quantity = self.data_store.selected_item_info.get("avg_available")
+        self.quantity_var.set(int(quantity))
+        self.update_cost_preview()
         
 
     def _populate_crafting_tree(self, node, multiplier=1):
@@ -177,9 +184,10 @@ class ShoppingListFrame(ttk.Frame):
         self.total_cost_value["text"] = "0.0"
 
 
-    def update_cost_preview(self, event):
+    def update_cost_preview(self, event=None):  # added default value for event
         try:
-            quantity = int(self.quantity_entry.get())
+            # Convert the string value from the StringVar back to an integer
+            quantity = int(self.quantity_var.get())
             craft_cost = self.data_store.selected_item_info.get("Crafting Cost", 0)
             total_cost = craft_cost * quantity
             self.cost_preview_value["text"] = "{:.2f}".format(total_cost)
