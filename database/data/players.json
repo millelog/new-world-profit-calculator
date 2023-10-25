@@ -3,18 +3,36 @@
         "player_name": "Keenorlin",
         "server_name": "Isabella",
         "skills": [
-            {"skill_name": "Arcana", "skill_level": 88},
+            {"skill_name": "Arcana", "skill_level": 118},
             {"skill_name": "Armoring", "skill_level": 0},
-            {"skill_name": "Cooking", "skill_level": 82},
+            {"skill_name": "Cooking", "skill_level": 108},
             {"skill_name": "Engineering", "skill_level": 11},
             {"skill_name": "Furnishing", "skill_level": 0},
             {"skill_name": "Jewelcrafting", "skill_level": 0},
             {"skill_name": "Leatherworking", "skill_level": 42},
             {"skill_name": "Smelting", "skill_level": 17},
-            {"skill_name": "Stonecutting", "skill_level": 87},
+            {"skill_name": "Stonecutting", "skill_level": 186},
             {"skill_name": "Weaponsmithing", "skill_level": 9},
             {"skill_name": "Weaving", "skill_level": 36},
             {"skill_name": "Woodworking", "skill_level": 11}
+        ]
+    },
+    {
+        "player_name": "Max Level",
+        "server_name": "Isabella",
+        "skills": [
+            {"skill_name": "Arcana", "skill_level": 250},
+            {"skill_name": "Armoring", "skill_level": 250},
+            {"skill_name": "Cooking", "skill_level": 250},
+            {"skill_name": "Engineering", "skill_level": 250},
+            {"skill_name": "Furnishing", "skill_level": 250},
+            {"skill_name": "Jewelcrafting", "skill_level": 250},
+            {"skill_name": "Leatherworking", "skill_level": 250},
+            {"skill_name": "Smelting", "skill_level": 250},
+            {"skill_name": "Stonecutting", "skill_level": 250},
+            {"skill_name": "Weaponsmithing", "skill_level": 250},
+            {"skill_name": "Weaving", "skill_level": 250},
+            {"skill_name": "Woodworking", "skill_level": 250}
         ]
     }
 ]
