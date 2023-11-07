@@ -34,6 +34,17 @@ def calculate_profit_potential(item_data):
 
     return profit_potential
 
+def calculate_buy_profit_potential(item_data):
+    if not item_data["Buy Price"]:
+        return 0
+
+    profit_per_unit = item_data["Market Price"] - item_data["Buy Price"]
+    average_available = item_data["avg_available"]
+
+    buy_profit_potential = (average_available * profit_per_unit)
+
+    return buy_profit_potential
+
 
 def is_price_trending_upwards(price_data):
     """Check if the price of an item is trending upwards."""
@@ -72,6 +83,9 @@ def rank_items(items_dict):
     return ranked_dict
 
 def get_mean_avg_availability(price_data):
+    if not price_data:
+        return None
+
     mean_value = np.mean([data_point["avg_avail"] for data_point in price_data["price_graph_data"]])
 
     if mean_value > 10:
@@ -117,12 +131,17 @@ def get_upward_price_signals(price_data, activity_derivatives):
 def analyze_market_health(session, server_id, items_dict):
     """Main function to analyze and rank items based on market health."""
     
+    items_to_remove = []
+
     for item_id, item_data in items_dict.items():
         # Extract data from cache
         price_data = get_price_data(session, item_id, server_id)
 
         item_data["avg_available"] = get_mean_avg_availability(price_data)
-
+        if item_data["avg_available"] is None:
+            items_to_remove.append(item_id)
+            continue
+        
         # Check market activity
         activity_derivatives = {
             "avg_avail": calculate_derivative([data_point["avg_avail"] for data_point in price_data["price_graph_data"]]),
@@ -136,6 +155,12 @@ def analyze_market_health(session, server_id, items_dict):
 
         # Calculate raw profit-making potential
         item_data["profit_potential"] = calculate_profit_potential(item_data)
+
+        item_data["buy_profit_potential"] = calculate_buy_profit_potential(item_data)
+
+    # Remove items where avg_available is None
+    for item_id in items_to_remove:
+        del items_dict[item_id]
 
     # Rank the items
     ranked_items_dict = rank_items(items_dict)

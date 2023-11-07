@@ -73,6 +73,9 @@ class AnalysisFrame(tk.Frame):
         self.listbox.delete(0, tk.END)  # Clear existing listbox items
         for item_id in self.profitability_info:
             self.listbox.insert(tk.END, item_id)
+    
+    def evaluate_all_buy_prices_ui(self):
+        self.buy_info = self.
 
     def update_progress(self, current, total):
         progress = (current / total) * 100
@@ -99,6 +102,7 @@ class AnalysisFrame(tk.Frame):
         profit = "{:.2f}".format(info.get("Profit", "N/A"))
         profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
         profit_potential = "{:.2f}".format(info.get("profit_potential", 0.00))
+        buy_profit_potential = "{:.2f}".format(info.get("buy_profit_potential", 0.00))
         average_availability = info.get("avg_available", "N/A")
         active = info.get("active", "N/A")
         crafting_cost = "{:.2f}".format(info.get("Crafting Cost", "N/A"))
@@ -113,6 +117,7 @@ class AnalysisFrame(tk.Frame):
                        f"Profit Margin: {profit_margin}%\n"
                        f"Avg Availability: {average_availability}\n"
                        f"Profit Potential: {profit_potential}\n"
+                       f"Buy Profit Potential: {buy_profit_potential}\n"
                        f"Is Market Active: {active}\n"
                        f"Has Upward Price: {upward_price}\n")
 

@@ -122,6 +122,7 @@ class CraftingProfitAnalyzer:
             return None
 
         market_price = market_price_data['price']
+        buy_price = market_price_data['highest_buy_order'] if market_price_data['highest_buy_order'] else None
 
         # Calculate crafting cost for the item
         crafting_cost, crafting_tree = self.calculate_item_cost(item_id, market_price)  # Pass the market_price here
@@ -139,7 +140,8 @@ class CraftingProfitAnalyzer:
             "Profit Margin": profit_margin,
             "Crafting Cost": crafting_cost,
             "Market Price": market_price,
-            "Availability": availability
+            "Availability": availability,
+            "Buy Price": buy_price
         }
 
 
