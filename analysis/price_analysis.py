@@ -1,3 +1,4 @@
+#analysis/price_analysis.py
 import numpy as np
 from database.operations.cache_operations import get_price_data
 
@@ -59,6 +60,28 @@ def is_price_trending_upwards(price_data):
     if price_derivatives:
         return price_derivatives[-1] > 0
     return False
+
+def rank_buy_items(items_dict):
+    """Rank items based on their scores."""
+    
+    # Convert dictionary to list of tuples [(key, value), ...]
+    items_list = list(items_dict.items())
+    
+    # Sort the items based on the given criteria
+    ranked_items = sorted(
+        items_list,
+        key=lambda x: (
+            x[1]["active"],
+            x[1]["buy_profit_potential"],
+            x[1]["upward_price"], 
+        ),
+        reverse=True
+    )
+
+    # Convert back to dictionary
+    ranked_dict = {item[0]: item[1] for item in ranked_items}
+    
+    return ranked_dict
 
 def rank_items(items_dict):
     """Rank items based on their scores."""
@@ -128,7 +151,7 @@ def get_upward_price_signals(price_data, activity_derivatives):
     return score
 
 
-def analyze_market_health(session, server_id, items_dict):
+def analyze_market_health(session, server_id, items_dict, type='craft'):
     """Main function to analyze and rank items based on market health."""
     
     items_to_remove = []
@@ -154,7 +177,8 @@ def analyze_market_health(session, server_id, items_dict):
         item_data["upward_price"] = get_upward_price_signals(price_data, activity_derivatives)
 
         # Calculate raw profit-making potential
-        item_data["profit_potential"] = calculate_profit_potential(item_data)
+        if type == 'craft':
+            item_data["profit_potential"] = calculate_profit_potential(item_data)
 
         item_data["buy_profit_potential"] = calculate_buy_profit_potential(item_data)
 
@@ -163,6 +187,9 @@ def analyze_market_health(session, server_id, items_dict):
         del items_dict[item_id]
 
     # Rank the items
-    ranked_items_dict = rank_items(items_dict)
+    if type=='craft':
+        ranked_items_dict = rank_items(items_dict)
+    elif type=='buy':
+        ranked_items_dict = rank_buy_items(items_dict)
 
     return ranked_items_dict

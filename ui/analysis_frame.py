@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from analysis.crafting_profit import CraftingProfitAnalyzer
+from analysis.buy_profit import BuyProfitAnalyzer
 from database.operations.item_operations import get_item_by_id
 from ui.graph_frame import ItemGraphFrame
 
@@ -11,6 +12,7 @@ class AnalysisFrame(tk.Frame):
         self.session = session
         self.data_store = data_store
         self.crafting_profit_analyzer = CraftingProfitAnalyzer(self.session, self.data_store.server_id, self.data_store.player_id)
+        self.buy_profit_analyzer = BuyProfitAnalyzer(self.session, self.data_store.server_id, self.data_store.player_id)
         
         self.progress = ttk.Progressbar(self, orient="horizontal", length=200, mode="determinate")
         self.progress.grid(row=0, column=1, pady=(5,5))
@@ -19,6 +21,9 @@ class AnalysisFrame(tk.Frame):
         self.evaluate_button = tk.Button(self, text="Evaluate All Recipes", command=self.evaluate_all_recipes_ui)
         self.evaluate_button.grid(row=0, column=0)
 
+        # Button to evaluate all recipes and find the most profitable
+        self.evaluate_button = tk.Button(self, text="Evaluate All Buys", command=self.evaluate_all_buy_prices_ui)
+        self.evaluate_button.grid(row=0, column=1)
         
         # Text widget to display results
         self.result_text = tk.Text(self, width=40, height=10)
@@ -75,7 +80,11 @@ class AnalysisFrame(tk.Frame):
             self.listbox.insert(tk.END, item_id)
     
     def evaluate_all_buy_prices_ui(self):
-        self.buy_info = self.
+        self.profitability_info = self.buy_profit_analyzer.evaluate_all_buy_prices()
+
+        self.listbox.delete(0, tk.END)  # Clear existing listbox items
+        for item_id in self.profitability_info:
+            self.listbox.insert(tk.END, item_id)
 
     def update_progress(self, current, total):
         progress = (current / total) * 100
@@ -97,33 +106,41 @@ class AnalysisFrame(tk.Frame):
         # Lookup the item info from the stored profitability_info
         info = self.profitability_info.get(item_id, {})
         self.data_store.selected_item_info = info
-        
-        item_name = get_item_by_id(self.session, item_id).item_name
-        profit = "{:.2f}".format(info.get("Profit", "N/A"))
-        profit_margin = "{:.2f}".format(info.get("Profit Margin", 0.00))
-        profit_potential = "{:.2f}".format(info.get("profit_potential", 0.00))
-        buy_profit_potential = "{:.2f}".format(info.get("buy_profit_potential", 0.00))
-        average_availability = info.get("avg_available", "N/A")
-        active = info.get("active", "N/A")
-        crafting_cost = "{:.2f}".format(info.get("Crafting Cost", "N/A"))
-        market_price = "{:.2f}".format(info.get("Market Price", "N/A"))
-        crafting_tree = info.get("Crafting Tree", {})
-        upward_price = info.get("upward_price", "N/A")
 
-        result_text = (f"Item Name: {item_name}\n"
-                          f"Market Price: {market_price}\n"
-                       f"Crafting Cost: {crafting_cost}\n"                       
-                       f"Profit: {profit}\n"
-                       f"Profit Margin: {profit_margin}%\n"
-                       f"Avg Availability: {average_availability}\n"
-                       f"Profit Potential: {profit_potential}\n"
-                       f"Buy Profit Potential: {buy_profit_potential}\n"
-                       f"Is Market Active: {active}\n"
-                       f"Has Upward Price: {upward_price}\n")
+        item = get_item_by_id(self.session, item_id)
+        item_name = item.item_name if item else "N/A"
+
+        # Helper function to format the float values if they exist
+        def format_float(value):
+            return "{:.2f}".format(value) if isinstance(value, (int, float)) else "N/A"
+
+        # Helper function to construct each line if the data exists
+        def construct_line(label, key, formatter=lambda x: x, suffix=''):
+            value = info.get(key)
+            return f"{label}: {formatter(value)}{suffix}\n" if value is not None else ''
+
+        # Constructing the result text by checking if the data exists for each item
+        result_text = f"Item Name: {item_name}\n"
+        result_text += construct_line("Market Price", "Market Price", format_float)
+        result_text += construct_line("Crafting Cost", "Crafting Cost", format_float)
+        result_text += construct_line("Buy Price", "Buy Price", format_float)
+        result_text += construct_line("Profit", "Profit", format_float)
+        result_text += construct_line("Profit Margin", "Profit Margin", format_float, "%")
+        result_text += construct_line("Avg Availability", "avg_available")
+        result_text += construct_line("Profit Potential", "profit_potential", format_float)
+        result_text += construct_line("Buy Profit Potential", "buy_profit_potential", format_float)
+        result_text += construct_line("Is Market Active", "active")
+        result_text += construct_line("Has Upward Price", "upward_price")
 
         self.result_text.delete('1.0', tk.END)
         self.result_text.insert(tk.END, result_text)
-        self.populate_tree(crafting_tree, item_id)
+
+        # Populate the crafting tree if it exists
+        crafting_tree = info.get("Crafting Tree")
+        if crafting_tree:
+            self.populate_tree(crafting_tree, item_id)
+
+
 
 
     def populate_tree(self, crafting_tree, root_item_id):
